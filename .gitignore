@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Agent configuration
+.agents/
+
+# Statutory raw documents & sensitive KYC records
+docs/
+
+# System files
+.DS_Store
+Thumbs.db

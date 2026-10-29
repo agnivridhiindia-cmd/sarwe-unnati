@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarwe Unnati Foundation | Empowering Grassroots India</title>
+  <meta name="description" content="Sarwe Unnati Foundation is a government-certified Section 8 non-profit institution dedicated to large-scale social infrastructure, digital education, vocational IT, and public healthcare across Northern India.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+
+  <!-- Google Fonts: Syne (Stylish Avant-Garde Modern Display) + Playfair Display / Instrument Serif (Editorial) + Plus Jakarta Sans + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="light-theme">
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-bar" id="scroll-progress"></div>
+
+  <!-- Architectural Navbar (Bright, Crisp & Modern) -->
+  <header class="main-navbar" id="site-header">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-brand" aria-label="Sarwe Unnati Foundation">
+        <div class="brand-emblem-vibrant">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+            <polyline points="2 17 12 22 22 17"/>
+            <polyline points="2 12 12 17 22 12"/>
+          </svg>
+        </div>
+        <div class="brand-title-wrap">
+          <span class="brand-title-main">SARWE UNNATI</span>
+          <span class="brand-title-sub">FOUNDATION &bull; ESTD. 2018</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link-item active">Home</a>
+        <a href="about.html" class="nav-link-item">About Foundation</a>
+        <a href="programs.html" class="nav-link-item">Programs &amp; Verticals</a>
+        <a href="impact.html" class="nav-link-item">Impact &amp; Audits</a>
+        <a href="volunteer.html" class="nav-link-item">Get Involved</a>
+        <a href="contact.html" class="nav-link-item">Contact</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="nav-actions-wrap">
+        <button class="btn-vibrant-gradient open-giving-modal" aria-label="Support the foundation">
+          <span class="btn-text">Support Mission [80G]</span>
+          <span class="btn-arrow">→</span>
+        </button>
+        <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <div class="brand-title-wrap">
+        <span class="brand-title-main">SARWE UNNATI</span>
+        <span class="brand-title-sub">SECTION 8 NON-PROFIT</span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close">&times;</button>
+    </div>
+    <div class="drawer-links-wrap">
+      <a href="index.html" class="drawer-link active">01 // Home</a>
+      <a href="about.html" class="drawer-link">02 // About the Foundation</a>
+      <a href="programs.html" class="drawer-link">03 // Program Verticals</a>
+      <a href="impact.html" class="drawer-link">04 // Impact &amp; Audit Reports</a>
+      <a href="volunteer.html" class="drawer-link">05 // CSR &amp; Involvement</a>
+      <a href="contact.html" class="drawer-link">06 // Contact Headquarters</a>
+    </div>
+    <div class="drawer-footer">
+      <div class="drawer-telemetry">
+        <span>CIN: U80902UP2018NPL106959</span>
+        <span>DARPAN: UP/2025/0710389</span>
+      </div>
+      <button class="btn-vibrant-gradient open-giving-modal" style="width:100%; margin-top:1rem;">
+        Direct Bank Wire (80G Relief)
+      </button>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SECTION 1: BRIGHT, VIBRANT, EYE-CATCHING HERO SECTION (Aurora Light Theme)
+       ========================================================================= -->
+  <section class="section-hero-vibrant" id="hero-section">
+    <!-- Ambient Background Video (Plays on view, auto-pauses when scrolled down) -->
+    <div class="hero-video-bg-wrap" aria-hidden="true">
+      <video id="hero-bg-video" class="hero-bg-video" autoplay muted loop playsinline preload="auto">
+        <source src="videos/hero-bg.mp4" type="video/mp4">
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+
+    <!-- Radiant Glowing Aurora Mesh Background Orbs -->
+    <div class="aurora-orb aurora-orb-1"></div>
+    <div class="aurora-orb aurora-orb-2"></div>
+    <div class="aurora-orb aurora-orb-3"></div>
+    <div class="hero-subtle-grid"></div>
+    
+    <div class="container hero-content-container">
+      <div class="hero-split-grid">
+        
+        <!-- Left Column: Inspiring Copy -->
+        <div class="hero-copy-column">
+          <h1 class="hero-vibrant-title">
+            Transforming Grassroots India<br>
+            <span class="hero-title-italic">Through Education, IT &amp; Healthcare.</span>
+          </h1>
+
+          <p class="hero-vibrant-lede">
+            Sarwe Unnati Foundation is a government-certified Section 8 non-profit institution incorporated in 2018. We operate transparent, high-impact ground programs across Uttar Pradesh and Northern India—delivering free primary schooling, youth IT vocational labs, and comprehensive rural healthcare with 100% direct fund deployment.
+          </p>
+
+          <div class="hero-actions-row">
+            <button class="btn-vibrant-cta open-giving-modal">
+              <span class="btn-text">Support Foundation (80G Relief)</span>
+              <span class="btn-arrow">→</span>
+            </button>
+            <a href="#about-intro" class="btn-vibrant-outline">
+              <span class="btn-text">Explore Mission &amp; Impact</span>
+              <span class="btn-arrow">↓</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Showcase Frame with Floating Cards -->
+        <div class="hero-visual-column">
+          <div class="hero-visual-frame">
+            <div class="hero-image-box">
+              <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=85" alt="Indian rural children learning happily in classroom" class="hero-main-img">
+              <div class="hero-image-overlay-vibrant"></div>
+            </div>
+
+            <!-- Floating Card: Beneficiaries -->
+            <div class="floating-vibrant-card card-top-right">
+              <div class="badge-top-row">
+                <span class="badge-dot-live"></span>
+                <span class="badge-tag-purple">FIELD IMPACT REACH</span>
+              </div>
+              <div class="badge-number-big">
+                <span class="counter-figure" data-target="12500">12,500</span><span class="badge-plus-vibrant">+</span>
+              </div>
+              <p class="badge-desc">
+                Direct beneficiaries across rural Uttar Pradesh &amp; Northern India.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Interactive Background Video Indicator -->
+    <button class="hero-video-toggle-btn" id="hero-video-toggle" aria-label="Toggle Hero Background Video">
+      <span class="video-indicator-dot"></span>
+      <span class="video-toggle-label">PLAYING</span>
+    </button>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: CLEAN WHITE "GET TO KNOW US" (Architectural White Transition)
+       ========================================================================= -->
+  <section class="section-white-intro" id="about-intro">
+    <div class="container">
+      <div class="section-tag-vibrant">
+        + GET TO KNOW US
+      </div>
+
+      <!-- Kinetic Scroll Scrub Text -->
+      <div class="kinetic-scrub-container" id="kinetic-text">
+        <p class="kinetic-lead-paragraph">
+          Sarwe Unnati Foundation represents a disciplined paradigm in grassroots social development. Established under Section 8 of the Companies Act, 2013, we engineer sustainable, accountable interventions across foundational education, youth IT skilling, and rural healthcare throughout Uttar Pradesh and Northern India.
+        </p>
+      </div>
+
+      <!-- 4-Pillar Operation Bento Grid (Pastel Dreamland Tones) -->
+      <div class="hero-bento-grid">
+        <div class="bento-cell bento-education">
+          <div class="bento-badge">01 // EDUCATION</div>
+          <h4 class="bento-title">Shiksha Unnati</h4>
+          <p class="bento-desc">Universal schooling, backpacks, stationery kits, and remedial centers for 5,000+ students.</p>
+        </div>
+
+        <div class="bento-cell bento-tech">
+          <div class="bento-badge">02 // TECHNOLOGY</div>
+          <h4 class="bento-title">Kaushal Unnati</h4>
+          <p class="bento-desc">Dedicated computer IT labs, software training, and job-readiness bootcamps for youth.</p>
+        </div>
+
+        <div class="bento-cell bento-health">
+          <div class="bento-badge">03 // HEALTHCARE</div>
+          <h4 class="bento-title">Aarogya Unnati</h4>
+          <p class="bento-desc">Free mobile health camps, specialist doctor checkups, diagnostic tests, and medicine distribution.</p>
+        </div>
+
+        <div class="bento-cell bento-compliance">
+          <div class="bento-badge">04 // STATUTORY 80G</div>
+          <h4 class="bento-title">50% Tax Relief</h4>
+          <p class="bento-desc">100% tax-deductible donor contributions certified by the Income Tax Department under Section 80G.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: WARM PORCELAIN "NUMBERS BEHIND OUR VALUE" (Sticky Split)
+       ========================================================================= -->
+  <section class="section-cream-metrics" id="impact-metrics">
+    <div class="container metrics-sticky-wrapper">
+      <!-- Left Column (Sticky) -->
+      <div class="metrics-left-column">
+        <div class="section-tag-vibrant">
+          + NUMBERS BEHIND OUR VALUE
+        </div>
+        <h2 class="metrics-main-title">
+          Measuring Transformation Across Northern India.
+        </h2>
+        <p class="metrics-lead-text">
+          Every rupee deployed and every community reached is tracked against verifiable ground milestones. Our 7-year track record reflects an unwavering commitment to grassroots empowerment.
+        </p>
+        <div class="metrics-left-action">
+          <a href="impact.html" class="btn-vibrant-cta">
+            <span class="btn-text">Explore Audit Telemetry</span>
+            <span class="btn-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column (Stacked Cards with Images & Big Stats) -->
+      <div class="metrics-cards-stack">
+        <!-- Impact Card 1 -->
+        <div class="impact-stat-card">
+          <div class="card-stat-header">
+            <span class="stat-num-massive counter-figure" data-target="12500">12,500</span><span class="stat-plus-vibrant">+</span>
+          </div>
+          <h3 class="stat-card-title">Lives Directly Benefited</h3>
+          <p class="stat-card-desc">
+            Students enrolled, youth certified in digital IT labs, and rural families provided essential preventive medical care.
+          </p>
+          <div class="stat-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Children in classroom studying happily" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Impact Card 2 -->
+        <div class="impact-stat-card">
+          <div class="card-stat-header">
+            <span class="stat-num-massive counter-figure" data-target="7">7</span><span class="stat-plus-vibrant">+</span>
+          </div>
+          <h3 class="stat-card-title">Years of Active Ground Execution</h3>
+          <p class="stat-card-desc">
+            Continuously operating on the ground since formal legal incorporation on August 14, 2018 (RoC Kanpur).
+          </p>
+          <div class="stat-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Plantation and rural execution work" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Impact Card 3 -->
+        <div class="impact-stat-card">
+          <div class="card-stat-header">
+            <span class="stat-num-massive counter-figure" data-target="35">35</span><span class="stat-plus-vibrant">+</span>
+          </div>
+          <h3 class="stat-card-title">Medical &amp; Diagnostic Camps Executed</h3>
+          <p class="stat-card-desc">
+            Free physician consultations, eye screenings, vital diagnostics, and prescription medicines delivered directly to remote villages.
+          </p>
+          <div class="stat-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80" alt="Doctor providing free checkup in rural camp" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Impact Card 4 -->
+        <div class="impact-stat-card">
+          <div class="card-stat-header">
+            <span class="stat-num-massive counter-figure" data-target="100">100</span><span class="stat-plus-vibrant">%</span>
+          </div>
+          <h3 class="stat-card-title">Statutory Tax Relief on Contributions</h3>
+          <p class="stat-card-desc">
+            Section 80G (URN: AAECH6219BF20261) &amp; Section 12A (URN: AAECH6219BE20251) approved and verified.
+          </p>
+          <div class="stat-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80" alt="Legal and financial documents verification" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: LUMINOUS BRAND MANIFESTO CARD
+       ========================================================================= -->
+  <section class="section-manifesto-vibrant">
+    <div class="container">
+      <div class="manifesto-card-vibrant">
+        <div class="manifesto-tag-vibrant">
+          + OUR CHARTER &amp; CREED
+        </div>
+        <blockquote class="manifesto-quote-text">
+          &ldquo;<em>We do not believe in superficial charity. We engineer self-sustaining ground systems—equipping young minds with modern IT tools, healing remote communities through preventive care, and ensuring every single contribution is audited and deployed for maximum social yield.</em>&rdquo;
+        </blockquote>
+        <div class="manifesto-signoff">
+          <div class="signoff-names">PRIYESH GARG &amp; DIPESH GARG</div>
+          <div class="signoff-roles">DIRECTORS, SARWE UNNATI FOUNDATION &bull; CIN: U80902UP2018NPL106959</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: CORE VERTICALS SPOTLIGHT (Bright & Modern Cards)
+       ========================================================================= -->
+  <section class="section-verticals-vibrant" id="verticals">
+    <div class="container">
+      <div class="verticals-header-wrap">
+        <div>
+          <span class="section-tag-vibrant">+ WHAT WE DO &bull; CORE VERTICALS</span>
+          <h2 class="verticals-massive-title">Structured Ground Interventions.</h2>
+        </div>
+        <p class="verticals-lead-desc">
+          Engineered to create self-sustaining community ecosystems across Northern India. Every intervention is aligned with statutory Section 8 objectives.
+        </p>
+      </div>
+
+      <div class="spotlight-cards-grid">
+        <!-- Vertical 1: Shiksha Unnati -->
+        <article class="spotlight-card-vibrant">
+          <div class="spotlight-media">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Students in classroom learning" loading="lazy">
+          </div>
+          <div class="spotlight-body">
+            <div class="spotlight-body-top">
+              <span class="spotlight-idx-pill badge-pill-amber">[ 01 ] EDUCATION</span>
+              <h3 class="spotlight-card-title">Shiksha Unnati</h3>
+              <p class="spotlight-card-text">
+                Universal access to primary and secondary schooling. We provide complete backpacks, learning supplies, and run evening remedial centers for first-generation learners.
+              </p>
+            </div>
+            <a href="programs.html#education" class="spotlight-arrow-link">
+              <span>Explore Vertical Details</span>
+              <span class="arrow-ico">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Vertical 2: Kaushal Unnati -->
+        <article class="spotlight-card-vibrant">
+          <div class="spotlight-media">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Students learning computer skills in IT lab" loading="lazy">
+          </div>
+          <div class="spotlight-body">
+            <div class="spotlight-body-top">
+              <span class="spotlight-idx-pill badge-pill-purple">[ 02 ] TECHNOLOGY</span>
+              <h3 class="spotlight-card-title">Kaushal Unnati</h3>
+              <p class="spotlight-card-text">
+                Specialized digital and IT vocational training centers equipping underprivileged youth with practical computer hardware, networking, and software skills for immediate employment.
+              </p>
+            </div>
+            <a href="programs.html#skills" class="spotlight-arrow-link">
+              <span>Explore Vertical Details</span>
+              <span class="arrow-ico">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Vertical 3: Aarogya Unnati -->
+        <article class="spotlight-card-vibrant">
+          <div class="spotlight-media">
+            <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80" alt="Doctor conducting free medical camp" loading="lazy">
+          </div>
+          <div class="spotlight-body">
+            <div class="spotlight-body-top">
+              <span class="spotlight-idx-pill badge-pill-green">[ 03 ] HEALTHCARE</span>
+              <h3 class="spotlight-card-title">Aarogya Unnati</h3>
+              <p class="spotlight-card-text">
+                Mobile rural health camps bringing experienced doctors, vital screenings, clean drinking water drives, and free prescription drugs directly to remote hamlets.
+              </p>
+            </div>
+            <a href="programs.html#health" class="spotlight-arrow-link">
+              <span>Explore Vertical Details</span>
+              <span class="arrow-ico">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Vertical 4: Mahila Sashaktikaran -->
+        <article class="spotlight-card-vibrant">
+          <div class="spotlight-media">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Women vocational tailoring collective" loading="lazy">
+          </div>
+          <div class="spotlight-body">
+            <div class="spotlight-body-top">
+              <span class="spotlight-idx-pill badge-pill-rose">[ 04 ] EMPOWERMENT</span>
+              <h3 class="spotlight-card-title">Mahila Sashaktikaran</h3>
+              <p class="spotlight-card-text">
+                Establishing Self-Help Groups (SHGs), tailoring cooperatives, and financial literacy workshops to ensure women have independent earning power and financial autonomy.
+              </p>
+            </div>
+            <a href="programs.html#women" class="spotlight-arrow-link">
+              <span>Explore Vertical Details</span>
+              <span class="arrow-ico">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Vertical 5: Gramin Utthan -->
+        <article class="spotlight-card-vibrant">
+          <div class="spotlight-media">
+            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=80" alt="Rural community development" loading="lazy">
+          </div>
+          <div class="spotlight-body">
+            <div class="spotlight-body-top">
+              <span class="spotlight-idx-pill badge-pill-cyan">[ 05 ] RURAL</span>
+              <h3 class="spotlight-card-title">Gramin Utthan</h3>
+              <p class="spotlight-card-text">
+                Community infrastructure, village sanitation units, environmental tree plantation, and rapid disaster relief supplies for vulnerable rural clusters.
+              </p>
+            </div>
+            <a href="programs.html#rural" class="spotlight-arrow-link">
+              <span>Explore Vertical Details</span>
+              <span class="arrow-ico">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Vertical 6: Corporate CSR Alliances -->
+        <article class="spotlight-card-vibrant card-featured-csr">
+          <div class="spotlight-media">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Corporate architectural facade" loading="lazy">
+          </div>
+          <div class="spotlight-body">
+            <div class="spotlight-body-top">
+              <span class="spotlight-idx-pill csr-pill">[ 06 ] CSR ALLIANCE</span>
+              <h3 class="spotlight-card-title text-purple">CSR Partnerships</h3>
+              <p class="spotlight-card-text">
+                Partner with Sarwe Unnati Foundation under Schedule VII of the Companies Act, 2013 for audited CSR execution with real-time reporting and verifiable social metrics.
+              </p>
+            </div>
+            <a href="volunteer.html#fellowship" class="spotlight-arrow-link link-purple">
+              <span>Explore Volunteer Fellowship</span>
+              <span class="arrow-ico">→</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       SECTION 7: DIRECT CANARA BANK WIRE & MODERN BRIGHT FOOTER
+       ========================================================================= -->
+  <section class="section-wire-vibrant" id="wire-details">
+    <div class="container">
+      <div class="wire-grid-layout">
+        <div>
+          <span class="section-tag-vibrant">+ FINANCIAL TELEMETRY</span>
+          <h2 class="wire-massive-title">Direct Canara Bank Wire Transfer.</h2>
+          <p class="wire-lead-desc">
+            Direct funds via NEFT, RTGS, IMPS, or Net Banking straight to the foundation’s verified Canara Bank account. Zero intermediary commissions or platform cuts—100% of your contribution reaches the ground.
+          </p>
+
+          <div class="wire-features-list">
+            <div class="wire-feature-item">
+              <span class="feature-check">[ ✓ ]</span> Instant 80G tax receipt issued upon receipt of UTR reference
+            </div>
+            <div class="wire-feature-item">
+              <span class="feature-check">[ ✓ ]</span> Full audit trail visible in annual statutory balance sheets
+            </div>
+            <div class="wire-feature-item">
+              <span class="feature-check">[ ✓ ]</span> Schedule VII corporate CSR eligible partnerships
+            </div>
+          </div>
+
+          <div class="wire-cta-wrap">
+            <a href="donate.html" class="btn-vibrant-cta">
+              <span class="btn-text">Open Donation &amp; 80G Tax Portal</span>
+              <span class="btn-arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bank Passbook Card (Bright & Trustworthy) -->
+        <div class="bank-passbook-vibrant">
+          <div class="passbook-top">
+            <div>
+              <div class="bank-title">CANARA BANK</div>
+              <div class="bank-branch">SAHARANPUR COURT ROAD (02201), UTTAR PRADESH</div>
+            </div>
+            <span class="passbook-status-tag">VERIFIED SECTION 8 ACCOUNT</span>
+          </div>
+
+          <div class="passbook-data-list">
+            <!-- Account Holder -->
+            <div class="passbook-data-row">
+              <span class="data-label">BENEFICIARY NAME</span>
+              <div class="data-val-group">
+                <span class="data-val">SARWE UNNATI FOUNDATION</span>
+                <button class="btn-copy-chip" data-copy-target="SARWE UNNATI FOUNDATION">COPY</button>
+              </div>
+            </div>
+
+            <!-- Account Number -->
+            <div class="passbook-data-row">
+              <span class="data-label">ACCOUNT NUMBER</span>
+              <div class="data-val-group">
+                <span class="data-val val-highlight">2201201002013</span>
+                <button class="btn-copy-chip" data-copy-target="2201201002013">COPY</button>
+              </div>
+            </div>
+
+            <!-- IFSC Code -->
+            <div class="passbook-data-row">
+              <span class="data-label">IFSC CODE</span>
+              <div class="data-val-group">
+                <span class="data-val">CNRB0002201</span>
+                <button class="btn-copy-chip" data-copy-target="CNRB0002201">COPY</button>
+              </div>
+            </div>
+
+            <!-- Account Type -->
+            <div class="passbook-data-row">
+              <span class="data-label">ACCOUNT TYPE</span>
+              <span class="data-val">CURRENT ACCOUNT</span>
+            </div>
+
+            <!-- Foundation PAN -->
+            <div class="passbook-data-row">
+              <span class="data-label">FOUNDATION PAN</span>
+              <div class="data-val-group">
+                <span class="data-val">AAECH6219B</span>
+                <button class="btn-copy-chip" data-copy-target="AAECH6219B">COPY</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modern Bright & Deep Navy Footer -->
+  <footer class="site-modern-footer">
+    <div class="container">
+      <div class="footer-top-columns">
+        <!-- Col 1: Brand & Charter -->
+        <div class="footer-col-brand">
+          <div class="footer-brand-huge">SARWE UNNATI FOUNDATION</div>
+          <p class="footer-brand-p">
+            A government-certified Section 8 non-profit company (incorporated August 14, 2018) operating large-scale grassroots education, IT vocational skilling, and public health infrastructure across Northern India.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div>
+          <h4 class="footer-col-heading">NAVIGATION</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link-a">↳ Home</a></li>
+            <li><a href="about.html" class="footer-link-a">↳ About Us</a></li>
+            <li><a href="programs.html" class="footer-link-a">↳ Verticals</a></li>
+            <li><a href="impact.html" class="footer-link-a">↳ Impact &amp; Audit</a></li>
+            <li><a href="volunteer.html" class="footer-link-a">↳ Get Involved</a></li>
+            <li><a href="donate.html" class="footer-link-a">↳ 80G Donate</a></li>
+            <li><a href="contact.html" class="footer-link-a">↳ Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Verticals -->
+        <div>
+          <h4 class="footer-col-heading">SPECIALIZATIONS</h4>
+          <ul class="footer-links-list">
+            <li><a href="programs.html#education" class="footer-link-a">↳ Shiksha Unnati</a></li>
+            <li><a href="programs.html#skills" class="footer-link-a">↳ Kaushal Unnati</a></li>
+            <li><a href="programs.html#health" class="footer-link-a">↳ Aarogya Unnati</a></li>
+            <li><a href="programs.html#women" class="footer-link-a">↳ Women Autonomy</a></li>
+            <li><a href="programs.html#rural" class="footer-link-a">↳ Rural Welfare</a></li>
+            <li><a href="volunteer.html#fellowship" class="footer-link-a">↳ Volunteer Fellowship</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Registered Headquarters -->
+        <div>
+          <h4 class="footer-col-heading">REGISTERED OFFICE</h4>
+          <p class="footer-address-p">
+            House No. 119, Vaishali Vihar, Near Dharia Builder, Delhi Road, Saharanpur City, Saharanpur — 247001, Uttar Pradesh, India
+          </p>
+          <div class="footer-contact-details">
+            <div>PHONE: <strong class="gold-text">+91 99974 26815</strong></div>
+            <div>ALT: <strong>+91 99971 97236</strong></div>
+            <div>EMAIL: <strong>PRIYESH.CHANU@GMAIL.COM</strong></div>
+          </div>
+
+          <form id="newsletter-form" class="footer-newsletter-row">
+            <input type="email" placeholder="ENTER WORK EMAIL" required class="newsletter-input">
+            <button type="submit" class="btn-newsletter-join">JOIN</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Giant Watermark Title -->
+      <div class="footer-giant-watermark">
+        SARWE UNNATI
+      </div>
+
+      <div class="footer-copyright-bar">
+        <div>
+          &copy; 2026 SARWE UNNATI FOUNDATION. ALL RIGHTS RESERVED. DIRECTORS: PRIYESH GARG &amp; DIPESH GARG.
+        </div>
+        <div class="footer-legal-links">
+          <a href="about.html#legal">↳ Legal Disclosures</a>
+          <a href="donate.html#tax">↳ 80G Guidelines</a>
+          <a href="contact.html">↳ Grievance Redressal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Dialog: Direct Giving & Wire Details -->
+  <div class="modal-overlay-dark" id="giving-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-window-box">
+      <div class="modal-header-bar">
+        <h3 id="modal-title" class="modal-header-title">SUPPORT SARWE UNNATI FOUNDATION</h3>
+        <button class="modal-close-x close-modal-trigger" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-inner-content">
+        <div class="modal-alert-80g">
+          <span class="alert-title">[ 80G TAX DEDUCTIBLE CONTRIBUTION ]</span>
+          <span class="alert-badge">50% RELIEF</span>
+        </div>
+
+        <p class="modal-intro-text">
+          Direct your funds via NEFT, RTGS, IMPS, or Net Banking straight to the foundation’s verified Canara Bank account below:
+        </p>
+
+        <!-- Bank Details Table -->
+        <div class="modal-bank-box">
+          <div class="modal-bank-row">
+            <span class="m-label">BANK NAME</span>
+            <strong class="m-val">CANARA BANK</strong>
+          </div>
+          <div class="modal-bank-row">
+            <span class="m-label">BENEFICIARY</span>
+            <div class="m-val-group">
+              <strong class="m-val">SARWE UNNATI FOUNDATION</strong>
+              <button class="btn-copy-chip" data-copy-target="SARWE UNNATI FOUNDATION">COPY</button>
+            </div>
+          </div>
+          <div class="modal-bank-row">
+            <span class="m-label">ACCOUNT NUMBER</span>
+            <div class="m-val-group">
+              <strong class="m-val val-highlight" style="font-size:1.1rem;">2201201002013</strong>
+              <button class="btn-copy-chip" data-copy-target="2201201002013">COPY</button>
+            </div>
+          </div>
+          <div class="modal-bank-row">
+            <span class="m-label">IFSC CODE</span>
+            <div class="m-val-group">
+              <strong class="m-val">CNRB0002201</strong>
+              <button class="btn-copy-chip" data-copy-target="CNRB0002201">COPY</button>
+            </div>
+          </div>
+          <div class="modal-bank-row">
+            <span class="m-label">BRANCH</span>
+            <span class="m-val">COURT ROAD, SAHARANPUR, UP</span>
+          </div>
+        </div>
+
+        <div class="modal-receipt-box">
+          [ TO RECEIVE 80G RECEIPT ]<br>
+          Email your payment reference (UTR) along with your Full Name, Address, and PAN to <strong>priyesh.chanu@gmail.com</strong> or WhatsApp to <strong>+91 99974 26815</strong>.
+        </div>
+
+        <button class="btn-vibrant-cta close-modal-trigger" style="width:100%; justify-content:center;">
+          ACKNOWLEDGE &amp; CLOSE
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript Bundle -->
+  <script src="js/main.js"></script>
+</body>
+</html>

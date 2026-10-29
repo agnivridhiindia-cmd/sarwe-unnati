@@ -1,0 +1,35 @@
+Acknowledgement Number: 468749001250226 	Date of filing : 25-Feb-2026
+INDIAN INCOME TAX UPDATED RETURN ACKNOWLEDGEMENT
+[Where the data of the Updated Return of Income in Form ITR-1(SAHAJ), ITR-2, ITR-3,
+ITR-4(SUGAM), ITR-5, ITR-6, ITR-7 filed and verified]
+(Please see Rule 12 of the Income-tax Rules, 1962)
+Assessment Year
+2025-26
+PAN 	AAECH6219B
+Name 	SARWE UNNATI FOUNDATION
+Address 	1,LAL KOTHI , CHANDER NAGAR, CHANDER NAGAR, 31-31-Uttar Pradesh, SAHARANPUR, 91-91-INDIA, 247001
+Status 	Individual 	Form Number 	ITR-6
+Filed u/s 	139(8A)-Updated Return 	e-Filing Acknowledgement Number 	468749001250226
+Current Year business loss, if any 	1 	0
+Total Income as per Updated return 	2 	0
+Total Income as per earlier return 	3 	0
+Book Profit under MAT, where applicable as per Updated Return 	4 	3
+Adjusted Total Income under AMT, where applicable as per Updated Return 	5 	0
+Amount payable (+) / Refundable (-) as per Updated return 	6 	(+) 1,000
+Additional income-tax liability on updated income 	7 	0
+Net amount payable 	8 	1,000
+Tax paid u/s 140B 	9 	1,000
+Tax due (8-9) 	10 	0
+This 	return 	has 	been 	digitally 	signed 	by 	P R I Y E S H GARG 	in 	the 	capacity 	of
+Director 	having PAN 	AWGPG0828A 	from IP address 	103.157.151.36 	on 	25-
+Feb-2026 	19:11:56 	at 	BASTI 	(Place) 	DSC 	SI.No 	& 	Issuer 	7194828 	&
+146028984887070425995751735493035561672CN=ProDigiSign 	Sub 	CA 	DSC 	2022,OU=Certifying
+Authority,O=Professional DigiSign Pvt. Ltd.,C=IN
+System Generated
+Barcode/QR Code
+AAECH6219B0646874900125022654dd1c6814495b28aa45030ee99ed7070ed5ccc9
+DO NOT SEND THIS ACKNOWLEDGEMENT TO CPC, BENGALURU
+Taxable Income and Tax details
+
+-- 1 of 1 --
+

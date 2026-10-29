@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs &amp; Verticals | Sarwe Unnati Foundation</title>
+  <meta name="description" content="Explore the 5 core development verticals and CSR mandates of Sarwe Unnati Foundation: Shiksha Unnati, Kaushal Unnati, Aarogya Unnati, Mahila Sashaktikaran, and Gramin Utthan.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="light-theme">
+
+  <div class="scroll-progress-bar" id="scroll-progress"></div>
+
+  <!-- Architectural Navbar -->
+  <header class="main-navbar" id="site-header">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-brand" aria-label="Sarwe Unnati Foundation">
+        <div class="brand-emblem-vibrant">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+            <polyline points="2 17 12 22 22 17"/>
+            <polyline points="2 12 12 17 22 12"/>
+          </svg>
+        </div>
+        <div class="brand-title-wrap">
+          <span class="brand-title-main">SARWE UNNATI</span>
+          <span class="brand-title-sub">FOUNDATION &bull; ESTD. 2018</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link-item">Home</a>
+        <a href="about.html" class="nav-link-item">About Foundation</a>
+        <a href="programs.html" class="nav-link-item active">Programs &amp; Verticals</a>
+        <a href="impact.html" class="nav-link-item">Impact &amp; Audits</a>
+        <a href="volunteer.html" class="nav-link-item">Get Involved</a>
+        <a href="contact.html" class="nav-link-item">Contact</a>
+      </nav>
+
+      <div class="nav-actions-wrap">
+        <button class="btn-vibrant-gradient open-giving-modal" aria-label="Support the foundation">
+          <span class="btn-text">Support Mission [80G]</span>
+          <span class="btn-arrow">→</span>
+        </button>
+        <button class="mobile-menu-btn" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <div class="brand-title-wrap">
+        <span class="brand-title-main">SARWE UNNATI</span>
+        <span class="brand-title-sub">SECTION 8 NON-PROFIT</span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close">&times;</button>
+    </div>
+    <div class="drawer-links-wrap">
+      <a href="index.html" class="drawer-link">01 // Home</a>
+      <a href="about.html" class="drawer-link">02 // About the Foundation</a>
+      <a href="programs.html" class="drawer-link active">03 // Program Verticals</a>
+      <a href="impact.html" class="drawer-link">04 // Impact &amp; Audit Reports</a>
+      <a href="volunteer.html" class="drawer-link">05 // CSR &amp; Involvement</a>
+      <a href="contact.html" class="drawer-link">06 // Contact Headquarters</a>
+    </div>
+    <div class="drawer-footer">
+      <button class="btn-vibrant-gradient open-giving-modal" style="width:100%;">
+        Direct Bank Wire (80G Relief)
+      </button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="section-hero-vibrant" style="min-height: auto; padding: 5rem 0 4rem;">
+    <div class="aurora-orb aurora-orb-1"></div>
+    <div class="aurora-orb aurora-orb-3"></div>
+    
+    <div class="container" style="position: relative; z-index: 2;">
+      <div style="max-width: 850px;">
+        <div class="hero-badge-pill">
+          <span class="pill-sparkle">🚀</span>
+          <span class="pill-text">GROUND INTERVENTIONS &bull; 5 CORE PILLARS</span>
+        </div>
+        <h1 class="hero-vibrant-title" style="font-size: clamp(2.6rem, 4.5vw, 4.2rem);">
+          Five Strategic Verticals.<br>
+          <span class="vibrant-gradient-text">One Unified Vision of Empowerment.</span>
+        </h1>
+        <p class="hero-vibrant-lede">
+          From grassroots primary classrooms to vocational computer laboratories and village preventive medical clinics, our programs are engineered to build self-sustaining community resilience.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep Dive Verticals (Detailed Interactive Sections) -->
+  <!-- Vertical 1: Shiksha Unnati -->
+  <section class="section-tint-sky" id="education" style="padding: 6rem 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: #B45309; background: #FEF3C7; display: inline-block; padding: 0.35rem 0.8rem; border-radius: 4px; margin-bottom: 1.25rem;">
+            VERTICAL 01 &bull; FOUNDATIONAL EDUCATION
+          </div>
+          <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.2vw, 2.75rem); font-weight: 800; margin-bottom: 1.25rem; line-height: 1.15;">
+            Shiksha Unnati: Universal Schooling &amp; Learning Kits.
+          </h2>
+          <p style="font-size: 1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 1.5rem;">
+            Quality early education is the bedrock of social mobility. Shiksha Unnati delivers foundational literacy, distributes complete study kits (stationery, backpacks, textbooks), and runs community remedial study centers in remote hamlets where first-generation learners require focused academic support.
+          </p>
+          <div style="background: #FFFFFF; border: 1.5px solid var(--border-light); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; box-shadow: var(--shadow-sm);">
+            <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; font-weight: 600; color: var(--text-dark);">
+              <span style="color: var(--vibrant-green-dark);">✓</span> 5,000+ students supported with complete study kits
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; font-weight: 600; color: var(--text-dark);">
+              <span style="color: var(--vibrant-green-dark);">✓</span> Evening remedial study centers with trained local educators
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; font-weight: 600; color: var(--text-dark);">
+              <span style="color: var(--vibrant-green-dark);">✓</span> Parent-teacher counseling for dropout prevention
+            </div>
+          </div>
+          <button class="btn-vibrant-gradient open-giving-modal">
+            Sponsor a Student's Education (80G) →
+          </button>
+        </div>
+        <div style="border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg); border: 2px solid #FFFFFF;">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=85" alt="Students learning in classroom" style="width: 100%; height: 420px; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vertical 2: Kaushal Unnati -->
+  <section class="section-tint-lilac" id="skills" style="padding: 6rem 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div style="order: 2;">
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: #7E22CE; background: #F3E8FF; display: inline-block; padding: 0.35rem 0.8rem; border-radius: 4px; margin-bottom: 1.25rem;">
+            VERTICAL 02 &bull; TECHNOLOGY &amp; IT SKILLING
+          </div>
+          <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.2vw, 2.75rem); font-weight: 800; margin-bottom: 1.25rem; line-height: 1.15;">
+            Kaushal Unnati: Digital Labs &amp; Youth Employment.
+          </h2>
+          <p style="font-size: 1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 1.5rem;">
+            In an increasingly digital economy, lack of computer access limits rural youth to low-wage manual labor. Kaushal Unnati establishes modern computer labs equipped with hardware, internet, and structured curricula spanning basic computing, office software, networking, and digital literacy.
+          </p>
+          <div style="background: #FFFFFF; border: 1.5px solid var(--border-light); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; box-shadow: var(--shadow-sm);">
+            <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; font-weight: 600; color: var(--text-dark);">
+              <span style="color: var(--vibrant-purple);">✓</span> Practical IT labs established across semi-urban clusters
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; font-weight: 600; color: var(--text-dark);">
+              <span style="color: var(--vibrant-purple);">✓</span> 1,200+ rural youth certified in vocational computing
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; font-weight: 600; color: var(--text-dark);">
+              <span style="color: var(--vibrant-purple);">✓</span> Resume assistance, mock interviews, and regional job placement
+            </div>
+          </div>
+          <button class="btn-vibrant-gradient open-giving-modal">
+            Sponsor a Computer Lab Seat →
+          </button>
+        </div>
+        <div style="order: 1; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg); border: 2px solid #FFFFFF;">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1000&q=85" alt="Students in IT laboratory" style="width: 100%; height: 420px; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vertical 3: Aarogya Unnati -->
+  <section class="section-tint-pink" id="health" style="padding: 6rem 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: #047857; background: #D1FAE5; display: inline-block; padding: 0.35rem 0.8rem; border-radius: 4px; margin-bottom: 1.25rem;">
+            VERTICAL 03 &bull; HEALTHCARE &amp; MEDICINE
+          </div>
+          <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.2vw, 2.75rem); font-weight: 800; margin-bottom: 1.25rem; line-height: 1.15;">
+            Aarogya Unnati: Rural Clinics &amp; Preventive Health.
+          </h2>
+          <p style="font-size: 1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 1.5rem;">
+            Preventable diseases cause severe financial strain on underprivileged families. Aarogya Unnati organizes mobile diagnostic camps led by verified physicians—providing free blood tests, eye screenings, pediatric checkups, and prescription medicine distributions directly in remote villages.
+          </p>
+          <div style="background: #FFFFFF; border: 1.5px solid var(--border-light); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; box-shadow: var(--shadow-sm);">
+            <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; font-weight: 600; color: var(--text-dark);">
+              <span style="color: var(--vibrant-green-dark);">✓</span> 35+ full-scale rural medical camps conducted
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; font-weight: 600; color: var(--text-dark);">
+              <span style="color: var(--vibrant-green-dark);">✓</span> Free consultation, basic diagnostics, and prescription medicines
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; font-weight: 600; color: var(--text-dark);">
+              <span style="color: var(--vibrant-green-dark);">✓</span> Clean drinking water drives and seasonal hygiene awareness
+            </div>
+          </div>
+          <button class="btn-vibrant-gradient open-giving-modal">
+            Support a Rural Health Camp →
+          </button>
+        </div>
+        <div style="border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg); border: 2px solid #FFFFFF;">
+          <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1000&q=85" alt="Medical screening camp" style="width: 100%; height: 420px; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vertical 4: Mahila Sashaktikaran -->
+  <section class="section-tint-candy" id="women" style="padding: 6rem 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div style="order: 2;">
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: #BE123C; background: #FFE4E6; display: inline-block; padding: 0.35rem 0.8rem; border-radius: 4px; margin-bottom: 1.25rem;">
+            VERTICAL 04 &bull; WOMEN EMPOWERMENT
+          </div>
+          <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.2vw, 2.75rem); font-weight: 800; margin-bottom: 1.25rem; line-height: 1.15;">
+            Mahila Sashaktikaran: Self-Help Groups &amp; Micro-Enterprise.
+          </h2>
+          <p style="font-size: 1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 1.5rem;">
+            When women earn, entire communities transform. We establish tailoring cooperatives, provide sewing machines, teach financial literacy and basic accounting, and organize women into Self-Help Groups (SHGs) to achieve financial independence.
+          </p>
+          <div style="background: #FFFFFF; border: 1.5px solid var(--border-light); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; box-shadow: var(--shadow-sm);">
+            <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; font-weight: 600; color: var(--text-dark);">
+              <span style="color: #BE123C;">✓</span> Tailoring &amp; embroidery centers with modern sewing units
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; font-weight: 600; color: var(--text-dark);">
+              <span style="color: #BE123C;">✓</span> Financial literacy, bank account opening, and micro-savings
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; font-weight: 600; color: var(--text-dark);">
+              <span style="color: #BE123C;">✓</span> Direct market linkage for artisanal handmade products
+            </div>
+          </div>
+          <button class="btn-vibrant-gradient open-giving-modal">
+            Empower a Women's Cooperative →
+          </button>
+        </div>
+        <div style="order: 1; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg); border: 2px solid #FFFFFF;">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=85" alt="Women vocational tailoring collective" style="width: 100%; height: 420px; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vertical 5: Gramin Utthan -->
+  <section class="section-tint-cerulean" id="rural" style="padding: 6rem 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: #0369A1; background: #E0F2FE; display: inline-block; padding: 0.35rem 0.8rem; border-radius: 4px; margin-bottom: 1.25rem;">
+            VERTICAL 05 &bull; RURAL WELFARE &amp; ENVIRONMENT
+          </div>
+          <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.2vw, 2.75rem); font-weight: 800; margin-bottom: 1.25rem; line-height: 1.15;">
+            Gramin Utthan: Village Infrastructure &amp; Plantation.
+          </h2>
+          <p style="font-size: 1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 1.5rem;">
+            Grassroots development requires resilient infrastructure. Gramin Utthan undertakes environmental tree plantation drives, community sanitation improvements, solar lighting installations, and emergency relief distribution during severe weather and floods.
+          </p>
+          <div style="background: #FFFFFF; border: 1.5px solid var(--border-light); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; box-shadow: var(--shadow-sm);">
+            <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; font-weight: 600; color: var(--text-dark);">
+              <span style="color: #0369A1;">✓</span> 15,000+ native saplings planted across rural greening corridors
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; font-weight: 600; color: var(--text-dark);">
+              <span style="color: #0369A1;">✓</span> Village sanitation units and clean community water stations
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; font-weight: 600; color: var(--text-dark);">
+              <span style="color: #0369A1;">✓</span> Disaster relief kits with dry rations, blankets, and hygiene supplies
+            </div>
+          </div>
+          <button class="btn-vibrant-gradient open-giving-modal">
+            Support Rural Infrastructure →
+          </button>
+        </div>
+        <div style="border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg); border: 2px solid #FFFFFF;">
+          <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1000&q=85" alt="Community tree plantation" style="width: 100%; height: 420px; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modern Bright & Deep Navy Footer -->
+  <footer class="site-modern-footer">
+    <div class="container">
+      <div class="footer-top-columns">
+        <div class="footer-col-brand">
+          <div class="footer-brand-huge">SARWE UNNATI FOUNDATION</div>
+          <p class="footer-brand-p">
+            A government-certified Section 8 non-profit company (incorporated August 14, 2018) operating large-scale grassroots education, IT vocational skilling, and public health infrastructure across Northern India.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-heading">NAVIGATION</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link-a">↳ Home</a></li>
+            <li><a href="about.html" class="footer-link-a">↳ About Us</a></li>
+            <li><a href="programs.html" class="footer-link-a">↳ Verticals</a></li>
+            <li><a href="impact.html" class="footer-link-a">↳ Impact &amp; Audit</a></li>
+            <li><a href="volunteer.html" class="footer-link-a">↳ Get Involved</a></li>
+            <li><a href="donate.html" class="footer-link-a">↳ 80G Donate</a></li>
+            <li><a href="contact.html" class="footer-link-a">↳ Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-heading">SPECIALIZATIONS</h4>
+          <ul class="footer-links-list">
+            <li><a href="programs.html#education" class="footer-link-a">↳ Shiksha Unnati</a></li>
+            <li><a href="programs.html#skills" class="footer-link-a">↳ Kaushal Unnati</a></li>
+            <li><a href="programs.html#health" class="footer-link-a">↳ Aarogya Unnati</a></li>
+            <li><a href="programs.html#women" class="footer-link-a">↳ Women Autonomy</a></li>
+            <li><a href="programs.html#rural" class="footer-link-a">↳ Rural Welfare</a></li>
+            <li><a href="volunteer.html#fellowship" class="footer-link-a">↳ Volunteer Fellowship</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-heading">REGISTERED OFFICE</h4>
+          <p class="footer-address-p">
+            House No. 119, Vaishali Vihar, Near Dharia Builder, Delhi Road, Saharanpur City, Saharanpur — 247001, Uttar Pradesh, India
+          </p>
+          <div class="footer-contact-details">
+            <div>PHONE: <strong class="gold-text">+91 99974 26815</strong></div>
+            <div>ALT: <strong>+91 99971 97236</strong></div>
+            <div>EMAIL: <strong>PRIYESH.CHANU@GMAIL.COM</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-giant-watermark">
+        SARWE UNNATI
+      </div>
+
+      <div class="footer-copyright-bar">
+        <div>
+          &copy; 2026 SARWE UNNATI FOUNDATION. ALL RIGHTS RESERVED. DIRECTORS: PRIYESH GARG &amp; DIPESH GARG.
+        </div>
+        <div class="footer-legal-links">
+          <a href="about.html#legal">↳ Legal Disclosures</a>
+          <a href="donate.html#tax">↳ 80G Guidelines</a>
+          <a href="contact.html">↳ Grievance Redressal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Dialog -->
+  <div class="modal-overlay-dark" id="giving-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-window-box">
+      <div class="modal-header-bar">
+        <h3 id="modal-title" class="modal-header-title">SUPPORT SARWE UNNATI FOUNDATION</h3>
+        <button class="modal-close-x close-modal-trigger">&times;</button>
+      </div>
+      <div class="modal-inner-content">
+        <div class="modal-alert-80g">
+          <span class="alert-title">[ 80G TAX DEDUCTIBLE CONTRIBUTION ]</span>
+          <span class="alert-badge">50% RELIEF</span>
+        </div>
+        <div class="modal-bank-box">
+          <div class="modal-bank-row">
+            <span class="m-label">BANK NAME</span>
+            <strong class="m-val">CANARA BANK</strong>
+          </div>
+          <div class="modal-bank-row">
+            <span class="m-label">BENEFICIARY</span>
+            <strong class="m-val">SARWE UNNATI FOUNDATION</strong>
+          </div>
+          <div class="modal-bank-row">
+            <span class="m-label">ACCOUNT NUMBER</span>
+            <strong class="m-val val-highlight">2201201002013</strong>
+          </div>
+          <div class="modal-bank-row">
+            <span class="m-label">IFSC CODE</span>
+            <strong class="m-val">CNRB0002201</strong>
+          </div>
+          <div class="modal-bank-row">
+            <span class="m-label">BRANCH</span>
+            <span class="m-val">COURT ROAD, SAHARANPUR, UP</span>
+          </div>
+        </div>
+        <button class="btn-vibrant-cta close-modal-trigger" style="width:100%; justify-content:center;">
+          ACKNOWLEDGE &amp; CLOSE
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 100" width="540" height="100" fill="none">
+  <defs>
+    <linearGradient id="goldGradientW" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD24D"/>
+      <stop offset="100%" stop-color="#EAAA00"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(12, 12)">
+    <polygon points="38,4 68,4 82,18 82,48 68,62 38,62 24,48 24,18" fill="#18181B" stroke="#EAAA00" stroke-width="2"/>
+    <path d="M53 14 L68 28 L53 42 L38 28 Z" fill="url(#goldGradientW)"/>
+    <circle cx="53" cy="28" r="4" fill="#09090B"/>
+    <rect x="32" y="48" width="42" height="5" rx="2.5" fill="#EAAA00"/>
+  </g>
+
+  <text x="110" y="48" font-family="'Anton', sans-serif" font-size="34" font-weight="900" fill="#FFFFFF" letter-spacing="2">SARWE UNNATI</text>
+  <text x="112" y="70" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#EAAA00" letter-spacing="3.5">FOUNDATION • EST. 2018</text>
+  <text x="112" y="85" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="500" fill="#DDE3E8" letter-spacing="0.5">SEC. 8 NON-PROFIT | ROC KANPUR | 80G &amp; 12A CERTIFIED</text>
+</svg>
