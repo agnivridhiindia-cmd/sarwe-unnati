@@ -17,14 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. SCROLL PROGRESS INDICATOR & NAVBAR SHADOW
+   1. SCROLL PROGRESS INDICATOR & DYNAMIC NAVBAR SLIDE-IN
+   Navbar remains hidden while on the hero section and smoothly slides down
+   into view once the user scrolls / slides down.
    ========================================================================== */
 function setupScrollProgress() {
   const progressBar = document.getElementById('scroll-progress');
   const navbar = document.getElementById('site-header');
 
-  window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
+  function updateNavbarVisibility() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
 
@@ -33,15 +35,18 @@ function setupScrollProgress() {
     }
 
     if (navbar) {
-      if (scrollTop > 30) {
-        navbar.style.boxShadow = '0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 4px 10px -2px rgba(124, 58, 237, 0.04)';
-        navbar.style.borderBottomColor = '#CBD5E1';
+      // Hidden on hero section (scrollTop <= 80px), reveals with smooth slide-down when user slides down
+      if (scrollTop > 80) {
+        navbar.classList.add('nav-visible');
       } else {
-        navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.03)';
-        navbar.style.borderBottomColor = '#E2E8F0';
+        navbar.classList.remove('nav-visible');
       }
     }
-  }, { passive: true });
+  }
+
+  window.addEventListener('scroll', updateNavbarVisibility, { passive: true });
+  // Initialize state on page load
+  updateNavbarVisibility();
 }
 
 /* ==========================================================================
