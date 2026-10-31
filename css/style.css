@@ -2539,3 +2539,429 @@ img {
     gap: 1rem !important;
   }
 }
+
+/* ==========================================================================
+   PREMIUM IMPACT & AUDIT CARDS SYSTEM
+   ========================================================================== */
+
+/* 1. Core Metrics Grid */
+.impact-metrics-modern-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.25rem;
+}
+
+.impact-metric-card-premium {
+  position: relative;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(226, 232, 240, 0.85);
+  border-radius: 22px;
+  padding: 2.5rem 2.25rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.06), 0 4px 6px -2px rgba(15, 23, 42, 0.02);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Iridescent specular light sweep on hover */
+.impact-metric-card-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.7) 50%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  transition: left 0.85s ease;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Ambient subtle background aura */
+.impact-metric-card-premium::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  opacity: 0.12;
+  filter: blur(40px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.impact-metric-card-premium:hover {
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.14), 0 0 35px var(--card-glow, rgba(205, 180, 219, 0.25));
+  border-color: var(--card-border, var(--pastel-lilac));
+}
+
+.impact-metric-card-premium:hover::before {
+  left: 170%;
+}
+
+.impact-metric-card-premium:hover::after {
+  opacity: 0.25;
+  transform: scale(1.3);
+}
+
+/* Card Accent Themes */
+.impact-theme-amber {
+  --card-glow: rgba(245, 158, 11, 0.25);
+  --card-border: #FCD34D;
+  --accent-color: #B45309;
+  --accent-light: #FEF3C7;
+}
+.impact-theme-amber::after { background: #F59E0B; }
+
+.impact-theme-purple {
+  --card-glow: rgba(147, 51, 234, 0.25);
+  --card-border: var(--pastel-lilac);
+  --accent-color: #7E22CE;
+  --accent-light: #F3E8FF;
+}
+.impact-theme-purple::after { background: #A855F7; }
+
+.impact-theme-emerald {
+  --card-glow: rgba(16, 185, 129, 0.25);
+  --card-border: #A7F3D0;
+  --accent-color: #047857;
+  --accent-light: #D1FAE5;
+}
+.impact-theme-emerald::after { background: #10B981; }
+
+.impact-theme-cerulean {
+  --card-glow: rgba(14, 165, 233, 0.25);
+  --card-border: var(--pastel-sky-soft);
+  --accent-color: #0284C7;
+  --accent-light: #E0F2FE;
+}
+.impact-theme-cerulean::after { background: #0EA5E9; }
+
+.impact-theme-rose {
+  --card-glow: rgba(244, 63, 94, 0.25);
+  --card-border: #FECDD3;
+  --accent-color: #BE123C;
+  --accent-light: #FFE4E6;
+}
+.impact-theme-rose::after { background: #F43F5E; }
+
+.impact-theme-indigo {
+  --card-glow: rgba(99, 102, 241, 0.25);
+  --card-border: #C7D2FE;
+  --accent-color: #4338CA;
+  --accent-light: #EEF2FF;
+}
+.impact-theme-indigo::after { background: #6366F1; }
+
+/* Metric Card Header */
+.metric-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.75rem;
+}
+
+.metric-icon-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease;
+}
+
+.impact-metric-card-premium:hover .metric-icon-badge {
+  transform: scale(1.1) rotate(4deg);
+}
+
+.metric-verified-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  background: var(--accent-light);
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.live-green-pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #10B981;
+  box-shadow: 0 0 6px #10B981;
+}
+
+/* Metric Number & Content */
+.metric-number-wrap {
+  margin-bottom: 0.65rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.15rem;
+}
+
+.metric-giant-number {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 3.8vw, 3.6rem);
+  font-weight: 800;
+  color: var(--accent-color);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.metric-plus-sign {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  line-height: 1;
+}
+
+.metric-card-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.metric-card-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+}
+
+/* Metric Telemetry Footer */
+.metric-telemetry-footer {
+  padding-top: 1.25rem;
+  border-top: 1px dashed rgba(226, 232, 240, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+.metric-progress-line {
+  flex-grow: 1;
+  margin: 0 1rem;
+  height: 4px;
+  background: #F1F5F9;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.metric-progress-fill {
+  height: 100%;
+  background: var(--accent-color);
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   2. STATUTORY CERTIFICATE REPOSITORY CARDS (Cryptographic Vault Style)
+   ========================================================================== */
+.statutory-vault-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.statutory-vault-card {
+  position: relative;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(226, 232, 240, 0.95);
+  border-radius: 20px;
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.05);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+  overflow: hidden;
+}
+
+/* Subtle guilloche security pattern watermark */
+.statutory-vault-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle, rgba(205, 180, 219, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+.statutory-vault-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--pastel-lilac);
+  box-shadow: 0 25px 50px -12px rgba(126, 34, 206, 0.18), 0 0 20px rgba(162, 210, 255, 0.2);
+}
+
+.statutory-vault-card:hover::before {
+  transform: scale(1.8);
+}
+
+.vault-card-authority-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #7E22CE;
+  background: #F3E8FF;
+  border: 1px solid rgba(205, 180, 219, 0.6);
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.04em;
+  width: fit-content;
+}
+
+.vault-icon-stamp {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #F8FAFC;
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease;
+}
+
+.statutory-vault-card:hover .vault-icon-stamp {
+  transform: scale(1.1);
+}
+
+.vault-card-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.vault-code-chip-box {
+  background: #F8FAFC;
+  border: 1px solid rgba(203, 213, 225, 0.8);
+  border-radius: 8px;
+  padding: 0.55rem 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 0.85rem 0 1.25rem;
+  transition: all 0.25s ease;
+}
+
+.vault-code-chip-box:hover {
+  background: #FFFFFF;
+  border-color: #7E22CE;
+  box-shadow: 0 4px 12px rgba(126, 34, 206, 0.1);
+}
+
+.vault-code-text {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E293B;
+  word-break: break-all;
+}
+
+.vault-copy-btn {
+  background: #FFFFFF;
+  border: 1px solid rgba(203, 213, 225, 0.9);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #7E22CE;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.vault-copy-btn:hover {
+  background: #7E22CE;
+  color: #FFFFFF;
+  border-color: #7E22CE;
+  transform: translateY(-1px);
+}
+
+.vault-card-desc {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.vault-status-footer {
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(226, 232, 240, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vault-verified-pill {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #047857;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Responsive Grids */
+@media (max-width: 1100px) {
+  .impact-metrics-modern-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .statutory-vault-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .impact-metrics-modern-grid {
+    grid-template-columns: 1fr;
+  }
+  .statutory-vault-grid {
+    grid-template-columns: 1fr;
+  }
+}
