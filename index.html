@@ -136,26 +136,86 @@
           </div>
         </div>
 
-        <!-- Right Column: Visual Showcase Frame with Floating Cards -->
+        <!-- Right Column: Visual Showcase Frame with Dynamic Hero Slideshow -->
         <div class="hero-visual-column">
           <div class="hero-visual-frame">
-            <div class="hero-image-box">
-              <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=85" alt="Indian rural children learning happily in classroom" class="hero-main-img">
-              <div class="hero-image-overlay-vibrant"></div>
-            </div>
+            <div class="hero-image-box" id="hero-slideshow-box" aria-label="Sarwe Unnati Foundation Field Work Slideshow">
+              <div class="hero-slideshow-track">
+                <!-- Slide 01: Education -->
+                <div class="hero-slide active">
+                  <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=85" alt="Indian rural children learning happily in classroom" class="hero-slide-img" loading="eager">
+                  <div class="hero-slide-caption">
+                    <span class="slide-tag">SHIKSHA UNNATI</span>
+                    <span class="slide-title">Primary Education &amp; Remedial Schooling</span>
+                  </div>
+                </div>
 
-            <!-- Floating Card: Beneficiaries -->
-            <div class="floating-vibrant-card card-top-right">
-              <div class="badge-top-row">
-                <span class="badge-dot-live"></span>
-                <span class="badge-tag-purple">FIELD IMPACT REACH</span>
+                <!-- Slide 02: IT Lab -->
+                <div class="hero-slide">
+                  <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=85" alt="Youth learning computer skills in digital literacy lab" class="hero-slide-img" loading="lazy">
+                  <div class="hero-slide-caption">
+                    <span class="slide-tag">KAUSHAL UNNATI</span>
+                    <span class="slide-title">IT &amp; Computer Vocational Labs</span>
+                  </div>
+                </div>
+
+                <!-- Slide 03: Classroom School Kits -->
+                <div class="hero-slide">
+                  <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=85" alt="Students engaged in active classroom learning" class="hero-slide-img" loading="lazy">
+                  <div class="hero-slide-caption">
+                    <span class="slide-tag">FOUNDATIONAL LEARNING</span>
+                    <span class="slide-title">Free Textbooks &amp; School Kits</span>
+                  </div>
+                </div>
+
+                <!-- Slide 04: Healthcare -->
+                <div class="hero-slide">
+                  <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1200&q=85" alt="Doctor providing free checkup in rural medical camp" class="hero-slide-img" loading="lazy">
+                  <div class="hero-slide-caption">
+                    <span class="slide-tag">AAROGYA UNNATI</span>
+                    <span class="slide-title">Preventive Health Camps &amp; Medicine</span>
+                  </div>
+                </div>
+
+                <!-- Slide 05: Women Empowerment -->
+                <div class="hero-slide">
+                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=85" alt="Women in vocational tailoring and self-reliance cooperative" class="hero-slide-img" loading="lazy">
+                  <div class="hero-slide-caption">
+                    <span class="slide-tag">WOMEN AUTONOMY</span>
+                    <span class="slide-title">Vocational Skilling &amp; Livelihoods</span>
+                  </div>
+                </div>
+
+                <!-- Slide 06: Rural Welfare & Ecology -->
+                <div class="hero-slide">
+                  <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=85" alt="Community tree plantation and rural ecological development" class="hero-slide-img" loading="lazy">
+                  <div class="hero-slide-caption">
+                    <span class="slide-tag">GRAMIN UTTHAN</span>
+                    <span class="slide-title">Tree Plantation &amp; Rural Development</span>
+                  </div>
+                </div>
+
+                <!-- Slide 07: Volunteer Fellowship -->
+                <div class="hero-slide">
+                  <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1200&q=85" alt="Dedicated community volunteers collaborating in field fellowship" class="hero-slide-img" loading="lazy">
+                  <div class="hero-slide-caption">
+                    <span class="slide-tag">GROUND FELLOWSHIP</span>
+                    <span class="slide-title">Student &amp; Professional Volunteers</span>
+                  </div>
+                </div>
               </div>
-              <div class="badge-number-big">
-                <span class="counter-figure" data-target="12500">12,500</span><span class="badge-plus-vibrant">+</span>
+
+              <!-- Vignette Overlay -->
+              <div class="hero-image-overlay-vibrant"></div>
+
+              <!-- Slideshow Navigation Dots -->
+              <div class="hero-slideshow-indicators" id="hero-slideshow-dots" aria-label="Slideshow pagination"></div>
+
+              <!-- Live Slideshow Counter Badge -->
+              <div class="hero-slide-counter-badge">
+                <span class="pulse-slide-dot"></span>
+                <span id="hero-slide-counter">01 / 07</span>
               </div>
-              <p class="badge-desc">
-                Direct beneficiaries across rural Uttar Pradesh &amp; Northern India.
-              </p>
             </div>
           </div>
         </div>

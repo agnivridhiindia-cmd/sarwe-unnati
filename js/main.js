@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupClipboardCopy();
   setupNewsletter();
   setupHeroVideoPlayback();
+  setupHeroSlideshow();
 });
 
 /* ==========================================================================
@@ -382,4 +383,100 @@ function setupHeroVideoPlayback() {
       }
     });
   }
+}
+
+/* ==========================================================================
+   9. HERO IMAGE SLIDESHOW (Cycles Pictures Smoothly Every 1.5 Seconds)
+   ========================================================================== */
+function setupHeroSlideshow() {
+  const slideshowBox = document.getElementById('hero-slideshow-box');
+  if (!slideshowBox) return;
+
+  const slides = slideshowBox.querySelectorAll('.hero-slide');
+  const dotsContainer = document.getElementById('hero-slideshow-dots');
+  const counterSpan = document.getElementById('hero-slide-counter');
+  if (!slides || slides.length === 0) return;
+
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+  const intervalMs = 1500; // Exact 1.5 seconds per user specification
+  let slideTimer = null;
+
+  // Render clickable pagination dots
+  if (dotsContainer) {
+    dotsContainer.innerHTML = '';
+    slides.forEach((_, idx) => {
+      const dot = document.createElement('button');
+      dot.className = `slideshow-dot ${idx === 0 ? 'active' : ''}`;
+      dot.setAttribute('aria-label', `View slide ${idx + 1}`);
+      dot.addEventListener('click', (e) => {
+        e.stopPropagation();
+        goToSlide(idx);
+        restartTimer();
+      });
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  function updateSlide(newIndex) {
+    slides.forEach((slide, idx) => {
+      if (idx === newIndex) {
+        slide.classList.add('active');
+      } else {
+        slide.classList.remove('active');
+      }
+    });
+
+    if (dotsContainer) {
+      const dots = dotsContainer.querySelectorAll('.slideshow-dot');
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === newIndex);
+      });
+    }
+
+    if (counterSpan) {
+      counterSpan.textContent = `${String(newIndex + 1).padStart(2, '0')} / ${String(totalSlides).padStart(2, '0')}`;
+    }
+
+    currentIndex = newIndex;
+  }
+
+  function nextSlide() {
+    const nextIdx = (currentIndex + 1) % totalSlides;
+    updateSlide(nextIdx);
+  }
+
+  function goToSlide(idx) {
+    updateSlide(idx);
+  }
+
+  function startTimer() {
+    if (!slideTimer) {
+      slideTimer = setInterval(nextSlide, intervalMs);
+    }
+  }
+
+  function stopTimer() {
+    if (slideTimer) {
+      clearInterval(slideTimer);
+      slideTimer = null;
+    }
+  }
+
+  function restartTimer() {
+    stopTimer();
+    startTimer();
+  }
+
+  // Start auto-cycling every 1.5 seconds
+  startTimer();
+
+  // Resource optimization: Pause timer when user leaves the browser tab
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopTimer();
+    } else {
+      startTimer();
+    }
+  });
 }
