@@ -46,12 +46,12 @@
   --vibrant-amber: #F59E0B;
   --vibrant-amber-dark: #B45309;
 
-  /* Dreamland Gradients */
-  --grad-dreamland: linear-gradient(135deg, #FFAFCC 0%, #CDB4DB 50%, #A2D2FF 100%);
-  --grad-cotton-candy: linear-gradient(135deg, #FFC8DD 0%, #FFAFCC 50%, #CDB4DB 100%);
+  /* Dreamland Gradients (Calibrated Ethereal Silk & Luminous Aurora) */
+  --grad-dreamland: linear-gradient(135deg, #FDE8EF 0%, #E9D5FF 38%, #C7D2FE 72%, #BAE6FD 100%);
+  --grad-cotton-candy: linear-gradient(135deg, #FDE8EF 0%, #E9D5FF 50%, #CDB4DB 100%);
   --grad-sky-lavender: linear-gradient(135deg, #BDE0FE 0%, #A2D2FF 50%, #CDB4DB 100%);
-  --grad-sunset: linear-gradient(135deg, #FFAFCC 0%, #FFC8DD 50%, #CDB4DB 100%);
-  --grad-aurora: linear-gradient(135deg, rgba(255, 200, 221, 0.45) 0%, rgba(205, 180, 219, 0.4) 35%, rgba(189, 224, 254, 0.45) 70%, rgba(162, 210, 255, 0.4) 100%);
+  --grad-sunset: linear-gradient(135deg, #FDE8EF 0%, #FFC8DD 50%, #CDB4DB 100%);
+  --grad-aurora: linear-gradient(135deg, rgba(253, 232, 239, 0.45) 0%, rgba(233, 213, 255, 0.4) 35%, rgba(199, 210, 254, 0.45) 70%, rgba(186, 230, 253, 0.4) 100%);
 
   /* Text Colors */
   --text-dark: #0F172A;
@@ -315,9 +315,9 @@ img {
 }
 
 .btn-vibrant-gradient:hover {
-  background: linear-gradient(135deg, #FFC8DD 0%, #CDB4DB 50%, #BDE0FE 100%);
+  background: linear-gradient(135deg, #FFF1F2 0%, #F3E8FF 40%, #E0E7FF 75%, #E0F2FE 100%);
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px -4px rgba(162, 210, 255, 0.55);
+  box-shadow: 0 14px 30px -4px rgba(199, 210, 254, 0.55);
 }
 
 .mobile-menu-btn {
@@ -786,9 +786,9 @@ img {
 }
 
 .btn-vibrant-cta:hover {
-  background: linear-gradient(135deg, #FFC8DD 0%, #CDB4DB 50%, #BDE0FE 100%);
+  background: linear-gradient(135deg, #FFF1F2 0%, #F3E8FF 40%, #E0E7FF 75%, #E0F2FE 100%);
   transform: translateY(-2px);
-  box-shadow: 0 16px 36px -4px rgba(162, 210, 255, 0.6);
+  box-shadow: 0 16px 36px -4px rgba(199, 210, 254, 0.6);
 }
 
 .btn-vibrant-outline {
@@ -2857,6 +2857,74 @@ img {
   letter-spacing: 0.04em;
   width: fit-content;
 }
+
+/* Authority-Specific Vault Card Themes (Institutional Precision) */
+.section-statutory-vault {
+  background-color: var(--bg-slate-soft);
+  color: var(--text-dark);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  position: relative;
+}
+
+.section-leadership-vibrant {
+  background-color: #FFFFFF;
+  color: var(--text-dark);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  position: relative;
+}
+
+.statutory-vault-card.vault-theme-mca {
+  border-top: 3.5px solid #0F172A;
+}
+.statutory-vault-card.vault-theme-mca .vault-card-authority-badge {
+  color: #0F172A;
+  background: #F1F5F9;
+  border-color: #CBD5E1;
+}
+
+.statutory-vault-card.vault-theme-80g {
+  border-top: 3.5px solid #059669;
+}
+.statutory-vault-card.vault-theme-80g .vault-card-authority-badge {
+  color: #047857;
+  background: #ECFDF5;
+  border-color: #A7F3D0;
+}
+
+.statutory-vault-card.vault-theme-12a {
+  border-top: 3.5px solid #7C3AED;
+}
+.statutory-vault-card.vault-theme-12a .vault-card-authority-badge {
+  color: #6D28D9;
+  background: #F5F3FF;
+  border-color: #DDD6FE;
+}
+
+.statutory-vault-card.vault-theme-niti {
+  border-top: 3.5px solid #0284C7;
+}
+.statutory-vault-card.vault-theme-niti .vault-card-authority-badge {
+  color: #0369A1;
+  background: #F0F9FF;
+  border-color: #BAE6FD;
+}
+
+/* Authority-Specific Governance Card Themes */
+.gov-card-vibrant.gov-theme-mca { border-top: 3.5px solid #0F172A; }
+.gov-card-vibrant.gov-theme-mca .gov-card-code { color: #0F172A; background: #F1F5F9; border-color: #CBD5E1; }
+
+.gov-card-vibrant.gov-theme-80g { border-top: 3.5px solid #059669; }
+.gov-card-vibrant.gov-theme-80g .gov-card-code { color: #047857; background: #ECFDF5; border-color: #A7F3D0; }
+.gov-card-vibrant.gov-theme-80g .gov-badge-verified { color: #047857; background: #ECFDF5; border-color: #A7F3D0; }
+
+.gov-card-vibrant.gov-theme-12a { border-top: 3.5px solid #7C3AED; }
+.gov-card-vibrant.gov-theme-12a .gov-card-code { color: #6D28D9; background: #F5F3FF; border-color: #DDD6FE; }
+
+.gov-card-vibrant.gov-theme-niti { border-top: 3.5px solid #0284C7; }
+.gov-card-vibrant.gov-theme-niti .gov-card-code { color: #0369A1; background: #F0F9FF; border-color: #BAE6FD; }
+.gov-card-vibrant.gov-theme-niti .gov-badge-verified { color: #0369A1; background: #F0F9FF; border-color: #BAE6FD; }
 
 .vault-icon-stamp {
   width: 48px;
