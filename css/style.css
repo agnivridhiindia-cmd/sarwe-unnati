@@ -3189,3 +3189,127 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   AWARDS-CALIBER LUXURY ENHANCEMENTS:
+   1. Lenis Smooth Scroll Engine Rules
+   2. Tactile Monochromatic Film Grain Texture
+   3. 3D Gyroscopic Card Tilt & Specular Light Sweep
+   4. Staggered Blur-to-Sharp Text Reveal on Scroll
+   ========================================================================== */
+
+/* 1. Lenis Smooth Scroll Rules */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* 2. Tactile Film Grain Luxury Overlay */
+.film-grain-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9995;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  mix-blend-mode: overlay;
+}
+
+/* 3. 3D Gyroscopic Card Tilt & Specular Light Sweep */
+.tilt-card-3d {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1100px;
+  will-change: transform;
+  transform: perspective(1100px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+}
+
+.tilt-card-3d.is-resetting {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
+}
+
+/* Dynamic Specular Glass Light Flare Following Cursor */
+.tilt-card-3d::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle 340px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.28),
+    rgba(255, 255, 255, 0.05) 45%,
+    transparent 70%
+  );
+  opacity: 0;
+  pointer-events: none;
+  z-index: 6;
+  transition: opacity 0.35s ease;
+  mix-blend-mode: overlay;
+}
+
+.tilt-card-3d:hover::before {
+  opacity: 1;
+}
+
+/* Pop inner key child elements in 3D space */
+.tilt-card-3d .operate-emblem-wrap,
+.tilt-card-3d .metric-icon-orb,
+.tilt-card-3d .vault-seal-icon,
+.tilt-card-3d .metric-counter-display,
+.tilt-card-3d .operate-badge-tag {
+  transform: translateZ(24px);
+  transition: transform 0.3s ease;
+}
+
+/* 4. Staggered Blur-to-Sharp Text Reveal */
+.word-reveal-wrap {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  line-height: inherit;
+  padding-bottom: 0.1em;
+  padding-top: 0.04em;
+}
+
+.reveal-word {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(110%);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.5s ease-out;
+  will-change: transform, filter, opacity;
+}
+
+.reveal-word.revealed {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-word {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .tilt-card-3d {
+    transform: none !important;
+  }
+}

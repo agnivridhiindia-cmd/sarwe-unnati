@@ -5,8 +5,11 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  setupLenisScroll();
   setupScrollProgress();
   setupKineticScrub();
+  setupTextReveal();
+  setup3DCardTilt();
   setupMobileDrawer();
   setupAnimatedMetrics();
   setupModals();
@@ -25,8 +28,8 @@ function setupScrollProgress() {
   const progressBar = document.getElementById('scroll-progress');
   const navbar = document.getElementById('site-header');
 
-  function updateNavbarVisibility() {
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  function updateNavbarVisibility(scrollY) {
+    const scrollTop = typeof scrollY === 'number' ? scrollY : (window.scrollY || document.documentElement.scrollTop);
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
 
@@ -44,7 +47,8 @@ function setupScrollProgress() {
     }
   }
 
-  window.addEventListener('scroll', updateNavbarVisibility, { passive: true });
+  window.onPageScroll = updateNavbarVisibility;
+  window.addEventListener('scroll', () => updateNavbarVisibility(), { passive: true });
   // Initialize state on page load
   updateNavbarVisibility();
 }
@@ -101,23 +105,27 @@ function setupMobileDrawer() {
 
   if (!drawer) return;
 
+  function openDrawer() {
+    drawer.classList.add('open');
+    if (window.lenis) window.lenis.stop();
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    if (window.lenis) window.lenis.start();
+  }
+
   if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      drawer.classList.add('open');
-    });
+    toggleBtn.addEventListener('click', openDrawer);
   }
 
   if (closeBtn) {
-    closeBtn.addEventListener('click', () => {
-      drawer.classList.remove('open');
-    });
+    closeBtn.addEventListener('click', closeDrawer);
   }
 
   // Close on link click
   drawer.querySelectorAll('.drawer-link').forEach(link => {
-    link.addEventListener('click', () => {
-      drawer.classList.remove('open');
-    });
+    link.addEventListener('click', closeDrawer);
   });
 }
 
@@ -169,28 +177,36 @@ function setupModals() {
 
   if (!modal) return;
 
+  function closeModal() {
+    modal.classList.remove('active');
+    if (window.lenis) window.lenis.start();
+  }
+
+  function openModal() {
+    modal.classList.add('active');
+    if (window.lenis) window.lenis.stop();
+  }
+
   closeTriggers.forEach(btn => {
-    btn.addEventListener('click', () => {
-      modal.classList.remove('active');
-    });
+    btn.addEventListener('click', closeModal);
   });
 
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {
-      modal.classList.remove('active');
+      closeModal();
     }
   });
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('active')) {
-      modal.classList.remove('active');
+      closeModal();
     }
   });
 
   document.querySelectorAll('.open-giving-modal').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      modal.classList.add('active');
+      openModal();
     });
   });
 }
@@ -483,5 +499,250 @@ function setupHeroSlideshow() {
     } else {
       startTimer();
     }
+  });
+}
+
+/* ==========================================================================
+   10. SMOOTH INERTIA SCROLL (LENIS ENGINE)
+   Silky smooth momentum scrolling with zero layout shift
+   ========================================================================== */
+function setupLenisScroll() {
+  if (typeof Lenis === 'undefined') return;
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  const lenis = new Lenis({
+    duration: 1.15,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    orientation: 'vertical',
+    gestureOrientation: 'vertical',
+    smoothWheel: true,
+    wheelMultiplier: 1.0,
+    touchMultiplier: 1.25,
+    infinite: false,
+  });
+
+  window.lenis = lenis;
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+
+  // Hook Lenis scroll events to navbar and progress updates
+  lenis.on('scroll', (e) => {
+    if (typeof window.onPageScroll === 'function') {
+      window.onPageScroll(e.scroll);
+    }
+  });
+
+  // Smooth scroll for anchor clicks (href="#...")
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          lenis.scrollTo(targetElement, { offset: -70, duration: 1.2 });
+        }
+      }
+    });
+  });
+}
+
+/* ==========================================================================
+   11. 3D GYROSCOPIC CARD TILT & SPECULAR LIGHT SWEEP
+   Interactive perspective physics on About, Impact & Program cards
+   ========================================================================== */
+function setup3DCardTilt() {
+  // Disable on coarse pointer (touch/mobile devices)
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+
+  const cardSelectors = [
+    '.operate-card-premium',
+    '.impact-metric-card-premium',
+    '.statutory-vault-card',
+    '.gov-card-vibrant',
+    '.vertical-card',
+    '.manifesto-stat-card',
+    '.leader-card-vibrant',
+    '.volunteer-role-card'
+  ].join(',');
+
+  const cards = document.querySelectorAll(cardSelectors);
+
+  cards.forEach(card => {
+    card.classList.add('tilt-card-3d');
+
+    let rafId = null;
+    let targetX = 0;
+    let targetY = 0;
+    let currentX = 0;
+    let currentY = 0;
+    let isHovering = false;
+    let rect = null;
+
+    function onMouseEnter() {
+      isHovering = true;
+      rect = card.getBoundingClientRect();
+      card.classList.remove('is-resetting');
+    }
+
+    function onMouseMove(e) {
+      if (!isHovering) return;
+      if (!rect) rect = card.getBoundingClientRect();
+
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const px = Math.max(0, Math.min(100, (x / rect.width) * 100));
+      const py = Math.max(0, Math.min(100, (y / rect.height) * 100));
+
+      card.style.setProperty('--mouse-x', `${px.toFixed(1)}%`);
+      card.style.setProperty('--mouse-y', `${py.toFixed(1)}%`);
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      // Max tilt angle: ±6.5 degrees for tasteful luxury physics
+      targetX = ((y - centerY) / centerY) * -6.5;
+      targetY = ((x - centerX) / centerX) * 6.5;
+
+      if (!rafId) {
+        rafId = requestAnimationFrame(updateTilt);
+      }
+    }
+
+    function updateTilt() {
+      // Smooth Lerp physics
+      currentX += (targetX - currentX) * 0.16;
+      currentY += (targetY - currentY) * 0.16;
+
+      card.style.transform = `perspective(1100px) rotateX(${currentX.toFixed(2)}deg) rotateY(${currentY.toFixed(2)}deg) scale3d(1.015, 1.015, 1.015)`;
+
+      if (isHovering && (Math.abs(targetX - currentX) > 0.02 || Math.abs(targetY - currentY) > 0.02)) {
+        rafId = requestAnimationFrame(updateTilt);
+      } else {
+        rafId = null;
+      }
+    }
+
+    function onMouseLeave() {
+      isHovering = false;
+      rect = null;
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+      card.classList.add('is-resetting');
+      card.style.transform = 'perspective(1100px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    }
+
+    card.addEventListener('mouseenter', onMouseEnter);
+    card.addEventListener('mousemove', onMouseMove);
+    card.addEventListener('mouseleave', onMouseLeave);
+  });
+}
+
+/* ==========================================================================
+   12. EDITORIAL TEXT REVEAL ON SCROLL (Staggered Word Blur-to-Sharp)
+   Staggered typography reveal as sections enter viewport
+   ========================================================================== */
+function setupTextReveal() {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const targetSelectors = [
+    '.section-headline-vibrant',
+    '.manifesto-vibrant-title',
+    '.operate-section-heading',
+    '.operate-title-luxury',
+    '.section-headline-dark'
+  ].join(',');
+
+  const targets = document.querySelectorAll(targetSelectors);
+
+  targets.forEach(heading => {
+    // Skip if already processed or is kinetic scrub target
+    if (heading.dataset.revealedSetup || heading.classList.contains('kinetic-lead-paragraph')) return;
+    heading.dataset.revealedSetup = 'true';
+
+    const childNodes = Array.from(heading.childNodes);
+    heading.innerHTML = '';
+    const wordSpans = [];
+
+    childNodes.forEach(node => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        const text = node.textContent;
+        const tokens = text.split(/(\s+)/);
+
+        tokens.forEach(token => {
+          if (/^\s+$/.test(token)) {
+            heading.appendChild(document.createTextNode(token));
+          } else if (token.length > 0) {
+            const wrap = document.createElement('span');
+            wrap.className = 'word-reveal-wrap';
+
+            const span = document.createElement('span');
+            span.className = 'reveal-word';
+            span.textContent = token;
+            if (prefersReduced) span.classList.add('revealed');
+
+            wrap.appendChild(span);
+            heading.appendChild(wrap);
+            wordSpans.push(span);
+          }
+        });
+      } else if (node.nodeType === Node.ELEMENT_NODE) {
+        if (node.tagName.toLowerCase() === 'br') {
+          heading.appendChild(node);
+        } else {
+          const text = node.textContent;
+          const tokens = text.split(/(\s+)/);
+          const clonedElement = node.cloneNode(false);
+
+          tokens.forEach(token => {
+            if (/^\s+$/.test(token)) {
+              clonedElement.appendChild(document.createTextNode(token));
+            } else if (token.length > 0) {
+              const wrap = document.createElement('span');
+              wrap.className = 'word-reveal-wrap';
+
+              const span = document.createElement('span');
+              span.className = 'reveal-word';
+              span.textContent = token;
+              if (prefersReduced) span.classList.add('revealed');
+
+              wrap.appendChild(span);
+              clonedElement.appendChild(wrap);
+              wordSpans.push(span);
+            }
+          });
+          heading.appendChild(clonedElement);
+        }
+      }
+    });
+
+    if (prefersReduced) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          wordSpans.forEach((span, i) => {
+            setTimeout(() => {
+              span.classList.add('revealed');
+            }, i * 36);
+          });
+          observer.unobserve(heading);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    observer.observe(heading);
   });
 }
