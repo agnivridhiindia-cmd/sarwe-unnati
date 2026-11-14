@@ -245,7 +245,7 @@ function setupThaliExplorer() {
       badge: 'STAPLE GRAINS • ENERGY ENGINE',
       title: 'Fresh Steamed Rice & Warm Whole-Wheat Roti',
       desc: 'High-energy complex carbohydrates providing essential daily caloric foundation for daily wage earners and street dwellers. Freshly prepared in hygienic vessels.',
-      img: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80',
+      img: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&h=900&q=85',
       macros: [
         { name: 'Carbohydrates', pct: 85, color: '#F97316' },
         { name: 'Dietary Fiber', pct: 60, color: '#10B981' },
@@ -256,7 +256,7 @@ function setupThaliExplorer() {
       badge: 'PROTEIN ENGINE • TISSUE REPAIR',
       title: 'Nutrient-Dense Dal, Lentils & Legume Gravy',
       desc: 'Slow-simmered yellow arhar dal, chana, or whole black lentils seasoned with cumin and turmeric. Essential amino acids for physical strength.',
-      img: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80',
+      img: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1200&h=900&q=85',
       macros: [
         { name: 'Plant Protein', pct: 88, color: '#F97316' },
         { name: 'Iron & Zinc', pct: 70, color: '#2563EB' },
@@ -267,7 +267,7 @@ function setupThaliExplorer() {
       badge: 'MICRONUTRIENT DEFENSE • IMMUNITY',
       title: 'Fresh Seasonal Subzi (Greens & Roots)',
       desc: 'Cooked fresh daily with seasonal market produce—potatoes, spinach, cauliflower, carrots, and bottle gourd. Packed with Vitamins A, C, and potassium.',
-      img: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80',
+      img: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&h=900&q=85',
       macros: [
         { name: 'Vitamins A & C', pct: 90, color: '#10B981' },
         { name: 'Minerals', pct: 75, color: '#F97316' },
@@ -278,7 +278,7 @@ function setupThaliExplorer() {
       badge: 'VITAL FORTIFICATION • SPECIALIZED CARE',
       title: 'Seasonal Fruit, Jaggery & Nutrition Adds',
       desc: 'Fresh bananas, oranges, or jaggery blocks provided to malnourished children, nursing mothers, and destitute senior citizens.',
-      img: 'https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&w=800&q=80',
+      img: 'https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&w=1200&h=900&q=85',
       macros: [
         { name: 'Micronutrients', pct: 95, color: '#10B981' },
         { name: 'Natural Sugar', pct: 70, color: '#F97316' },
@@ -289,7 +289,7 @@ function setupThaliExplorer() {
       badge: 'HYDRATION SECURITY • POTABLE & SAFE',
       title: 'Certified Potable Drinking Water',
       desc: 'Tested, clean drinking water provided in hygienic refills to prevent severe dehydration and waterborne diseases among street populations.',
-      img: 'https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=800&q=80',
+      img: 'https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=1200&h=900&q=85',
       macros: [
         { name: 'Purity Level', pct: 100, color: '#2563EB' },
         { name: 'Zero Contaminants', pct: 100, color: '#10B981' },
@@ -356,7 +356,7 @@ function setupThaliExplorer() {
 
   function restartLoop() {
     clearInterval(loopTimer);
-    loopTimer = setInterval(advanceNext, 1200); // Continuous ~1 second kinetic loop
+    loopTimer = setInterval(advanceNext, 4500); // Continuous 4.5s loop
   }
 
   tabs.forEach(btn => {
@@ -365,8 +365,8 @@ function setupThaliExplorer() {
     });
   });
 
-  // Pause loop on hover so users can inspect macros, resume on leave
-  const thaliContainer = document.querySelector('.thali-visual-layout');
+  // Pause loop on hover so users can inspect, resume on leave
+  const thaliContainer = document.querySelector('.thali-container');
   if (thaliContainer) {
     thaliContainer.addEventListener('mouseenter', () => clearInterval(loopTimer));
     thaliContainer.addEventListener('mouseleave', () => restartLoop());
