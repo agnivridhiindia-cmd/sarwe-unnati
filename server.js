@@ -62,7 +62,10 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, {
       'Content-Length': totalSize,
       'Content-Type': contentType,
-      'Accept-Ranges': 'bytes'
+      'Accept-Ranges': 'bytes',
+      'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0',
+      'Pragma': 'no-cache',
+      'Expires': '0'
     });
 
     if (req.method === 'HEAD') {

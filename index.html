@@ -3,360 +3,1152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sarwe Unnati Foundation | Empowering Grassroots India</title>
-  <meta name="description" content="Sarwe Unnati Foundation is a government-certified Section 8 non-profit institution dedicated to large-scale social infrastructure, digital education, vocational IT, and public healthcare across Northern India.">
+  <title>Sarwe Unnati Foundation | Providing and Distributing Food to People Facing Hunger</title>
+  <meta name="description" content="Sarwe Unnati Foundation is a government-registered Section 8 non-profit organization dedicated to structured hunger relief, distributing 3,00,000 nutritious meals annually across Northern India. 50% Section 80G tax deductions.">
   
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
-
-  <!-- Google Fonts: Syne (Stylish Avant-Garde Modern Display) + Playfair Display / Instrument Serif (Editorial) + Plus Jakarta Sans + JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20261114_vibrant">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
 </head>
-<body class="light-theme">
+<body>
 
   <!-- Scroll Progress Indicator -->
   <div class="scroll-progress-bar" id="scroll-progress"></div>
 
-  <!-- Tactile Monochromatic Film Grain Luxury Overlay -->
-  <div class="film-grain-overlay" aria-hidden="true"></div>
-
-  <!-- Architectural Navbar (Bright, Crisp & Modern) -->
-  <header class="main-navbar" id="site-header">
-    <div class="container navbar-inner">
-      <a href="index.html" class="navbar-brand" aria-label="Sarwe Unnati Foundation">
-        <div class="brand-emblem-vibrant">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
-            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-            <polyline points="2 17 12 22 22 17"/>
-            <polyline points="2 12 12 17 22 12"/>
-          </svg>
-        </div>
-        <div class="brand-title-wrap">
-          <span class="brand-title-main">SARWE UNNATI</span>
-          <span class="brand-title-sub">FOUNDATION &bull; ESTD. 2018</span>
+    <!-- Modern Floating Header -->
+    <!-- Floating Frosted Navigation Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-brand" aria-label="Sarwe Unnati Foundation Home">
+        <span class="brand-emblem-seal">
+          <img src="assets/images/logo-emblem-circle.png" alt="Sarwe Unnati Foundation Logo" class="brand-logo-img">
+        </span>
+        <div class="brand-text-col">
+          <span class="brand-main-title">SARWE UNNATI</span>
+          <span class="brand-sub-tag">FOUNDATION • ESTD. 2018</span>
         </div>
       </a>
 
-      <!-- Navigation Links -->
-      <nav class="nav-menu" aria-label="Main Navigation">
-        <a href="index.html" class="nav-link-item active">Home</a>
-        <a href="about.html" class="nav-link-item">About Foundation</a>
-        <a href="programs.html" class="nav-link-item">Programs &amp; Verticals</a>
-        <a href="impact.html" class="nav-link-item">Impact &amp; Audits</a>
-        <a href="volunteer.html" class="nav-link-item">Get Involved</a>
-        <a href="contact.html" class="nav-link-item">Contact</a>
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-desktop-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-item active">Home</a>
+        <a href="about.html" class="nav-item">About Us</a>
+        <a href="programs.html" class="nav-item">Relief Model</a>
+        <a href="impact.html" class="nav-item">Impact &amp; Budget</a>
+        <a href="volunteer.html" class="nav-item">Volunteer</a>
+        <a href="contact.html" class="nav-item">Contact</a>
       </nav>
 
-      <!-- Action Button -->
-      <div class="nav-actions-wrap">
-        <button class="btn-vibrant-gradient open-giving-modal" aria-label="Support the foundation">
-          <span class="btn-text">Support Mission [80G]</span>
-          <span class="btn-arrow">→</span>
-        </button>
-        <button class="mobile-menu-btn" aria-label="Toggle Navigation">
-          <span></span>
-          <span></span>
-          <span></span>
+      <!-- Header CTAs -->
+      <div class="header-cta-group">
+        <a href="donate.html" class="btn-header-donate">
+          <span>CSR [80G] Donate</span>
+          <svg class="donate-btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <button type="button" class="mobile-menu-toggle" id="mobile-drawer-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Fullscreen Mobile Navigation Drawer -->
-  <div class="mobile-nav-drawer" id="mobile-drawer">
+    <!-- Mobile Off-Canvas Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
     <div class="drawer-header">
-      <div class="brand-title-wrap">
-        <span class="brand-title-main">SARWE UNNATI</span>
-        <span class="brand-title-sub">SECTION 8 NON-PROFIT</span>
-      </div>
-      <button class="drawer-close-btn" id="drawer-close">&times;</button>
-    </div>
-    <div class="drawer-links-wrap">
-      <a href="index.html" class="drawer-link active">01 // Home</a>
-      <a href="about.html" class="drawer-link">02 // About the Foundation</a>
-      <a href="programs.html" class="drawer-link">03 // Program Verticals</a>
-      <a href="impact.html" class="drawer-link">04 // Impact &amp; Audit Reports</a>
-      <a href="volunteer.html" class="drawer-link">05 // CSR &amp; Involvement</a>
-      <a href="contact.html" class="drawer-link">06 // Contact Headquarters</a>
-    </div>
-    <div class="drawer-footer">
-      <div class="drawer-telemetry">
-        <span>CIN: U80902UP2018NPL106959</span>
-        <span>DARPAN: UP/2025/0710389</span>
-      </div>
-      <button class="btn-vibrant-gradient open-giving-modal" style="width:100%; margin-top:1rem;">
-        Direct Bank Wire (80G Relief)
+      <div class="brand-identity footer-brand">
+            <div class="brand-emblem-icon">
+              <img src="assets/images/logo-emblem-circle.png" alt="Sarwe Unnati Foundation Logo" class="brand-logo-img">
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-main-name" style="color: #FFFFFF;">SARWE UNNATI</span>
+              <span class="brand-sub-badge" style="color: #4ADE80;">FOUNDATION • ESTD. 2018</span>
+            </div>
+          </div>
+      <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
+    </div>
+
+    <div class="drawer-links-list">
+      <a href="index.html" class="drawer-link active">Flagship Overview</a>
+      <a href="about.html" class="drawer-link">Institutional Charter</a>
+      <a href="programs.html" class="drawer-link">Food Relief Model</a>
+      <a href="impact.html" class="drawer-link">Impact &amp; Budget</a>
+      <a href="donate.html" class="drawer-link">CSR Alliances &amp; 80G Donate</a>
+      <a href="volunteer.html" class="drawer-link">Volunteer Ground Cadre</a>
+      <a href="contact.html" class="drawer-link">Founder &amp; Headquarters</a>
+    </div>
+
+    <div>
+      <a href="donate.html#bank-wire" class="btn-primary-glow" style="width: 100%;">
+        Direct Canara Bank Wire [80G]
+      </a>
+      <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #A8A29E; text-align: center; margin-top: 1rem;">
+        CIN: U80902UP2018NPL106959 | 80G URN: AAECH6219BF20261
+      </div>
     </div>
   </div>
 
   <!-- =========================================================================
-       SECTION 1: BRIGHT, VIBRANT, EYE-CATCHING HERO SECTION (Aurora Light Theme)
+       SECTION 1: HERO - SARWE UNNATI FOUNDATION
        ========================================================================= -->
-  <section class="section-hero-vibrant" id="hero-section">
-    <!-- Ambient Background Video (Plays on view, auto-pauses when scrolled down) -->
-    <div class="hero-video-bg-wrap" aria-hidden="true">
-      <video id="hero-bg-video" class="hero-bg-video" autoplay muted loop playsinline preload="auto">
+  <section class="section-hero" id="hero">
+    <!-- Ambient Background Video -->
+    <div class="hero-bg-video-wrapper" aria-hidden="true">
+      <video class="hero-video-element" autoplay muted loop playsinline preload="auto">
         <source src="videos/hero-bg.mp4" type="video/mp4">
       </video>
-      <div class="hero-video-overlay"></div>
     </div>
 
-    <!-- Radiant Glowing Aurora Mesh Background Orbs -->
-    <div class="aurora-orb aurora-orb-1"></div>
-    <div class="aurora-orb aurora-orb-2"></div>
-    <div class="aurora-orb aurora-orb-3"></div>
-    <div class="hero-subtle-grid"></div>
-    
-    <div class="container hero-content-container">
-      <div class="hero-split-grid">
-        
-        <!-- Left Column: Inspiring Copy -->
-        <div class="hero-copy-column">
-          <h1 class="hero-vibrant-title">
-            Transforming Grassroots India<br>
-            <span class="hero-title-italic">Through Education, IT &amp; Healthcare.</span>
+    <div class="container">
+      <div class="hero-split-layout">
+        <!-- Left: Mission Copy & Telemetry -->
+        <div>
+          <div class="hero-eyebrow-pill float-slow">
+            <span class="eyebrow-pulse-dot"></span>
+            <span class="eyebrow-text">GOVERNMENT-CERTIFIED SECTION 8 NON-PROFIT • 80G APPROVED</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Providing and Distributing Food to People <span class="serif-accent">Facing Hunger.</span>
           </h1>
 
-          <p class="hero-vibrant-lede">
-            Sarwe Unnati Foundation is a government-certified Section 8 non-profit institution incorporated in 2018. We operate transparent, high-impact ground programs across Uttar Pradesh and Northern India—delivering free primary schooling, youth IT vocational labs, and comprehensive rural healthcare with 100% direct fund deployment.
+          <p class="hero-lead-text">
+            SARWE UNNATI FOUNDATION mobilizes an accountable, structured food relief ecosystem to distribute <strong>3,00,000 wholesome meals annually</strong> (~822 meals daily) to homeless individuals, daily wagers, and vulnerable communities across Northern India.
           </p>
 
-          <div class="hero-actions-row">
-            <button class="btn-vibrant-cta open-giving-modal">
-              <span class="btn-text">Support Foundation (80G Relief)</span>
-              <span class="btn-arrow">→</span>
-            </button>
-            <a href="#about-intro" class="btn-vibrant-outline">
-              <span class="btn-text">Explore Mission &amp; Impact</span>
-              <span class="btn-arrow">↓</span>
+          <div class="hero-button-group">
+            <a href="donate.html" class="btn-primary-glow">
+              <span>Sponsor Meals With 50% 80G Relief</span>
+              <span>→</span>
             </a>
+            <a href="#charter-dossier" class="btn-secondary-outline">
+              <span>Review Charter Dossier</span>
+              <span>↓</span>
+            </a>
+          </div>
+
+          <!-- Open Modern Metric Ribbon (Non-Boxy, High-Impact) -->
+          <div class="hero-metric-ribbon">
+            <div class="hero-metric-item">
+              <span class="hero-metric-val emerald" data-counter="300000">3,00,000</span>
+              <span class="hero-metric-label">Annual Meals Target</span>
+              <span class="hero-metric-sub">~822 Daily Balanced Thalis</span>
+            </div>
+            <div class="hero-metric-divider" aria-hidden="true"></div>
+            <div class="hero-metric-item">
+              <span class="hero-metric-val orange" data-counter="66" data-prefix="₹" data-suffix=".67">₹66.67</span>
+              <span class="hero-metric-label">Unit Program Cost</span>
+              <span class="hero-metric-sub">All-Inclusive Fresh Prep</span>
+            </div>
+            <div class="hero-metric-divider" aria-hidden="true"></div>
+            <div class="hero-metric-item">
+              <span class="hero-metric-val blue" data-counter="100" data-suffix="%">100%</span>
+              <span class="hero-metric-label">Direct Bank Wire</span>
+              <span class="hero-metric-sub">Zero Intermediary Leakage</span>
+            </div>
           </div>
         </div>
 
-        <!-- Right Column: Visual Showcase Frame with Dynamic Hero Slideshow -->
-        <div class="hero-visual-column">
-          <div class="hero-visual-frame">
-            <div class="hero-image-box" id="hero-slideshow-box" aria-label="Sarwe Unnati Foundation Field Work Slideshow">
-              <div class="hero-slideshow-track">
-                <!-- Slide 01: Education -->
-                <div class="hero-slide active">
-                  <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=85" alt="Indian rural children learning happily in classroom" class="hero-slide-img" loading="eager">
-                  <div class="hero-slide-caption">
-                    <span class="slide-tag">SHIKSHA UNNATI</span>
-                    <span class="slide-title">Primary Education &amp; Remedial Schooling</span>
-                  </div>
-                </div>
+        <!-- Right: Field Photography Slideshow Frame -->
+        <div>
+          <div class="hero-visual-card">
+            <div class="hero-visual-inner">
+              <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1200&q=85" alt="Volunteers serving hot nutritious meals to underserved people" class="hero-slide-image active" loading="eager">
+              <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=85" alt="Hygienic kitchen preparation conforming to FSSAI standards" class="hero-slide-image" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=85" alt="Nutritious balanced plate with grains, lentils and vegetables" class="hero-slide-image" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=85" alt="Children and elderly receiving meals with dignity" class="hero-slide-image" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?auto=format&fit=crop&w=1200&q=85" alt="Dedicated community volunteers packing meals" class="hero-slide-image" loading="lazy">
 
-                <!-- Slide 02: IT Lab -->
-                <div class="hero-slide">
-                  <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=85" alt="Youth learning computer skills in digital literacy lab" class="hero-slide-img" loading="lazy">
-                  <div class="hero-slide-caption">
-                    <span class="slide-tag">KAUSHAL UNNATI</span>
-                    <span class="slide-title">IT &amp; Computer Vocational Labs</span>
-                  </div>
+              <div class="hero-visual-badge-overlay">
+                <div>
+                  <div class="overlay-tag" id="hero-slide-tag">FLAGSHIP RELIEF</div>
+                  <div class="overlay-title" id="hero-slide-title">Nutritious Meal Preparation &amp; Distribution</div>
                 </div>
-
-                <!-- Slide 03: Classroom School Kits -->
-                <div class="hero-slide">
-                  <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=85" alt="Students engaged in active classroom learning" class="hero-slide-img" loading="lazy">
-                  <div class="hero-slide-caption">
-                    <span class="slide-tag">FOUNDATIONAL LEARNING</span>
-                    <span class="slide-title">Free Textbooks &amp; School Kits</span>
-                  </div>
+                <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #34D399; font-weight: 700;">
+                  365 DAYS
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <!-- Slide 04: Healthcare -->
-                <div class="hero-slide">
-                  <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1200&q=85" alt="Doctor providing free checkup in rural medical camp" class="hero-slide-img" loading="lazy">
-                  <div class="hero-slide-caption">
-                    <span class="slide-tag">AAROGYA UNNATI</span>
-                    <span class="slide-title">Preventive Health Camps &amp; Medicine</span>
-                  </div>
+  <!-- =========================================================================
+       SECTION 2: EXECUTIVE SUMMARY & STATUTORY DOSSIER (SLIDE 2)
+       ========================================================================= -->
+  <section class="section-charter" id="charter-dossier">
+    <div class="container">
+      <div class="charter-editorial-wrapper">
+        <!-- Institutional Header Bar (Full Bleed Top Strip) -->
+        <div class="charter-header-bar">
+          <div class="charter-seal">
+            <div class="seal-icon-box" aria-hidden="true" style="padding: 0; background: #000; border: 1.5px solid #10B981; border-radius: 50%; overflow: hidden; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;">
+              <img src="assets/images/logo-emblem-circle.png" alt="Sarwe Unnati Foundation Seal" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div>
+              <div class="charter-headline">SARWE UNNATI FOUNDATION</div>
+              <div class="charter-sub-status">
+                <span class="live-pulse-dot" aria-hidden="true"></span>
+                SECTION 8 CORPORATION &bull; ROC KANPUR &bull; ESTD. 14 AUG 2018
+              </div>
+            </div>
+          </div>
+          <div class="charter-badges-row">
+            <div class="mono-stat-tag tag-cin">
+              <span class="tag-prefix">CIN:</span>
+              <span class="tag-val font-mono">U80902UP2018NPL106959</span>
+            </div>
+            <div class="mono-stat-tag tag-80g">
+              <span class="tag-prefix">80G:</span>
+              <span class="tag-val font-mono">AAECH6219BF20261</span>
+              <span class="tag-pill-sub">50% TAX RELIEF</span>
+            </div>
+            <div class="mono-stat-tag tag-darpan">
+              <span class="tag-prefix">NGO DARPAN:</span>
+              <span class="tag-val font-mono">UP/2025/0710389</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inner Content Area with Proper Padding -->
+        <div class="charter-editorial-inner">
+          <div class="charter-editorial-grid">
+            <div class="charter-left-col">
+              <div class="section-tag-badge" style="display: inline-flex; align-items: center; gap: 0.45rem; margin-bottom: 0.85rem;">
+                <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #EA580C;"></span>
+                INSTITUTIONAL CHARTER &bull; EXECUTIVE SUMMARY
+              </div>
+              <h2 class="section-title-sm" style="font-family: var(--font-heading); font-size: clamp(1.85rem, 2.7vw, 2.35rem); font-weight: 800; line-height: 1.2; color: #1C1917; margin-bottom: 1rem;">
+                A Structured, Fiduciary Framework for Hunger Relief.
+              </h2>
+              <p class="section-lead-text" style="font-size: 1.05rem; line-height: 1.75; color: #57534E; margin-bottom: 1.75rem;">
+                SARWE UNNATI FOUNDATION was incorporated to address the acute human crisis of hunger among homeless people, street dwellers, and economically vulnerable populations. We bridge the gap between agricultural surplus and urban starvation by operating certified cooking centers, dignified mobile distribution networks, and audited financial reporting.
+              </p>
+
+              <!-- Structured Bullet Points -->
+              <div class="editorial-bullets-block">
+                <h4 class="bullets-subtitle">Statutory Safeguards &amp; Operating Standards</h4>
+                <ul class="clean-bullet-list">
+                  <li>
+                    <span class="bullet-marker">✓</span>
+                    <div>
+                      <strong>Section 8 Non-Profit Corporation:</strong> Incorporated under Section 8 of the Companies Act, 2013 (RoC Kanpur) with certified articles of fiduciary governance.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="bullet-marker">✓</span>
+                    <div>
+                      <strong>Dual Tax Exemptions (12A &amp; 80G):</strong> Donors receive an immediate 50% income tax deduction backed by statutory Form 10BE documentation.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="bullet-marker">✓</span>
+                    <div>
+                      <strong>FSSAI Kitchen Hygiene Certification:</strong> All meals batch-prepared in certified sanitary kitchens with temperature tracking and ingredient testing.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="bullet-marker">✓</span>
+                    <div>
+                      <strong>100% Audited Rupee Deployment:</strong> Independent Chartered Accountants reconcile all wholesale purchases against physical recipient headcount logs.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="charter-right-col">
+              <div class="statutory-ledger-card">
+                <div class="ledger-header">
+                  <span class="ledger-title">OPERATIONAL &amp; FINANCIAL LEDGER</span>
+                  <span class="ledger-period">FY 2025–26</span>
                 </div>
-
-                <!-- Slide 05: Women Empowerment -->
-                <div class="hero-slide">
-                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=85" alt="Women in vocational tailoring and self-reliance cooperative" class="hero-slide-img" loading="lazy">
-                  <div class="hero-slide-caption">
-                    <span class="slide-tag">WOMEN AUTONOMY</span>
-                    <span class="slide-title">Vocational Skilling &amp; Livelihoods</span>
+                <div class="ledger-table">
+                  <div class="ledger-row">
+                    <span class="ledger-key">Director &amp; Founder</span>
+                    <span class="ledger-val">Priyesh Garg</span>
                   </div>
-                </div>
-
-                <!-- Slide 06: Rural Welfare & Ecology -->
-                <div class="hero-slide">
-                  <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=85" alt="Community tree plantation and rural ecological development" class="hero-slide-img" loading="lazy">
-                  <div class="hero-slide-caption">
-                    <span class="slide-tag">GRAMIN UTTHAN</span>
-                    <span class="slide-title">Tree Plantation &amp; Rural Development</span>
+                  <div class="ledger-row">
+                    <span class="ledger-key">Core Operating Focus</span>
+                    <span class="ledger-val">Food Relief &amp; Nutrition</span>
                   </div>
-                </div>
-
-                <!-- Slide 07: Volunteer Fellowship -->
-                <div class="hero-slide">
-                  <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1200&q=85" alt="Dedicated community volunteers collaborating in field fellowship" class="hero-slide-img" loading="lazy">
-                  <div class="hero-slide-caption">
-                    <span class="slide-tag">GROUND FELLOWSHIP</span>
-                    <span class="slide-title">Student &amp; Professional Volunteers</span>
+                  <div class="ledger-row highlight-row orange">
+                    <span class="ledger-key">Annual Budget</span>
+                    <span class="ledger-val text-orange">₹2,00,00,000 (₹2 Crore)</span>
+                  </div>
+                  <div class="ledger-row highlight-row emerald">
+                    <span class="ledger-key">Unit Economics</span>
+                    <span class="ledger-val text-emerald">₹66.67 Per Meal</span>
+                  </div>
+                  <div class="ledger-row">
+                    <span class="ledger-key">Daily Balanced Thalis</span>
+                    <span class="ledger-val font-mono">~822 Meals / Day</span>
+                  </div>
+                  <div class="ledger-row">
+                    <span class="ledger-key">Operating Cadence</span>
+                    <span class="ledger-val">365 Continuous Days</span>
+                  </div>
+                  <div class="ledger-row">
+                    <span class="ledger-key">Target Beneficiaries</span>
+                    <span class="ledger-val">Homeless, Labor &amp; Children</span>
+                  </div>
+                  <div class="ledger-row">
+                    <span class="ledger-key">Section 12A URN</span>
+                    <span class="ledger-val font-mono">AAECH6219BE20251</span>
+                  </div>
+                  <div class="ledger-row">
+                    <span class="ledger-key">Section 80G URN</span>
+                    <span class="ledger-val font-mono">AAECH6219BF20261</span>
+                  </div>
+                  <div class="ledger-row">
+                    <span class="ledger-key">Registered Headquarters</span>
+                    <span class="ledger-val">Saharanpur — 247001, UP</span>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    </div>
+  </section>
 
-              <!-- Vignette Overlay -->
-              <div class="hero-image-overlay-vibrant"></div>
+  <!-- =========================================================================
+       SECTION 3: THE ACUTE HUNGER CRISIS (SLIDE 4)
+       ========================================================================= -->
+  <section class="section-problem" id="crisis">
+    <div class="container">
+      <div class="problem-split-grid">
+        <!-- Left: Five Ground Challenges -->
+        <div>
+          <span class="section-tag-badge amber">ACUTE GROUND REALITY • URGENT HUNGER CRISIS</span>
+          <h2 class="section-title">
+            The Harsh Reality of <span class="italic-flair">Urban Starvation.</span>
+          </h2>
+          <p class="section-desc">
+            Hunger remains an unrelenting barrier for people living on streets and in informal settlements. For hundreds of daily wagers and destitute citizens, securing even one wholesome meal each day is a battle.
+          </p>
 
-              <!-- Slideshow Navigation Dots -->
-              <div class="hero-slideshow-indicators" id="hero-slideshow-dots" aria-label="Slideshow pagination"></div>
+          <div class="editorial-numbered-list">
+            <div class="numbered-bullet-item">
+              <span class="num-bullet">01</span>
+              <div class="bullet-content">
+                <h3 class="bullet-heading">Severe Nutritional &amp; Protein Deficit</h3>
+                <p class="bullet-text">Street diets are heavily imbalanced, relying on low-cost carbohydrates with almost zero protein, dietary fiber, or vital micronutrients.</p>
+              </div>
+            </div>
 
-              <!-- Live Slideshow Counter Badge -->
-              <div class="hero-slide-counter-badge">
-                <span class="pulse-slide-dot"></span>
-                <span id="hero-slide-counter">01 / 07</span>
+            <div class="numbered-bullet-item">
+              <span class="num-bullet">02</span>
+              <div class="bullet-content">
+                <h3 class="bullet-heading">Irregular Meal Cadence</h3>
+                <p class="bullet-text">Homeless people and casual laborers frequently endure 24 to 48 hours without food, surviving on sporadic, unorganized charity drives.</p>
+              </div>
+            </div>
+
+            <div class="numbered-bullet-item">
+              <span class="num-bullet">03</span>
+              <div class="bullet-content">
+                <h3 class="bullet-heading">Under-Served Micro-Pockets</h3>
+                <p class="bullet-text">Traditional feeding centers miss high-need labor squares, railway track dwellers, and temporary migrant construction clusters.</p>
+              </div>
+            </div>
+
+            <div class="numbered-bullet-item">
+              <span class="num-bullet">04</span>
+              <div class="bullet-content">
+                <h3 class="bullet-heading">Severe Food Wastage Paradox</h3>
+                <p class="bullet-text">Tons of edible surplus food is discarded daily from commercial banquets while citizens sleep hungry just kilometers away.</p>
+              </div>
+            </div>
+
+            <div class="numbered-bullet-item">
+              <span class="num-bullet">05</span>
+              <div class="bullet-content">
+                <h3 class="bullet-heading">Vulnerable Children &amp; Destitute Seniors</h3>
+                <p class="bullet-text">Street children suffer irreversible cognitive stunting, while elderly citizens face severe malnutrition without family support.</p>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- Right: Food Relief Image & Foundation Bridge -->
+        <div>
+          <div class="problem-image-box">
+            <img src="https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?auto=format&fit=crop&w=1200&q=85" alt="Volunteers packing hygienic nutritious meals for people facing hunger" class="problem-img">
+            <div class="problem-solution-card">
+              <span class="solution-badge">THE FOUNDATION BRIDGE</span>
+              <h4 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; margin-bottom: 0.35rem;">Organized, Accountable Food Relief</h4>
+              <p style="font-size: 0.9rem; color: #CBD5E1; line-height: 1.6;">
+                SARWE UNNATI FOUNDATION bridges this gap with scheduled daily dispatches, approved culinary partners, and FSSAI hygiene standards.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- Interactive Background Video Indicator -->
-    <button class="hero-video-toggle-btn" id="hero-video-toggle" aria-label="Toggle Hero Background Video">
-      <span class="video-indicator-dot"></span>
-      <span class="video-toggle-label">PLAYING</span>
-    </button>
   </section>
 
   <!-- =========================================================================
-       SECTION 2: CLEAN WHITE "GET TO KNOW US" (Architectural White Transition)
+       SECTION 4: 5 CORE OPERATING COMPONENTS (SLIDE 5)
        ========================================================================= -->
-  <section class="section-white-intro" id="about-intro">
+    <!-- =========================================================================
+       SECTION 4: 5 CORE OPERATING PILLARS (SLIDE 5)
+       ========================================================================= -->
+    <!-- =========================================================================
+       SECTION 4: 5 CORE OPERATING PILLARS (SLIDE 5)
+       ========================================================================= -->
+  <section class="section-components" id="solution">
     <div class="container">
-      <div class="section-tag-vibrant">
-        + GET TO KNOW US
+      <!-- Section Header (Clean & Minimal) -->
+      <div class="operating-header-block" style="margin-bottom: 2.25rem;">
+        <span class="section-tag-badge emerald">OUR OPERATING MODEL • 5 PILLARS</span>
+        <h2 class="section-title" style="margin: 0.75rem 0 0 0;">
+          Engineered for <span class="italic-flair">Scale, Hygiene &amp; Dignity.</span>
+        </h2>
       </div>
 
-      <!-- Kinetic Scroll Scrub Text -->
-      <div class="kinetic-scrub-container" id="kinetic-text">
-        <p class="kinetic-lead-paragraph">
-          Sarwe Unnati Foundation represents a disciplined paradigm in grassroots social development. Established under Section 8 of the Companies Act, 2013, we engineer sustainable, accountable interventions across foundational education, youth IT skilling, and rural healthcare throughout Uttar Pradesh and Northern India.
-        </p>
+      <!-- 5-Pillar Pipeline Navigation Strip -->
+      <div class="pillars-pipeline-nav" role="tablist" aria-label="Operating Model 5 Pillars">
+        <button class="pipeline-nav-btn active" data-pillar="1" role="tab" aria-selected="true" aria-controls="pillar-panel-1" id="pillar-tab-1">
+          <span class="nav-step-num">01</span>
+          <div class="nav-btn-text">
+            <span class="nav-btn-title">Certified Kitchens</span>
+            <span class="nav-btn-sub">Fresh Batch Prep</span>
+          </div>
+        </button>
+
+        <button class="pipeline-nav-btn" data-pillar="2" role="tab" aria-selected="false" aria-controls="pillar-panel-2" id="pillar-tab-2">
+          <span class="nav-step-num">02</span>
+          <div class="nav-btn-text">
+            <span class="nav-btn-title">Street Logistics</span>
+            <span class="nav-btn-sub">5–10 Fixed Hubs</span>
+          </div>
+        </button>
+
+        <button class="pipeline-nav-btn" data-pillar="3" role="tab" aria-selected="false" aria-controls="pillar-panel-3" id="pillar-tab-3">
+          <span class="nav-step-num">03</span>
+          <div class="nav-btn-text">
+            <span class="nav-btn-title">Surplus Recovery</span>
+            <span class="nav-btn-sub">Zero Waste Fleet</span>
+          </div>
+        </button>
+
+        <button class="pipeline-nav-btn" data-pillar="4" role="tab" aria-selected="false" aria-controls="pillar-panel-4" id="pillar-tab-4">
+          <span class="nav-step-num">04</span>
+          <div class="nav-btn-text">
+            <span class="nav-btn-title">Need Mapping</span>
+            <span class="nav-btn-sub">Doorstep Outreach</span>
+          </div>
+        </button>
+
+        <button class="pipeline-nav-btn" data-pillar="5" role="tab" aria-selected="false" aria-controls="pillar-panel-5" id="pillar-tab-5">
+          <span class="nav-step-num">05</span>
+          <div class="nav-btn-text">
+            <span class="nav-btn-title">CA Auditing</span>
+            <span class="nav-btn-sub">100% Telemetry</span>
+          </div>
+        </button>
       </div>
 
-      <!-- 4-Pillar Operation Bento Grid (Pastel Dreamland Tones) -->
-      <div class="hero-bento-grid">
-        <div class="bento-cell bento-education">
-          <div class="bento-badge">01 // EDUCATION</div>
-          <h4 class="bento-title">Shiksha Unnati</h4>
-          <p class="bento-desc">Universal schooling, backpacks, stationery kits, and remedial centers for 5,000+ students.</p>
+      <!-- Unified Pillar Showcase Stage (Clean & Simple) -->
+      <div class="pillars-stage-wrapper">
+        <!-- Panel 1: Certified Kitchens -->
+        <div class="pillar-panel-view active" id="pillar-panel-1" role="tabpanel" aria-labelledby="pillar-tab-1">
+          <div class="pillar-showcase-grid">
+            <div class="pillar-left-content">
+              <div>
+                <div class="pillar-eyebrow-row">
+                  <span class="pillar-phase-pill">PILLAR 01</span>
+                  <span class="pillar-status-tag tag-green">FSSAI COMPLIANT</span>
+                </div>
+                <h3 class="pillar-headline">Nutritious Meal Preparation</h3>
+                <p class="pillar-narrative">
+                  Meals are cooked fresh daily in commercial sanitized kitchens using wholesale grains, fresh vegetables, and protein pulses under strict thermal control.
+                </p>
+
+                <div class="pillar-bullets-group">
+                  <ul class="pillar-execution-list">
+                    <li>
+                      <span class="bullet-accent">✦</span>
+                      <div><strong>Wholesale Mandi Procurement:</strong> Direct grain and pulse sourcing with batch testing.</div>
+                    </li>
+                    <li>
+                      <span class="bullet-accent">✦</span>
+                      <div><strong>Calibrated ~650 kcal Nutrition:</strong> 18g–22g protein, dietary fiber, and seasonal vegetables.</div>
+                    </li>
+                    <li>
+                      <span class="bullet-accent">✦</span>
+                      <div><strong>FSSAI Food Hygiene:</strong> Food-grade SS 304 steam kettles, hairnets, and &ge; 75&deg;C cooking logs.</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="pillar-actions-bar">
+                <a href="programs.html#kitchen-hygiene" class="btn-primary-glow btn-shimmer">
+                  <span>Kitchen Protocols</span>
+                  <span>&rarr;</span>
+                </a>
+                <div class="pillar-controls">
+                  <button class="pillar-arrow-btn prev-btn" aria-label="Previous Pillar" data-target="5">&#8592;</button>
+                  <span class="pillar-counter-indicator">01 / 05</span>
+                  <button class="pillar-arrow-btn next-btn" aria-label="Next Pillar" data-target="2">&#8594;</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="pillar-right-visual">
+              <div class="pillar-photo-container">
+                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=85" alt="Hygienic industrial kitchen food preparation adhering to FSSAI standards" class="pillar-visual-img">
+                <div class="pillar-telemetry-overlay">
+                  <div class="telemetry-chip">
+                    <span class="chip-label">CAPACITY</span>
+                    <span class="chip-value">1,500 Meals/Day</span>
+                  </div>
+                  <div class="telemetry-chip">
+                    <span class="chip-label">COOKING TEMP</span>
+                    <span class="chip-value">&ge; 75&deg;C Holding</span>
+                  </div>
+                  <div class="telemetry-chip">
+                    <span class="chip-label">VESSELS</span>
+                    <span class="chip-value">SS 304 Food-Grade</span>
+                  </div>
+                  <div class="telemetry-chip">
+                    <span class="chip-label">SAFETY</span>
+                    <span class="chip-value highlight-green">FSSAI Certified</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="bento-cell bento-tech">
-          <div class="bento-badge">02 // TECHNOLOGY</div>
-          <h4 class="bento-title">Kaushal Unnati</h4>
-          <p class="bento-desc">Dedicated computer IT labs, software training, and job-readiness bootcamps for youth.</p>
+        <!-- Panel 2: Street Logistics -->
+        <div class="pillar-panel-view" id="pillar-panel-2" role="tabpanel" aria-labelledby="pillar-tab-2">
+          <div class="pillar-showcase-grid">
+            <div class="pillar-left-content">
+              <div>
+                <div class="pillar-eyebrow-row">
+                  <span class="pillar-phase-pill">PILLAR 02</span>
+                  <span class="pillar-status-tag tag-blue">SCHEDULED TRANSIT</span>
+                </div>
+                <h3 class="pillar-headline">Street &amp; Community Logistics</h3>
+                <p class="pillar-narrative">
+                  Fresh meals are dispatched in double-walled insulated containers across 5&ndash;10 fixed relief hubs, providing dependable nourishment for daily wagers and night shelters.
+                </p>
+
+                <div class="pillar-bullets-group">
+                  <ul class="pillar-execution-list">
+                    <li>
+                      <span class="bullet-accent">✦</span>
+                      <div><strong>Fixed Daily Cadence:</strong> Morning and evening food dispatches 365 days a year without pause.</div>
+                    </li>
+                    <li>
+                      <span class="bullet-accent">✦</span>
+                      <div><strong>Insulated Thermal Transit:</strong> Food-grade containers keeping meals above 65&deg;C for over 3 hours.</div>
+                    </li>
+                    <li>
+                      <span class="bullet-accent">✦</span>
+                      <div><strong>Orderly Queues &amp; Dignity:</strong> Volunteer marshals and 100% biodegradable leaf plates.</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="pillar-actions-bar">
+                <a href="programs.html#distribution-model" class="btn-primary-glow btn-shimmer">
+                  <span>Distribution Model</span>
+                  <span>&rarr;</span>
+                </a>
+                <div class="pillar-controls">
+                  <button class="pillar-arrow-btn prev-btn" aria-label="Previous Pillar" data-target="1">&#8592;</button>
+                  <span class="pillar-counter-indicator">02 / 05</span>
+                  <button class="pillar-arrow-btn next-btn" aria-label="Next Pillar" data-target="3">&#8594;</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="pillar-right-visual">
+              <div class="pillar-photo-container">
+                <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1200&q=85" alt="Orderly and dignified food distribution at community hunger relief hubs" class="pillar-visual-img">
+                <div class="pillar-telemetry-overlay">
+                  <div class="telemetry-chip">
+                    <span class="chip-label">FIXED HUBS</span>
+                    <span class="chip-value">5–10 Points</span>
+                  </div>
+                  <div class="telemetry-chip">
+                    <span class="chip-label">TRANSIT TIME</span>
+                    <span class="chip-value">&lt; 45 Minutes</span>
+                  </div>
+                  <div class="telemetry-chip">
+                    <span class="chip-label">PLATES</span>
+                    <span class="chip-value">100% Compostable</span>
+                  </div>
+                  <div class="telemetry-chip">
+                    <span class="chip-label">CADENCE</span>
+                    <span class="chip-value highlight-blue">~822 Meals/Day</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="bento-cell bento-health">
-          <div class="bento-badge">03 // HEALTHCARE</div>
-          <h4 class="bento-title">Aarogya Unnati</h4>
-          <p class="bento-desc">Free mobile health camps, specialist doctor checkups, diagnostic tests, and medicine distribution.</p>
+        <!-- Panel 3: Surplus Recovery -->
+        <div class="pillar-panel-view" id="pillar-panel-3" role="tabpanel" aria-labelledby="pillar-tab-3">
+          <div class="pillar-showcase-grid">
+            <div class="pillar-left-content">
+              <div>
+                <div class="pillar-eyebrow-row">
+                  <span class="pillar-phase-pill">PILLAR 03</span>
+                  <span class="pillar-status-tag tag-orange">ZERO FOOD WASTE</span>
+                </div>
+                <h3 class="pillar-headline">Safe Surplus Food Recovery</h3>
+                <p class="pillar-narrative">
+                  An on-call rapid response rescue network collecting untouched, safe surplus food from banquet halls, corporate cafeterias, and institutional partners.
+                </p>
+
+                <div class="pillar-bullets-group">
+                  <ul class="pillar-execution-list">
+                    <li>
+                      <span class="bullet-accent">✦</span>
+                      <div><strong>Organoleptic Safety Checks:</strong> Aroma, texture, and temperature testing prior to collection.</div>
+                    </li>
+                    <li>
+                      <span class="bullet-accent">✦</span>
+                      <div><strong>Rapid 60-Minute Dispatch:</strong> Dedicated transit fleet reaching hungry citizens in under an hour.</div>
+                    </li>
+                    <li>
+                      <span class="bullet-accent">✦</span>
+                      <div><strong>~30+ Tons Rescued Yearly:</strong> Diverting edible food from landfills directly to vulnerable families.</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="pillar-actions-bar">
+                <a href="contact.html?type=food-partner" class="btn-primary-glow btn-shimmer">
+                  <span>Partner With Us</span>
+                  <span>&rarr;</span>
+                </a>
+                <div class="pillar-controls">
+                  <button class="pillar-arrow-btn prev-btn" aria-label="Previous Pillar" data-target="2">&#8592;</button>
+                  <span class="pillar-counter-indicator">03 / 05</span>
+                  <button class="pillar-arrow-btn next-btn" aria-label="Next Pillar" data-target="4">&#8594;</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="pillar-right-visual">
+              <div class="pillar-photo-container">
+                <img src="https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?auto=format&fit=crop&w=1200&q=85" alt="Safe packaging and rapid rescue of surplus food from institutional partners" class="pillar-visual-img">
+                <div class="pillar-telemetry-overlay">
+                  <div class="telemetry-chip">
+                    <span class="chip-label">SURPLUS RESCUED</span>
+                    <span class="chip-value highlight-orange">~30+ Tons/Year</span>
+                  </div>
+                  <div class="telemetry-chip">
+                    <span class="chip-label">SPEED</span>
+                    <span class="chip-value">&lt; 60 Minutes</span>
+                  </div>
+                  <div class="telemetry-chip">
+                    <span class="chip-label">CHECKS</span>
+                    <span class="chip-value">Organoleptic</span>
+                  </div>
+                  <div class="telemetry-chip">
+                    <span class="chip-label">ALLIANCES</span>
+                    <span class="chip-value">10–15 Partners</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="bento-cell bento-compliance">
-          <div class="bento-badge">04 // STATUTORY 80G</div>
-          <h4 class="bento-title">50% Tax Relief</h4>
-          <p class="bento-desc">100% tax-deductible donor contributions certified by the Income Tax Department under Section 80G.</p>
+        <!-- Panel 4: Outreach Mapping -->
+        <div class="pillar-panel-view" id="pillar-panel-4" role="tabpanel" aria-labelledby="pillar-tab-4">
+          <div class="pillar-showcase-grid">
+            <div class="pillar-left-content">
+              <div>
+                <div class="pillar-eyebrow-row">
+                  <span class="pillar-phase-pill">PILLAR 04</span>
+                  <span class="pillar-status-tag tag-purple">DOORSTEP OUTREACH</span>
+                </div>
+                <h3 class="pillar-headline">Need Mapping &amp; Doorstep Aid</h3>
+                <p class="pillar-narrative">
+                  Conducting ward-level demographic surveys across Saharanpur to identify bedridden seniors, disabled individuals, and street children who cannot reach distribution points.
+                </p>
+
+                <div class="pillar-bullets-group">
+                  <ul class="pillar-execution-list">
+                    <li>
+                      <span class="bullet-accent">✦</span>
+                      <div><strong>Doorstep Delivery:</strong> Direct volunteer foot delivery to bedridden elderly and disabled citizens.</div>
+                    </li>
+                    <li>
+                      <span class="bullet-accent">✦</span>
+                      <div><strong>Zero Public Profiling:</strong> Strict foundation policy protecting recipient dignity and privacy.</div>
+                    </li>
+                    <li>
+                      <span class="bullet-accent">✦</span>
+                      <div><strong>50–100 Volunteer Force:</strong> Trained community cadre managing equitable distribution on the ground.</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="pillar-actions-bar">
+                <a href="volunteer.html" class="btn-primary-glow btn-shimmer">
+                  <span>Join Volunteers</span>
+                  <span>&rarr;</span>
+                </a>
+                <div class="pillar-controls">
+                  <button class="pillar-arrow-btn prev-btn" aria-label="Previous Pillar" data-target="3">&#8592;</button>
+                  <span class="pillar-counter-indicator">04 / 05</span>
+                  <button class="pillar-arrow-btn next-btn" aria-label="Next Pillar" data-target="5">&#8594;</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="pillar-right-visual">
+              <div class="pillar-photo-container">
+                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=85" alt="Compassionate community outreach supporting children and vulnerable families" class="pillar-visual-img">
+                <div class="pillar-telemetry-overlay">
+                  <div class="telemetry-chip">
+                    <span class="chip-label">TARGET POPULATION</span>
+                    <span class="chip-value">Homeless &amp; Labor</span>
+                  </div>
+                  <div class="telemetry-chip">
+                    <span class="chip-label">DOORSTEP AID</span>
+                    <span class="chip-value">Bedridden Seniors</span>
+                  </div>
+                  <div class="telemetry-chip">
+                    <span class="chip-label">DIGNITY</span>
+                    <span class="chip-value">Zero Profiling</span>
+                  </div>
+                  <div class="telemetry-chip">
+                    <span class="chip-label">VOLUNTEERS</span>
+                    <span class="chip-value highlight-purple">50–100 Cadre</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 5: CA Auditing -->
+        <div class="pillar-panel-view" id="pillar-panel-5" role="tabpanel" aria-labelledby="pillar-tab-5">
+          <div class="pillar-showcase-grid">
+            <div class="pillar-left-content">
+              <div>
+                <div class="pillar-eyebrow-row">
+                  <span class="pillar-phase-pill">PILLAR 05</span>
+                  <span class="pillar-status-tag tag-emerald">100% AUDITED</span>
+                </div>
+                <h3 class="pillar-headline">Physical Registers &amp; CA Auditing</h3>
+                <p class="pillar-narrative">
+                  Radical fiduciary accountability: wholesale raw material purchases are daily reconciled against the exact weight cooked and verified against physical recipient headcount logs.
+                </p>
+
+                <div class="pillar-bullets-group">
+                  <ul class="pillar-execution-list">
+                    <li>
+                      <span class="bullet-accent">✦</span>
+                      <div><strong>Daily Physical Registers:</strong> Stock consumption reconciled against on-site distribution counts.</div>
+                    </li>
+                    <li>
+                      <span class="bullet-accent">✦</span>
+                      <div><strong>Independent CA Audits:</strong> Quarterly statutory audits certifying 100% legitimate capital deployment.</div>
+                    </li>
+                    <li>
+                      <span class="bullet-accent">✦</span>
+                      <div><strong>Instant 80G Form 10BE:</strong> Direct tax certificates granting donors 50% income tax deductions.</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="pillar-actions-bar">
+                <a href="impact.html#budget-allocation" class="btn-primary-glow btn-shimmer">
+                  <span>View Budget Matrix</span>
+                  <span>&rarr;</span>
+                </a>
+                <div class="pillar-controls">
+                  <button class="pillar-arrow-btn prev-btn" aria-label="Previous Pillar" data-target="4">&#8592;</button>
+                  <span class="pillar-counter-indicator">05 / 05</span>
+                  <button class="pillar-arrow-btn next-btn" aria-label="Next Pillar" data-target="1">&#8594;</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="pillar-right-visual">
+              <div class="pillar-photo-container">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=85" alt="Audited accounting registers, statutory balance sheets, and fiduciary documentation" class="pillar-visual-img">
+                <div class="pillar-telemetry-overlay">
+                  <div class="telemetry-chip">
+                    <span class="chip-label">ANNUAL BUDGET</span>
+                    <span class="chip-value">₹2 Cr Deployed</span>
+                  </div>
+                  <div class="telemetry-chip">
+                    <span class="chip-label">UNIT COST</span>
+                    <span class="chip-value highlight-emerald">₹66.67 / Meal</span>
+                  </div>
+                  <div class="telemetry-chip">
+                    <span class="chip-label">AUDITS</span>
+                    <span class="chip-value">Quarterly CA</span>
+                  </div>
+                  <div class="telemetry-chip">
+                    <span class="chip-label">TAX RELIEF</span>
+                    <span class="chip-value">80G Form 10BE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- =========================================================================
-       SECTION 3: WARM PORCELAIN "NUMBERS BEHIND OUR VALUE" (Sticky Split)
+       SECTION 5: BALANCED THALI EXPLORER (SLIDE 8 & 9)
        ========================================================================= -->
-  <section class="section-cream-metrics" id="impact-metrics">
-    <div class="container metrics-sticky-wrapper">
-      <!-- Left Column (Sticky) -->
-      <div class="metrics-left-column">
-        <div class="section-tag-vibrant">
-          + NUMBERS BEHIND OUR VALUE
-        </div>
-        <h2 class="metrics-main-title">
-          Measuring Transformation Across Northern India.
+  <section class="section-thali" id="thali-program">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="section-tag-badge">NUTRITIONAL COMPOSITION • BALANCED THALI</span>
+        <h2 class="section-title">
+          Designed for <span class="italic-flair">Nourishment, Not Just Calories.</span>
         </h2>
-        <p class="metrics-lead-text">
-          Every rupee deployed and every community reached is tracked against verifiable ground milestones. Our 7-year track record reflects an unwavering commitment to grassroots empowerment.
+        <p class="section-desc" style="margin: 0 auto;">
+          The foundation prioritizes a wholesome, balanced diet fulfilling macro and micronutrient benchmarks recommended by medical nutritionists.
         </p>
-        <div class="metrics-left-action">
-          <a href="impact.html" class="btn-vibrant-cta">
-            <span class="btn-text">Explore Audit Telemetry</span>
-            <span class="btn-arrow">→</span>
+      </div>
+
+      <div class="thali-container">
+        <!-- Left: Interactive Tab Buttons -->
+        <div class="thali-tabs-nav">
+          <button type="button" class="thali-nav-btn active" data-thali="staple">
+            <div>
+              <div class="thali-btn-title">01 // Staple Grains</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">Steamed Rice &amp; Whole Wheat Roti</div>
+            </div>
+            <span class="thali-btn-portion">~250g Portion</span>
+          </button>
+
+          <button type="button" class="thali-nav-btn" data-thali="protein">
+            <div>
+              <div class="thali-btn-title">02 // Protein Engine</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">Lentils, Arhar Dal &amp; Chana</div>
+            </div>
+            <span class="thali-btn-portion">~150g Portion</span>
+          </button>
+
+          <button type="button" class="thali-nav-btn" data-thali="vegetable">
+            <div>
+              <div class="thali-btn-title">03 // Seasonal Vegetables</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">Nutritious Greens, Roots &amp; Subzi</div>
+            </div>
+            <span class="thali-btn-portion">~100g Portion</span>
+          </button>
+
+          <button type="button" class="thali-nav-btn" data-thali="supplement">
+            <div>
+              <div class="thali-btn-title">04 // Supplementary Adds</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">Fruit, Jaggery &amp; Fortification</div>
+            </div>
+            <span class="thali-btn-portion">Child Special</span>
+          </button>
+
+          <button type="button" class="thali-nav-btn" data-thali="water">
+            <div>
+              <div class="thali-btn-title">05 // Potable Water</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">Certified Clean Drinking Water</div>
+            </div>
+            <span class="thali-btn-portion">500ml Clean</span>
+          </button>
+        </div>
+
+        <!-- Right: Interactive Display Card -->
+        <div class="thali-display-card">
+          <img id="thali-img" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Nutritious Balanced Thali Plate" class="thali-img-preview">
+          <div class="thali-detail-body">
+            <span class="section-tag-badge" id="thali-badge">STAPLE GRAINS • ENERGY ENGINE</span>
+            <h3 id="thali-title" style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">
+              Fresh Steamed Rice &amp; Warm Whole-Wheat Roti
+            </h3>
+            <p id="thali-desc" style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.65;">
+              High-energy complex carbohydrates providing essential daily caloric foundation for daily wage earners and street dwellers. Freshly prepared in hygienic vessels.
+            </p>
+
+            <div class="thali-macro-bars" id="thali-macro-bars">
+              <!-- Dynamically populated via setupThaliExplorer() in js/main.js -->
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: 0.78rem;">
+              <span style="color: var(--brand-emerald-dark); font-weight: 700;">✓ FSSAI HYGIENE PROTOCOLS</span>
+              <span style="color: var(--text-muted);">CALORIC VALUE: ~650 KCAL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: SOCIAL IMPACT TARGETS & FINANCIAL SUSTAINABILITY (SLIDE 11 & 14)
+       ========================================================================= -->
+  <section class="section-impact-targets" id="impact-targets">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+        <span class="section-tag-badge emerald" style="font-size: 0.72rem; padding: 0.3rem 0.8rem; margin-bottom: 0.6rem;">ANNUAL PROGRAM BENCHMARKS • SLIDE 11 &amp; 14</span>
+        <h2 class="section-title" style="color: #FFFFFF; font-size: clamp(1.8rem, 2.6vw, 2.3rem); line-height: 1.18; margin-bottom: 0.4rem;">
+          Measurable Goals &amp; <span class="italic-flair" style="color: #FBBF24;">Radical Efficiency.</span>
+        </h2>
+        <p class="section-desc" style="color: #94A3B8; font-size: 0.95rem; line-height: 1.55; max-width: 640px; margin: 0 auto;">
+          The ₹2 Crore annual budget is deployed with strict unit economics: ₹66.67 per meal covering bulk procurement, certified preparation, and hygienic transport.
+        </p>
+      </div>
+
+      <div class="impact-editorial-container">
+        <!-- Compact Open Metrics Strip -->
+        <div class="impact-metrics-strip">
+          <div class="metric-strip-item">
+            <div class="metric-big-num color-emerald">3,00,000</div>
+            <div class="metric-strip-title">Nutritious Meals Distributed</div>
+            <p class="metric-strip-desc">Annual baseline target served across 365 continuous days.</p>
+          </div>
+
+          <div class="metric-strip-item">
+            <div class="metric-big-num color-cyan">~822 / day</div>
+            <div class="metric-strip-title">Daily Operating Cadence</div>
+            <p class="metric-strip-desc">Uninterrupted morning and evening relief schedules.</p>
+          </div>
+
+          <div class="metric-strip-item">
+            <div class="metric-big-num color-orange">₹66.67</div>
+            <div class="metric-strip-title">All-Inclusive Cost / Meal</div>
+            <p class="metric-strip-desc">Includes bulk grains, hygienic prep, packaging &amp; fleet transit.</p>
+          </div>
+        </div>
+
+        <!-- 2-Column Structured Bulleted Audit Matrix (Compact) -->
+        <div class="impact-bullets-split-grid">
+          <!-- Column 1: Field Delivery Outcomes -->
+          <div class="impact-bullet-column-card">
+            <h3 class="impact-column-heading">
+              <span style="color: #34D399;">✦</span> Field Delivery &amp; Reach
+            </h3>
+            <ul class="impact-bullet-list">
+              <li>
+                <div class="bullet-icon-box green">✓</div>
+                <div>
+                  <strong>365 Days Unbroken Cadence:</strong> Active year-round relief across monsoons, summer &amp; winter.
+                </div>
+              </li>
+              <li>
+                <div class="bullet-icon-box green">✓</div>
+                <div>
+                  <strong>5–10 Strategic Beneficiary Hubs:</strong> Mapped stations at labor chowks, hospital sheds &amp; night shelters.
+                </div>
+              </li>
+              <li>
+                <div class="bullet-icon-box green">✓</div>
+                <div>
+                  <strong>50–100 Volunteer Cadre:</strong> Trained personnel for hygiene protocols, queue order &amp; logs.
+                </div>
+              </li>
+              <li>
+                <div class="bullet-icon-box green">✓</div>
+                <div>
+                  <strong>~30+ Tons Surplus Rescued:</strong> Coordinated food recovery from banquet halls &amp; corporate kitchens.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Governance & Financial Accountability -->
+          <div class="impact-bullet-column-card">
+            <h3 class="impact-column-heading">
+              <span style="color: #38BDF8;">✦</span> Fiduciary Governance &amp; Fiscal Rigor
+            </h3>
+            <ul class="impact-bullet-list">
+              <li>
+                <div class="bullet-icon-box orange">✓</div>
+                <div>
+                  <strong>₹2 Crore Capital Framework:</strong> Strict 6-head budgetary matrix maximizing direct meal relief.
+                </div>
+              </li>
+              <li>
+                <div class="bullet-icon-box orange">✓</div>
+                <div>
+                  <strong>Daily Inventory Reconciliation:</strong> Wholesale grain purchase invoices matched to recipient counts.
+                </div>
+              </li>
+              <li>
+                <div class="bullet-icon-box orange">✓</div>
+                <div>
+                  <strong>Quarterly Independent CA Audits:</strong> Certified utilization certificates published for public review.
+                </div>
+              </li>
+              <li>
+                <div class="bullet-icon-box orange">✓</div>
+                <div>
+                  <strong>Instant 80G Tax Certificates:</strong> Automated Form 10BE generation providing 50% tax deductions.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 7: INTERACTIVE MEAL SIMULATOR & 80G TAX CALCULATOR
+       ========================================================================= -->
+  <section class="section-calculator" id="meal-calculator">
+    <div class="container">
+      <div class="calculator-card-wrapper modern-calc-wrapper">
+        <div style="text-align: center; max-width: 780px; margin: 0 auto;">
+          <div class="tax-benefit-guarantee-pill">
+            <span class="pill-pulse-dot"></span>
+            <span>SECTION 80G TAX EXEMPTION ACTIVE • 50% IMMEDIATE DEDUCTION</span>
+          </div>
+          <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.4vw, 3rem); font-weight: 800; margin-bottom: 0.75rem; color: #FFFFFF;">
+            Calculate Your Contribution &amp; Tax Deduction.
+          </h2>
+          <p style="font-size: 1.05rem; color: #CBD5E1; line-height: 1.65; max-width: 680px; margin: 0 auto;">
+            Adjust the slider below to see how many balanced thalis your contribution delivers, total nutritious food weight, and your statutory tax deduction under Section 80G.
+          </p>
+        </div>
+
+        <!-- Preset Buttons -->
+        <div style="text-align: center; margin-top: 2rem;">
+          <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #94A3B8; text-transform: uppercase; margin-right: 0.5rem;">QUICK PRESETS:</span>
+          <div class="calc-presets-row" style="justify-content: center;">
+            <button type="button" class="calc-preset-btn active" data-meals="75">75 Meals (₹5,000)</button>
+            <button type="button" class="calc-preset-btn" data-meals="150">150 Meals (₹10,000)</button>
+            <button type="button" class="calc-preset-btn" data-meals="822">Full Day: 822 Meals (₹54,795)</button>
+            <button type="button" class="calc-preset-btn" data-meals="1500">1,500 Meals (₹1 Lakh)</button>
+          </div>
+        </div>
+
+        <!-- Slider -->
+        <div class="calc-slider-box" style="max-width: 820px; margin: 1.5rem auto 2.5rem;">
+          <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.75rem; color: #94A3B8; margin-bottom: 0.5rem;">
+            <span>15 Meals (₹1,000)</span>
+            <span>822 Meals (Full Day Operation)</span>
+            <span>1,500 Meals (₹1,00,000)</span>
+          </div>
+          <input type="range" min="15" max="1500" step="5" value="75" class="calc-range-slider" id="meal-slider" aria-label="Adjust meal slider">
+        </div>
+
+        <!-- Live Output Telemetry -->
+        <div class="calc-telemetry-output-grid" style="max-width: 960px; margin: 0 auto;">
+          <div class="calc-output-item">
+            <span class="calc-output-val" id="calc-meal-count" style="color: #FFFFFF;">75</span>
+            <span class="calc-output-label">Meals Funded</span>
+          </div>
+          <div class="calc-output-item">
+            <span class="calc-output-val" id="calc-total-cost" style="color: #34D399;">₹5,000</span>
+            <span class="calc-output-label">Total Contribution</span>
+          </div>
+          <div class="calc-output-item">
+            <span class="calc-output-val" id="calc-tax-relief" style="color: #60A5FA;">₹2,500</span>
+            <span class="calc-output-label">50% 80G Tax Deduction</span>
+          </div>
+          <div class="calc-output-item">
+            <span class="calc-output-val" id="calc-food-kg" style="color: #FBBF24;">34 kg</span>
+            <span class="calc-output-label">Wholesome Food Weight</span>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="donate.html#bank-wire" class="btn-primary-glow" id="calc-donate-btn">
+            <span>Transfer Via Verified Canara Bank Account</span>
+            <span>→</span>
           </a>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Right Column (Stacked Cards with Images & Big Stats) -->
-      <div class="metrics-cards-stack">
-        <!-- Impact Card 1 -->
-        <div class="impact-stat-card">
-          <div class="card-stat-header">
-            <span class="stat-num-massive counter-figure" data-target="12500">12,500</span><span class="stat-plus-vibrant">+</span>
-          </div>
-          <h3 class="stat-card-title">Lives Directly Benefited</h3>
-          <p class="stat-card-desc">
-            Students enrolled, youth certified in digital IT labs, and rural families provided essential preventive medical care.
-          </p>
-          <div class="stat-card-image-wrap">
-            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Children in classroom studying happily" loading="lazy">
-          </div>
-        </div>
+    <!-- =========================================================================
+       INFINITE TICKER MARQUEE & STATUTORY TRANSPARENCY STRIP
+       ========================================================================= -->
+  <section class="section-marquee-ticker" data-reveal>
+    <div class="marquee-track-container">
+      <div class="marquee-flow-track">
+        <div class="marquee-item"><span class="ticker-dot">✦</span> 3,00,000 ANNUAL MEALS TARGET</div>
+        <div class="marquee-item"><span class="ticker-dot">✦</span> ₹66.67 PRECISION UNIT COST</div>
+        <div class="marquee-item"><span class="ticker-dot">✦</span> FSSAI HYGIENE CERTIFIED</div>
+        <div class="marquee-item"><span class="ticker-dot">✦</span> SECTION 80G 50% TAX EXEMPTION</div>
+        <div class="marquee-item"><span class="ticker-dot">✦</span> CANARA BANK DIRECT SETTLEMENT</div>
+        <div class="marquee-item"><span class="ticker-dot">✦</span> 50–100 ACTIVE GROUND CADRE</div>
+        <div class="marquee-item"><span class="ticker-dot">✦</span> 100% STATUTORY COMPLIANCE</div>
+        <div class="marquee-item"><span class="ticker-dot">✦</span> 30+ TONS FOOD WASTE RESCUED</div>
+        <!-- Duplicated for seamless infinite loop -->
+        <div class="marquee-item"><span class="ticker-dot">✦</span> 3,00,000 ANNUAL MEALS TARGET</div>
+        <div class="marquee-item"><span class="ticker-dot">✦</span> ₹66.67 PRECISION UNIT COST</div>
+        <div class="marquee-item"><span class="ticker-dot">✦</span> FSSAI HYGIENE CERTIFIED</div>
+        <div class="marquee-item"><span class="ticker-dot">✦</span> SECTION 80G 50% TAX EXEMPTION</div>
+        <div class="marquee-item"><span class="ticker-dot">✦</span> CANARA BANK DIRECT SETTLEMENT</div>
+        <div class="marquee-item"><span class="ticker-dot">✦</span> 50–100 ACTIVE GROUND CADRE</div>
+        <div class="marquee-item"><span class="ticker-dot">✦</span> 100% STATUTORY COMPLIANCE</div>
+        <div class="marquee-item"><span class="ticker-dot">✦</span> 30+ TONS FOOD WASTE RESCUED</div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Impact Card 2 -->
-        <div class="impact-stat-card">
-          <div class="card-stat-header">
-            <span class="stat-num-massive counter-figure" data-target="7">7</span><span class="stat-plus-vibrant">+</span>
+  <!-- Interactive Transparency Gateway Card -->
+  <section class="section-transparency-gateway" data-reveal style="background: #F8FAFC !important; padding: 5rem 0; position: relative; z-index: 5; border-top: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0;">
+    <div class="container">
+      <div class="transparency-banner-card spotlight-card has-border-beam" style="background: linear-gradient(135deg, #0F172A 0%, #162032 100%) !important; border: 1.5px solid rgba(59, 130, 246, 0.45) !important; border-radius: 24px; padding: 3.5rem; position: relative; overflow: hidden; box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.3), 0 0 35px rgba(37, 99, 235, 0.18) !important;">
+        <div class="transparency-grid-split">
+          <div>
+            <div class="hero-eyebrow-pill float-slow" style="background: rgba(37, 99, 235, 0.2) !important; border: 1px solid rgba(96, 165, 250, 0.6) !important; display: inline-flex; align-items: center; gap: 0.65rem; padding: 0.45rem 1rem; border-radius: 999px; margin-bottom: 1.25rem;">
+              <span class="eyebrow-pulse-dot" style="background: #10B981; box-shadow: 0 0 10px #10B981;"></span>
+              <span class="eyebrow-text" style="color: #93C5FD !important; font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">FIDUCIARY GOVERNANCE • ITEM (I) SCHEDULE VII</span>
+            </div>
+            <h3 class="transparency-title" style="color: #FFFFFF !important; font-family: var(--font-display); font-size: clamp(2rem, 3.8vw, 2.75rem); font-weight: 800; line-height: 1.25; margin: 1.25rem 0 1rem; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;">100% Audited Rupee-for-Rupee Deployment</h3>
+            <p class="transparency-desc" style="color: #CBD5E1 !important; font-size: 1.05rem; line-height: 1.7; max-width: 640px; margin-bottom: 2.25rem;">
+              Every single rupee contributed to Sarwe Unnati Foundation is deployed under certified Section 8 governance. View our comprehensive 6-head capital allocation matrix, unit economics telemetry, and independent CA audit reports.
+            </p>
+            <div class="transparency-actions">
+              <a href="impact.html#budget-allocation" class="btn-primary-glow btn-shimmer" style="background: #2563EB; color: #FFFFFF !important;">
+                <span>Explore Full ₹2 Cr Itemized Audit Matrix</span>
+                <span>→</span>
+              </a>
+              <a href="about.html#leadership" class="btn-secondary-outline" style="border: 1.5px solid rgba(255, 255, 255, 0.35) !important; color: #FFFFFF !important; background: rgba(255, 255, 255, 0.08) !important;">
+                <span>Director &amp; Stewardship</span>
+              </a>
+            </div>
           </div>
-          <h3 class="stat-card-title">Years of Active Ground Execution</h3>
-          <p class="stat-card-desc">
-            Continuously operating on the ground since formal legal incorporation on August 14, 2018 (RoC Kanpur).
-          </p>
-          <div class="stat-card-image-wrap">
-            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Plantation and rural execution work" loading="lazy">
-          </div>
-        </div>
-
-        <!-- Impact Card 3 -->
-        <div class="impact-stat-card">
-          <div class="card-stat-header">
-            <span class="stat-num-massive counter-figure" data-target="35">35</span><span class="stat-plus-vibrant">+</span>
-          </div>
-          <h3 class="stat-card-title">Medical &amp; Diagnostic Camps Executed</h3>
-          <p class="stat-card-desc">
-            Free physician consultations, eye screenings, vital diagnostics, and prescription medicines delivered directly to remote villages.
-          </p>
-          <div class="stat-card-image-wrap">
-            <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80" alt="Doctor providing free checkup in rural camp" loading="lazy">
-          </div>
-        </div>
-
-        <!-- Impact Card 4 -->
-        <div class="impact-stat-card">
-          <div class="card-stat-header">
-            <span class="stat-num-massive counter-figure" data-target="100">100</span><span class="stat-plus-vibrant">%</span>
-          </div>
-          <h3 class="stat-card-title">Statutory Tax Relief on Contributions</h3>
-          <p class="stat-card-desc">
-            Section 80G (URN: AAECH6219BF20261) &amp; Section 12A (URN: AAECH6219BE20251) approved and verified.
-          </p>
-          <div class="stat-card-image-wrap">
-            <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80" alt="Legal and financial documents verification" loading="lazy">
+          <div class="transparency-kpi-column">
+            <div class="kpi-mini-card" style="background: #1E293B !important; border: 1px solid rgba(255, 255, 255, 0.16) !important; border-radius: 14px; padding: 1.35rem 1.75rem;">
+              <div class="kpi-num" data-counter="66" data-prefix="₹" data-suffix=".67" style="color: #FFFFFF !important; font-family: var(--font-mono); font-size: 2.1rem; font-weight: 800;">₹66.67</div>
+              <div class="kpi-lbl" style="color: #F97316 !important; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.35rem;">All-Inclusive Cost / Meal</div>
+            </div>
+            <div class="kpi-mini-card" style="background: #1E293B !important; border: 1px solid rgba(255, 255, 255, 0.16) !important; border-radius: 14px; padding: 1.35rem 1.75rem;">
+              <div class="kpi-num" data-counter="822" data-suffix="/day" style="color: #FFFFFF !important; font-family: var(--font-mono); font-size: 2.1rem; font-weight: 800;">822/day</div>
+              <div class="kpi-lbl" style="color: #F97316 !important; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.35rem;">Daily Balanced Thalis</div>
+            </div>
+            <div class="kpi-mini-card" style="background: #1E293B !important; border: 1px solid rgba(255, 255, 255, 0.16) !important; border-radius: 14px; padding: 1.35rem 1.75rem;">
+              <div class="kpi-num" data-counter="50" data-suffix="%" style="color: #FFFFFF !important; font-family: var(--font-mono); font-size: 2.1rem; font-weight: 800;">50%</div>
+              <div class="kpi-lbl" style="color: #F97316 !important; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.35rem;">Section 80G Tax Exemption</div>
+            </div>
           </div>
         </div>
       </div>
@@ -364,397 +1156,466 @@
   </section>
 
   <!-- =========================================================================
-       SECTION 4: LUMINOUS BRAND MANIFESTO CARD
+       SECTION 9: CSR PARTNERSHIP TIERS (SLIDE 16)
        ========================================================================= -->
-  <section class="section-manifesto-vibrant">
+  <section class="section-csr-tiers" id="csr-partnerships">
     <div class="container">
-      <div class="manifesto-card-vibrant">
-        <div class="manifesto-tag-vibrant">
-          + OUR CHARTER &amp; CREED
-        </div>
-        <blockquote class="manifesto-quote-text">
-          &ldquo;<em>We do not believe in superficial charity. We engineer self-sustaining ground systems—equipping young minds with modern IT tools, healing remote communities through preventive care, and ensuring every single contribution is audited and deployed for maximum social yield.</em>&rdquo;
-        </blockquote>
-        <div class="manifesto-signoff">
-          <div class="signoff-names">PRIYESH GARG &amp; DIPESH GARG</div>
-          <div class="signoff-roles">DIRECTORS, SARWE UNNATI FOUNDATION &bull; CIN: U80902UP2018NPL106959</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       SECTION 5: CORE VERTICALS SPOTLIGHT (Bright & Modern Cards)
-       ========================================================================= -->
-  <section class="section-verticals-vibrant" id="verticals">
-    <div class="container">
-      <div class="verticals-header-wrap">
-        <div>
-          <span class="section-tag-vibrant">+ WHAT WE DO &bull; CORE VERTICALS</span>
-          <h2 class="verticals-massive-title">Structured Ground Interventions.</h2>
-        </div>
-        <p class="verticals-lead-desc">
-          Engineered to create self-sustaining community ecosystems across Northern India. Every intervention is aligned with statutory Section 8 objectives.
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="section-tag-badge emerald">CORPORATE ALLIANCES • SCHEDULE VII CSR</span>
+        <h2 class="section-title">
+          Strategic CSR <span class="italic-flair">Partnership Models.</span>
+        </h2>
+        <p class="section-desc" style="margin: 0 auto;">
+          Compliant with Schedule VII of the Companies Act, 2013. Supported by Chartered Accountant audited utilization certificates, Form 10BE, and quarterly ESG impact reports.
         </p>
       </div>
 
-      <div class="spotlight-cards-grid">
-        <!-- Vertical 1: Shiksha Unnati -->
-        <article class="spotlight-card-vibrant">
-          <div class="spotlight-media">
-            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Students in classroom learning" loading="lazy">
+      <div class="csr-tier-grid modern-csr-grid">
+        <!-- Tier 1: Grassroots -->
+        <div class="csr-card modern-tier-card">
+          <div class="tier-card-header">
+            <span class="tier-badge-chip">GRASSROOTS CSR</span>
+            <h3 class="csr-title">Sponsor a Meal Batch</h3>
+            <div class="csr-price">₹5,000 – ₹50,000</div>
+            <p class="csr-desc">Support ongoing daily steam-kettle preparation and nutritious field distribution batches.</p>
           </div>
-          <div class="spotlight-body">
-            <div class="spotlight-body-top">
-              <span class="spotlight-idx-pill badge-pill-amber">[ 01 ] EDUCATION</span>
-              <h3 class="spotlight-card-title">Shiksha Unnati</h3>
-              <p class="spotlight-card-text">
-                Universal access to primary and secondary schooling. We provide complete backpacks, learning supplies, and run evening remedial centers for first-generation learners.
-              </p>
-            </div>
-            <a href="programs.html#education" class="spotlight-arrow-link">
-              <span>Explore Vertical Details</span>
-              <span class="arrow-ico">→</span>
-            </a>
+          <div class="tier-card-body">
+            <div class="tier-deliverables-title">Verified Inclusions:</div>
+            <ul class="clean-bullet-list tier-bullets">
+              <li>
+                <span class="bullet-marker">✓</span>
+                <div><strong>Flexible Batches:</strong> 75 to 750 hot, balanced thalis deployed in verified distribution queues.</div>
+              </li>
+              <li>
+                <span class="bullet-marker">✓</span>
+                <div><strong>Statutory 80G Tax Deduction:</strong> Immediate 50% tax exemption certificate with Form 10BE filing.</div>
+              </li>
+              <li>
+                <span class="bullet-marker">✓</span>
+                <div><strong>Photographic Proof:</strong> Digital verification summary of food preparation and dignified service.</div>
+              </li>
+            </ul>
           </div>
-        </article>
+          <div class="tier-card-footer">
+            <a href="donate.html?tier=meal" class="btn-secondary-outline tier-btn">Sponsor Meal Batch →</a>
+          </div>
+        </div>
 
-        <!-- Vertical 2: Kaushal Unnati -->
-        <article class="spotlight-card-vibrant">
-          <div class="spotlight-media">
-            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Students learning computer skills in IT lab" loading="lazy">
+        <!-- Tier 2: FEATURED CORPORATE BENCHMARK -->
+        <div class="csr-card modern-tier-card featured-csr-tier">
+          <div class="featured-tier-ribbon">
+            <span class="star-icon">★</span>
+            <span>MOST POPULAR • CORPORATE BENCHMARK</span>
           </div>
-          <div class="spotlight-body">
-            <div class="spotlight-body-top">
-              <span class="spotlight-idx-pill badge-pill-purple">[ 02 ] TECHNOLOGY</span>
-              <h3 class="spotlight-card-title">Kaushal Unnati</h3>
-              <p class="spotlight-card-text">
-                Specialized digital and IT vocational training centers equipping underprivileged youth with practical computer hardware, networking, and software skills for immediate employment.
-              </p>
-            </div>
-            <a href="programs.html#skills" class="spotlight-arrow-link">
-              <span>Explore Vertical Details</span>
-              <span class="arrow-ico">→</span>
+          <div class="tier-card-header">
+            <span class="tier-badge-chip orange-chip">SILVER ANNADAAN</span>
+            <h3 class="csr-title">Day-of-Service Sponsorship</h3>
+            <div class="csr-price orange-price">₹54,795 – ₹1,00,000</div>
+            <p class="csr-desc">Sponsor a full day of foundation operations (822 meals) or dedicate 1,500 thalis to commemorate corporate milestones.</p>
+          </div>
+          <div class="tier-card-body">
+            <div class="tier-deliverables-title">Comprehensive CSR Deliverables:</div>
+            <ul class="clean-bullet-list tier-bullets">
+              <li>
+                <span class="bullet-marker orange-marker">✓</span>
+                <div><strong>Entire Daily Run (822 Thalis):</strong> Direct capital coverage of morning procurement, kitchen prep, and field logistics.</div>
+              </li>
+              <li>
+                <span class="bullet-marker orange-marker">✓</span>
+                <div><strong>Dedicated Distribution Drive:</strong> Field photo and video documentation honoring company sponsorship.</div>
+              </li>
+              <li>
+                <span class="bullet-marker orange-marker">✓</span>
+                <div><strong>CA Utilization Certificate:</strong> Signed audit document ready for corporate CSR Schedule VII compliance.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="tier-card-footer">
+            <a href="donate.html?tier=day" class="btn-primary-glow tier-btn orange-btn">
+              <span>Sponsor Full Day Operations</span>
+              <span>→</span>
             </a>
           </div>
-        </article>
+        </div>
 
-        <!-- Vertical 3: Aarogya Unnati -->
-        <article class="spotlight-card-vibrant">
-          <div class="spotlight-media">
-            <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80" alt="Doctor conducting free medical camp" loading="lazy">
+        <!-- Tier 3: Strategic Community Adoption -->
+        <div class="csr-card modern-tier-card">
+          <div class="tier-card-header">
+            <span class="tier-badge-chip">COMMUNITY ADOPTION</span>
+            <h3 class="csr-title">Adopt a Relief Sector</h3>
+            <div class="csr-price">₹1L – ₹5L <span class="price-cadence">/ Month</span></div>
+            <p class="csr-desc">Adopt an identified high-vulnerability slum cluster, night shelter, or construction corridor with recurring food security.</p>
           </div>
-          <div class="spotlight-body">
-            <div class="spotlight-body-top">
-              <span class="spotlight-idx-pill badge-pill-green">[ 03 ] HEALTHCARE</span>
-              <h3 class="spotlight-card-title">Aarogya Unnati</h3>
-              <p class="spotlight-card-text">
-                Mobile rural health camps bringing experienced doctors, vital screenings, clean drinking water drives, and free prescription drugs directly to remote hamlets.
-              </p>
-            </div>
-            <a href="programs.html#health" class="spotlight-arrow-link">
-              <span>Explore Vertical Details</span>
-              <span class="arrow-ico">→</span>
-            </a>
+          <div class="tier-card-body">
+            <div class="tier-deliverables-title">Strategic Institutional Support:</div>
+            <ul class="clean-bullet-list tier-bullets">
+              <li>
+                <span class="bullet-marker">✓</span>
+                <div><strong>Sustained Monthly Cadence:</strong> Continuous food relief ensuring zero hunger dropouts across target clusters.</div>
+              </li>
+              <li>
+                <span class="bullet-marker">✓</span>
+                <div><strong>Co-Branded Distribution:</strong> On-site signage acknowledging corporate philanthropic partnership.</div>
+              </li>
+              <li>
+                <span class="bullet-marker">✓</span>
+                <div><strong>Board Impact Dossier:</strong> Quarterly ESG impact report with demographic tracking and CA sign-off.</div>
+              </li>
+            </ul>
           </div>
-        </article>
-
-        <!-- Vertical 4: Mahila Sashaktikaran -->
-        <article class="spotlight-card-vibrant">
-          <div class="spotlight-media">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Women vocational tailoring collective" loading="lazy">
+          <div class="tier-card-footer">
+            <a href="contact.html?type=adopt-community" class="btn-secondary-outline tier-btn">Inquire for CSR Adoption →</a>
           </div>
-          <div class="spotlight-body">
-            <div class="spotlight-body-top">
-              <span class="spotlight-idx-pill badge-pill-rose">[ 04 ] EMPOWERMENT</span>
-              <h3 class="spotlight-card-title">Mahila Sashaktikaran</h3>
-              <p class="spotlight-card-text">
-                Establishing Self-Help Groups (SHGs), tailoring cooperatives, and financial literacy workshops to ensure women have independent earning power and financial autonomy.
-              </p>
-            </div>
-            <a href="programs.html#women" class="spotlight-arrow-link">
-              <span>Explore Vertical Details</span>
-              <span class="arrow-ico">→</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- Vertical 5: Gramin Utthan -->
-        <article class="spotlight-card-vibrant">
-          <div class="spotlight-media">
-            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=80" alt="Rural community development" loading="lazy">
-          </div>
-          <div class="spotlight-body">
-            <div class="spotlight-body-top">
-              <span class="spotlight-idx-pill badge-pill-cyan">[ 05 ] RURAL</span>
-              <h3 class="spotlight-card-title">Gramin Utthan</h3>
-              <p class="spotlight-card-text">
-                Community infrastructure, village sanitation units, environmental tree plantation, and rapid disaster relief supplies for vulnerable rural clusters.
-              </p>
-            </div>
-            <a href="programs.html#rural" class="spotlight-arrow-link">
-              <span>Explore Vertical Details</span>
-              <span class="arrow-ico">→</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- Vertical 6: Corporate CSR Alliances -->
-        <article class="spotlight-card-vibrant card-featured-csr">
-          <div class="spotlight-media">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Corporate architectural facade" loading="lazy">
-          </div>
-          <div class="spotlight-body">
-            <div class="spotlight-body-top">
-              <span class="spotlight-idx-pill csr-pill">[ 06 ] CSR ALLIANCE</span>
-              <h3 class="spotlight-card-title text-purple">CSR Partnerships</h3>
-              <p class="spotlight-card-text">
-                Partner with Sarwe Unnati Foundation under Schedule VII of the Companies Act, 2013 for audited CSR execution with real-time reporting and verifiable social metrics.
-              </p>
-            </div>
-            <a href="volunteer.html#fellowship" class="spotlight-arrow-link link-purple">
-              <span>Explore Volunteer Fellowship</span>
-              <span class="arrow-ico">→</span>
-            </a>
-          </div>
-        </article>
+        </div>
       </div>
     </div>
   </section>
-
 
   <!-- =========================================================================
-       SECTION 7: DIRECT CANARA BANK WIRE & MODERN BRIGHT FOOTER
+       SECTION 10: 5-PHASE IMPLEMENTATION ROADMAP (SLIDE 17)
        ========================================================================= -->
-  <section class="section-wire-vibrant" id="wire-details">
+  <section class="section-roadmap" id="roadmap">
     <div class="container">
-      <div class="wire-grid-layout">
-        <div>
-          <span class="section-tag-vibrant">+ FINANCIAL TELEMETRY</span>
-          <h2 class="wire-massive-title">Direct Canara Bank Wire Transfer.</h2>
-          <p class="wire-lead-desc">
-            Direct funds via NEFT, RTGS, IMPS, or Net Banking straight to the foundation’s verified Canara Bank account. Zero intermediary commissions or platform cuts—100% of your contribution reaches the ground.
-          </p>
+      <div style="max-width: 800px;">
+        <span class="section-tag-badge">12-MONTH TIMELINE • SLIDE 17</span>
+        <h2 class="section-title">
+          Implementation <span class="italic-flair">Roadmap.</span>
+        </h2>
+        <p class="section-desc">
+          A phased, disciplined rollout ensuring supplier verification, pilot validation, and measured expansion across Western UP.
+        </p>
+      </div>
 
-          <div class="wire-features-list">
-            <div class="wire-feature-item">
-              <span class="feature-check">[ ✓ ]</span> Instant 80G tax receipt issued upon receipt of UTR reference
+      <!-- Linear Connected Timeline with Milestone Bullets -->
+      <div class="roadmap-linear-timeline">
+        <!-- Phase 1 -->
+        <div class="timeline-milestone-row">
+          <div class="timeline-node-pin">01</div>
+          <div class="timeline-milestone-content">
+            <div class="milestone-meta-bar">
+              <span class="milestone-time-badge">MONTH 1</span>
+              <h3 class="milestone-phase-name">Foundational Setup &amp; Ground Baseline</h3>
             </div>
-            <div class="wire-feature-item">
-              <span class="feature-check">[ ✓ ]</span> Full audit trail visible in annual statutory balance sheets
-            </div>
-            <div class="wire-feature-item">
-              <span class="feature-check">[ ✓ ]</span> Schedule VII corporate CSR eligible partnerships
-            </div>
-          </div>
-
-          <div class="wire-cta-wrap">
-            <a href="donate.html" class="btn-vibrant-cta">
-              <span class="btn-text">Open Donation &amp; 80G Tax Portal</span>
-              <span class="btn-arrow">→</span>
-            </a>
+            <ul class="milestone-bullets-list">
+              <li>Location mapping and ward-level hunger baseline surveys across Saharanpur</li>
+              <li>FSSAI certified commercial kitchen agreements and equipment procurement</li>
+              <li>Wholesale ingredient supplier contracts for bulk pulses, grains, and spices</li>
+              <li>Ground volunteer mobilization drive and safety training onboarding</li>
+            </ul>
           </div>
         </div>
 
-        <!-- Bank Passbook Card (Bright & Trustworthy) -->
-        <div class="bank-passbook-vibrant">
-          <div class="passbook-top">
-            <div>
-              <div class="bank-title">CANARA BANK</div>
-              <div class="bank-branch">SAHARANPUR COURT ROAD (02201), UTTAR PRADESH</div>
+        <!-- Phase 2 -->
+        <div class="timeline-milestone-row">
+          <div class="timeline-node-pin">02</div>
+          <div class="timeline-milestone-content">
+            <div class="milestone-meta-bar">
+              <span class="milestone-time-badge">MONTHS 2–3</span>
+              <h3 class="milestone-phase-name">Pilot Operations &amp; Portion Calibration</h3>
             </div>
-            <span class="passbook-status-tag">VERIFIED SECTION 8 ACCOUNT</span>
+            <ul class="milestone-bullets-list">
+              <li>Launch pilot meal preparation batches (200–400 meals/day)</li>
+              <li>Calibrate standardized portioning (~650 kcal) and nutritional balances</li>
+              <li>Test thermal insulation containers and mobile transit dispatch routes</li>
+              <li>Establish daily physical recipient registration protocols at pilot hubs</li>
+            </ul>
           </div>
+        </div>
 
-          <div class="passbook-data-list">
-            <!-- Account Holder -->
-            <div class="passbook-data-row">
-              <span class="data-label">BENEFICIARY NAME</span>
-              <div class="data-val-group">
-                <span class="data-val">SARWE UNNATI FOUNDATION</span>
-                <button class="btn-copy-chip" data-copy-target="SARWE UNNATI FOUNDATION">COPY</button>
-              </div>
+        <!-- Phase 3 -->
+        <div class="timeline-milestone-row">
+          <div class="timeline-node-pin">03</div>
+          <div class="timeline-milestone-content">
+            <div class="milestone-meta-bar">
+              <span class="milestone-time-badge">MONTHS 4–6</span>
+              <h3 class="milestone-phase-name">Full-Scale 822 Meals/Day Rollout</h3>
             </div>
+            <ul class="milestone-bullets-list">
+              <li>Ramp operations to full annual target volume (~822 nutritious meals every day)</li>
+              <li>Activate 5–10 fixed distribution hubs covering labor chowks and night shelters</li>
+              <li>Initiate banquet and institutional cafeteria surplus food recovery network</li>
+              <li>Publish first quarterly independent CA audit report and donor briefing</li>
+            </ul>
+          </div>
+        </div>
 
-            <!-- Account Number -->
-            <div class="passbook-data-row">
-              <span class="data-label">ACCOUNT NUMBER</span>
-              <div class="data-val-group">
-                <span class="data-val val-highlight">2201201002013</span>
-                <button class="btn-copy-chip" data-copy-target="2201201002013">COPY</button>
-              </div>
+        <!-- Phase 4 -->
+        <div class="timeline-milestone-row">
+          <div class="timeline-node-pin">04</div>
+          <div class="timeline-milestone-content">
+            <div class="milestone-meta-bar">
+              <span class="milestone-time-badge">MONTHS 7–9</span>
+              <h3 class="milestone-phase-name">Corporate CSR Alliances &amp; Logistics Optimization</h3>
             </div>
+            <ul class="milestone-bullets-list">
+              <li>Formalize institutional CSR grant partnerships under Schedule VII Item (i)</li>
+              <li>Introduce automated route telemetry for dispatch vans to minimize idle transit</li>
+              <li>Expand volunteer base to 100 active community members with specialized PPE</li>
+              <li>Conduct mid-term nutritional health assessment among regular beneficiary groups</li>
+            </ul>
+          </div>
+        </div>
 
-            <!-- IFSC Code -->
-            <div class="passbook-data-row">
-              <span class="data-label">IFSC CODE</span>
-              <div class="data-val-group">
-                <span class="data-val">CNRB0002201</span>
-                <button class="btn-copy-chip" data-copy-target="CNRB0002201">COPY</button>
-              </div>
+        <!-- Phase 5 -->
+        <div class="timeline-milestone-row">
+          <div class="timeline-node-pin">05</div>
+          <div class="timeline-milestone-content">
+            <div class="milestone-meta-bar">
+              <span class="milestone-time-badge">MONTHS 10–12</span>
+              <h3 class="milestone-phase-name">Impact Consolidation &amp; Year 2 Expansion</h3>
             </div>
-
-            <!-- Account Type -->
-            <div class="passbook-data-row">
-              <span class="data-label">ACCOUNT TYPE</span>
-              <span class="data-val">CURRENT ACCOUNT</span>
-            </div>
-
-            <!-- Foundation PAN -->
-            <div class="passbook-data-row">
-              <span class="data-label">FOUNDATION PAN</span>
-              <div class="data-val-group">
-                <span class="data-val">AAECH6219B</span>
-                <button class="btn-copy-chip" data-copy-target="AAECH6219B">COPY</button>
-              </div>
-            </div>
+            <ul class="milestone-bullets-list">
+              <li>Complete annual distribution milestone target of 3,00,000 wholesome meals</li>
+              <li>Publish comprehensive Annual Impact Dossier and statutory Form 10BE filing</li>
+              <li>Reconcile ₹2 Crore budget utilization certificate with statutory auditors</li>
+              <li>Finalize expansion blueprint for Phase II regional kitchen clusters</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Modern Bright & Deep Navy Footer -->
-  <footer class="site-modern-footer">
+  <!-- =========================================================================
+       SECTION 11: FREQUENTLY ASKED QUESTIONS (FAQ ACCORDION)
+       ========================================================================= -->
+  <section class="section-problem" id="faq">
     <div class="container">
-      <div class="footer-top-columns">
-        <!-- Col 1: Brand & Charter -->
-        <div class="footer-col-brand">
-          <div class="footer-brand-huge">SARWE UNNATI FOUNDATION</div>
-          <p class="footer-brand-p">
-            A government-certified Section 8 non-profit company (incorporated August 14, 2018) operating large-scale grassroots education, IT vocational skilling, and public health infrastructure across Northern India.
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="section-tag-badge">DONOR ASSURANCE • STATUTORY FAQ</span>
+        <h2 class="section-title">
+          Frequently Asked <span class="italic-flair">Questions.</span>
+        </h2>
+        <p class="section-desc" style="margin: 0 auto;">
+          Clear, transparent answers regarding our Section 80G tax deductions, FSSAI kitchen audits, and CSR matching.
+        </p>
+      </div>
+
+      <div class="faq-wrap-box">
+        <div class="faq-card-item">
+          <button type="button" class="faq-trigger-btn" aria-expanded="false">
+            <span>How does the Section 80G 50% tax deduction work?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-content-drawer">
+            SARWE UNNATI FOUNDATION holds valid Section 80G approval from the Income Tax Department (URN: <strong>AAECH6219BF20261</strong>). Both individual Indian tax filers and corporate entities are legally entitled to claim a <strong>50% deduction</strong> on their qualifying contribution under Section 80G. Once your transfer is verified, our accounts team issues the official Form 10BE certificate with digital seal.
+          </div>
+        </div>
+
+        <div class="faq-card-item">
+          <button type="button" class="faq-trigger-btn" aria-expanded="false">
+            <span>What standards ensure food safety and preparation hygiene?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-content-drawer">
+            All relief meals are cooked in commercial-grade, sanitized kitchens adhering strictly to FSSAI (Food Safety and Standards Authority of India) food handling regulations. Cooks and volunteers wear food-grade aprons, hairnets, and gloves. High-grade stainless steel cooking vessels and certified pure drinking water are used for every batch.
+          </div>
+        </div>
+
+        <div class="faq-card-item">
+          <button type="button" class="faq-trigger-btn" aria-expanded="false">
+            <span>Can corporate CSR committees inspect kitchens and audit field drives?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-content-drawer">
+            Yes, absolutely. We operate a 100% open-door policy for corporate CSR delegates, institutional donors, and philanthropic evaluators. You are welcome to inspect our preparation centers, review raw material purchase ledgers, and accompany our teams during scheduled field meal distribution drives in Saharanpur and Western UP.
+          </div>
+        </div>
+
+        <div class="faq-card-item">
+          <button type="button" class="faq-trigger-btn" aria-expanded="false">
+            <span>How is the unit economics of ₹66.67 per meal calculated?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-content-drawer">
+            Our ₹2.00 Crore annual budget feeds 3,00,000 wholesome meals over 365 days (~822 meals daily). At ₹66.67 per meal, approximately <strong>55% (₹36.67)</strong> covers wholesale grains, lentils, fresh seasonal vegetables, and spices; <strong>20% (₹13.33)</strong> covers compostable leaf packaging and transport logistics; <strong>16% (₹10.67)</strong> covers kitchen staff wages and utilities; and <strong>9% (₹6.00)</strong> covers statutory audit, insurance, and emergency buffer.
+          </div>
+        </div>
+
+        <div class="faq-card-item">
+          <button type="button" class="faq-trigger-btn" aria-expanded="false">
+            <span>Can I sponsor a full day of food relief across the foundation?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-content-drawer">
+            Yes. Our popular <strong>"Sponsor a Day"</strong> initiative allows donors to fund an entire day of operations (822 meals) for <strong>₹54,795</strong>. Many donors sponsor a day to commemorate birthdays, anniversaries, or corporate milestones. You receive dedicated photographic documentation and an audited daily distribution summary report.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 12: DIRECT CANARA BANK SETTLEMENT TERMINAL
+       ========================================================================= -->
+  <section class="section-wire-terminal" id="bank-wire">
+    <div class="container">
+      <div class="wire-terminal-split">
+        <div>
+          <span class="section-tag-badge emerald">100% DIRECT WIRE DEPLOYMENT</span>
+          <h2 class="section-title">
+            Direct Canara Bank <span class="italic-flair">Settlement.</span>
+          </h2>
+          <p class="section-desc" style="margin-bottom: 2rem;">
+            Transfer directly via NEFT, RTGS, IMPS, or Net Banking into the foundation’s verified bank account. Zero payment gateway fees or intermediary cuts—100% reaches the hungry.
           </p>
-        </div>
 
-        <!-- Col 2: Navigation -->
-        <div>
-          <h4 class="footer-col-heading">NAVIGATION</h4>
-          <ul class="footer-links-list">
-            <li><a href="index.html" class="footer-link-a">↳ Home</a></li>
-            <li><a href="about.html" class="footer-link-a">↳ About Us</a></li>
-            <li><a href="programs.html" class="footer-link-a">↳ Verticals</a></li>
-            <li><a href="impact.html" class="footer-link-a">↳ Impact &amp; Audit</a></li>
-            <li><a href="volunteer.html" class="footer-link-a">↳ Get Involved</a></li>
-            <li><a href="donate.html" class="footer-link-a">↳ 80G Donate</a></li>
-            <li><a href="contact.html" class="footer-link-a">↳ Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 3: Verticals -->
-        <div>
-          <h4 class="footer-col-heading">SPECIALIZATIONS</h4>
-          <ul class="footer-links-list">
-            <li><a href="programs.html#education" class="footer-link-a">↳ Shiksha Unnati</a></li>
-            <li><a href="programs.html#skills" class="footer-link-a">↳ Kaushal Unnati</a></li>
-            <li><a href="programs.html#health" class="footer-link-a">↳ Aarogya Unnati</a></li>
-            <li><a href="programs.html#women" class="footer-link-a">↳ Women Autonomy</a></li>
-            <li><a href="programs.html#rural" class="footer-link-a">↳ Rural Welfare</a></li>
-            <li><a href="volunteer.html#fellowship" class="footer-link-a">↳ Volunteer Fellowship</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 4: Registered Headquarters -->
-        <div>
-          <h4 class="footer-col-heading">REGISTERED OFFICE</h4>
-          <p class="footer-address-p">
-            House No. 119, Vaishali Vihar, Near Dharia Builder, Delhi Road, Saharanpur City, Saharanpur — 247001, Uttar Pradesh, India
-          </p>
-          <div class="footer-contact-details">
-            <div>PHONE: <strong class="gold-text">+91 99974 26815</strong></div>
-            <div>ALT: <strong>+91 99971 97236</strong></div>
-            <div>EMAIL: <strong>PRIYESH.CHANU@GMAIL.COM</strong></div>
+          <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.95rem; color: var(--text-body);">
+            <div>✓ Instant 80G tax receipt (50% deduction) issued upon UTR confirmation</div>
+            <div>✓ Verified Section 8 Non-Profit Company (CIN: U80902UP2018NPL106959)</div>
+            <div>✓ NGO Darpan ID: UP/2025/0710389 | Section 12A URN: AAECH6219BE20251</div>
+            <div>✓ Schedule VII Corporate CSR Eligible Entity</div>
           </div>
 
-          <form id="newsletter-form" class="footer-newsletter-row">
-            <input type="email" placeholder="ENTER WORK EMAIL" required class="newsletter-input">
-            <button type="submit" class="btn-newsletter-join">JOIN</button>
-          </form>
+          <div style="margin-top: 2.5rem;">
+            <a href="donate.html" class="btn-primary-glow">
+              <span>Submit Transfer Reference For 80G Certificate</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Passbook Card -->
+        <div class="passbook-terminal-card">
+          <div class="passbook-header">
+            <div>
+              <div class="bank-brand-title">CANARA BANK</div>
+              <div class="bank-branch-name">SAHARANPUR COURT ROAD (02201), UTTAR PRADESH</div>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #34D399; font-weight: 700; background: rgba(52,211,153,0.15); padding: 0.3rem 0.65rem; border-radius: 6px;">
+              VERIFIED NGO
+            </span>
+          </div>
+
+          <div class="passbook-data-table">
+            <div class="passbook-row">
+              <span class="passbook-lbl">BENEFICIARY NAME</span>
+              <div class="passbook-val-box">
+                <span class="passbook-val-strong" style="font-size: 0.95rem;">SARWE UNNATI FOUNDATION</span>
+              </div>
+            </div>
+
+            <div class="passbook-row">
+              <span class="passbook-lbl">ACCOUNT NUMBER</span>
+              <div class="passbook-val-box">
+                <span class="passbook-val-strong" style="color: #FBBF24;">2201201002013</span>
+                <button type="button" class="btn-copy-chip" data-copy-target="2201201002013">COPY</button>
+              </div>
+            </div>
+
+            <div class="passbook-row">
+              <span class="passbook-lbl">IFSC CODE</span>
+              <div class="passbook-val-box">
+                <span class="passbook-val-strong">CNRB0002201</span>
+                <button type="button" class="btn-copy-chip" data-copy-target="CNRB0002201">COPY</button>
+              </div>
+            </div>
+
+            <div class="passbook-row">
+              <span class="passbook-lbl">ACCOUNT TYPE</span>
+              <div class="passbook-val-box">
+                <span class="passbook-val-strong" style="font-size: 0.95rem;">Current Account</span>
+              </div>
+            </div>
+
+            <div class="passbook-row">
+              <span class="passbook-lbl">80G TAX URN</span>
+              <div class="passbook-val-box">
+                <span class="passbook-val-strong" style="color: #34D399; font-size: 0.95rem;">AAECH6219BF20261</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px dashed rgba(255,255,255,0.15); font-size: 0.85rem; color: #94A3B8; line-height: 1.6;">
+            After transferring funds, email your UTR/Reference with PAN details to <strong>priyesh.chanu@gmail.com</strong> or WhatsApp <strong>+91 99974 26815</strong> to receive your Form 10BE tax certificate.
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Giant Watermark Title -->
-      <div class="footer-giant-watermark">
-        SARWE UNNATI
-      </div>
-
-      <div class="footer-copyright-bar">
+    <!-- =========================================================================
+       FOOTER (COMPREHENSIVE STATUTORY & DISCLOSURES)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1 -->
         <div>
-          &copy; 2026 SARWE UNNATI FOUNDATION. ALL RIGHTS RESERVED. DIRECTORS: PRIYESH GARG &amp; DIPESH GARG.
+          <div class="header-brand footer-brand" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+            <span class="brand-emblem-seal" style="width: 42px; height: 42px;">
+              <img src="assets/images/logo-emblem-circle.png" alt="Sarwe Unnati Foundation Logo" class="brand-logo-img">
+            </span>
+            <div class="brand-text-col">
+              <span class="brand-main-name" style="color: #FFFFFF; font-size: 1.15rem;">SARWE UNNATI FOUNDATION</span>
+              <span class="brand-sub-tag" style="color: #4ADE80;">ESTABLISHED 14 AUGUST 2018</span>
+            </div>
+          </div>
+          <p class="footer-brand-summary">
+            A government-certified Section 8 non-profit company dedicated to providing and distributing food to people facing hunger. Transparent governance, FSSAI hygiene, and 50% 80G tax deductions.
+          </p>
+          <span class="footer-legal-badge-pill">CIN: U80902UP2018NPL106959</span>
         </div>
-        <div class="footer-legal-links">
-          <a href="about.html#legal">↳ Legal Disclosures</a>
-          <a href="donate.html#tax">↳ 80G Guidelines</a>
-          <a href="contact.html">↳ Grievance Redressal</a>
+
+        <!-- Col 2 -->
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links-col">
+            <li><a href="index.html">Flagship Home</a></li>
+            <li><a href="about.html">About Foundation</a></li>
+            <li><a href="programs.html">Food Relief Model</a></li>
+            <li><a href="impact.html">Impact &amp; ₹2 Cr Budget</a></li>
+            <li><a href="volunteer.html">Volunteer Cadre</a></li>
+            <li><a href="contact.html">Contact Founder</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div>
+          <div class="footer-col-title">Governance</div>
+          <ul class="footer-links-col">
+            <li><a href="about.html#leadership">Director &amp; Leadership</a></li>
+            <li><a href="impact.html#budget-allocation">Itemized Allocation</a></li>
+            <li><a href="impact.html#risk-matrix">Risk Mitigation</a></li>
+            <li><a href="donate.html#csr-tiers">CSR Schedule VII</a></li>
+            <li><a href="donate.html#bank-wire">Canara Bank Wire</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div>
+          <div class="footer-col-title">Headquarters</div>
+          <p style="font-size: 0.9rem; color: #A8A29E; line-height: 1.6; margin-bottom: 1rem;">
+            House No. 119, Vaishali Vihar, Near Dharia Builder, Delhi Road, Saharanpur — 247001, Uttar Pradesh, India
+          </p>
+          <div style="font-family: var(--font-mono); font-size: 0.82rem; color: #E2E8F0; display: flex; flex-direction: column; gap: 0.4rem;">
+            <span>Director: Priyesh Garg</span>
+            <span>Email: priyesh.chanu@gmail.com</span>
+            <span>Direct: +91 99974 26815</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © 2018–2026 SARWE UNNATI FOUNDATION. All Rights Reserved. Incorporated under Section 8 of the Companies Act, 2013.
+        </div>
+        <div style="font-family: var(--font-mono); font-size: 0.75rem;">
+          12A URN: AAECH6219BE20251 | 80G URN: AAECH6219BF20261
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Modal Dialog: Direct Giving & Wire Details -->
-  <div class="modal-overlay-dark" id="giving-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal-window-box">
-      <div class="modal-header-bar">
-        <h3 id="modal-title" class="modal-header-title">SUPPORT SARWE UNNATI FOUNDATION</h3>
-        <button class="modal-close-x close-modal-trigger" aria-label="Close modal">&times;</button>
-      </div>
-      <div class="modal-inner-content">
-        <div class="modal-alert-80g">
-          <span class="alert-title">[ 80G TAX DEDUCTIBLE CONTRIBUTION ]</span>
-          <span class="alert-badge">50% RELIEF</span>
-        </div>
+  <!-- Floating Elements -->
+  <div class="toast-notification" id="global-toast"></div>
+  <button type="button" class="scroll-to-top-btn" id="scroll-to-top" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 
-        <p class="modal-intro-text">
-          Direct your funds via NEFT, RTGS, IMPS, or Net Banking straight to the foundation’s verified Canara Bank account below:
-        </p>
-
-        <!-- Bank Details Table -->
-        <div class="modal-bank-box">
-          <div class="modal-bank-row">
-            <span class="m-label">BANK NAME</span>
-            <strong class="m-val">CANARA BANK</strong>
-          </div>
-          <div class="modal-bank-row">
-            <span class="m-label">BENEFICIARY</span>
-            <div class="m-val-group">
-              <strong class="m-val">SARWE UNNATI FOUNDATION</strong>
-              <button class="btn-copy-chip" data-copy-target="SARWE UNNATI FOUNDATION">COPY</button>
-            </div>
-          </div>
-          <div class="modal-bank-row">
-            <span class="m-label">ACCOUNT NUMBER</span>
-            <div class="m-val-group">
-              <strong class="m-val val-highlight" style="font-size:1.1rem;">2201201002013</strong>
-              <button class="btn-copy-chip" data-copy-target="2201201002013">COPY</button>
-            </div>
-          </div>
-          <div class="modal-bank-row">
-            <span class="m-label">IFSC CODE</span>
-            <div class="m-val-group">
-              <strong class="m-val">CNRB0002201</strong>
-              <button class="btn-copy-chip" data-copy-target="CNRB0002201">COPY</button>
-            </div>
-          </div>
-          <div class="modal-bank-row">
-            <span class="m-label">BRANCH</span>
-            <span class="m-val">COURT ROAD, SAHARANPUR, UP</span>
-          </div>
-        </div>
-
-        <div class="modal-receipt-box">
-          [ TO RECEIVE 80G RECEIPT ]<br>
-          Email your payment reference (UTR) along with your Full Name, Address, and PAN to <strong>priyesh.chanu@gmail.com</strong> or WhatsApp to <strong>+91 99974 26815</strong>.
-        </div>
-
-        <button class="btn-vibrant-cta close-modal-trigger" style="width:100%; justify-content:center;">
-          ACKNOWLEDGE &amp; CLOSE
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Smooth Inertia Scrolling Engine (Lenis) -->
-  <script src="js/lenis.min.js"></script>
-  <!-- Main JavaScript Bundle -->
-  <script src="js/main.js"></script>
+  <!-- Master Interactive Script -->
+  <script src="js/main.js?v=20261113_v6"></script>
 </body>
 </html>

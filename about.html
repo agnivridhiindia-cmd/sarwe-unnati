@@ -3,460 +3,375 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Sarwe Unnati Foundation</title>
-  <meta name="description" content="Learn about Sarwe Unnati Foundation, incorporated on August 14, 2018 as a Section 8 non-profit company. Dedicated to grassroots education, skilling, and healthcare.">
-  
-  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <title>Institutional Charter & Governance | Sarwe Unnati Foundation</title>
+  <meta name="description" content="Read the statutory charter, Section 8 incorporation credentials, 5 core values, and governance architecture of Sarwe Unnati Foundation.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400;1,9..40,700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261114_vibrant">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
 </head>
-<body class="light-theme">
+<body class="bg-warm-surface text-warm-charcoal antialiased selection:bg-brand-amber selection:text-white">
 
-  <div class="scroll-progress-bar" id="scroll-progress"></div>
-  <div class="film-grain-overlay" aria-hidden="true"></div>
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+  </div>
 
-  <!-- Architectural Navbar -->
-  <header class="main-navbar" id="site-header">
-    <div class="container navbar-inner">
-      <a href="index.html" class="navbar-brand" aria-label="Sarwe Unnati Foundation">
-        <div class="brand-emblem-vibrant">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
-            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-            <polyline points="2 17 12 22 22 17"/>
-            <polyline points="2 12 12 17 22 12"/>
-          </svg>
-        </div>
-        <div class="brand-title-wrap">
-          <span class="brand-title-main">SARWE UNNATI</span>
-          <span class="brand-title-sub">FOUNDATION &bull; ESTD. 2018</span>
+    <!-- Floating Frosted Navigation Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-brand" aria-label="Sarwe Unnati Foundation Home">
+        <span class="brand-emblem-seal">
+          <img src="assets/images/logo-emblem-circle.png" alt="Sarwe Unnati Foundation Logo" class="brand-logo-img">
+        </span>
+        <div class="brand-text-col">
+          <span class="brand-main-title">SARWE UNNATI</span>
+          <span class="brand-sub-tag">FOUNDATION • ESTD. 2018</span>
         </div>
       </a>
 
-      <nav class="nav-menu" aria-label="Main Navigation">
-        <a href="index.html" class="nav-link-item">Home</a>
-        <a href="about.html" class="nav-link-item active">About Foundation</a>
-        <a href="programs.html" class="nav-link-item">Programs &amp; Verticals</a>
-        <a href="impact.html" class="nav-link-item">Impact &amp; Audits</a>
-        <a href="volunteer.html" class="nav-link-item">Get Involved</a>
-        <a href="contact.html" class="nav-link-item">Contact</a>
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-desktop-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="about.html" class="nav-item active">About Us</a>
+        <a href="programs.html" class="nav-item">Relief Model</a>
+        <a href="impact.html" class="nav-item">Impact &amp; Budget</a>
+        <a href="volunteer.html" class="nav-item">Volunteer</a>
+        <a href="contact.html" class="nav-item">Contact</a>
       </nav>
 
-      <div class="nav-actions-wrap">
-        <button class="btn-vibrant-gradient open-giving-modal" aria-label="Support the foundation">
-          <span class="btn-text">Support Mission [80G]</span>
-          <span class="btn-arrow">→</span>
-        </button>
-        <button class="mobile-menu-btn" aria-label="Toggle Navigation">
-          <span></span>
-          <span></span>
-          <span></span>
+      <!-- Header CTAs -->
+      <div class="header-cta-group">
+        <a href="donate.html" class="btn-header-donate">
+          <span>CSR [80G] Donate</span>
+          <svg class="donate-btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <button type="button" class="mobile-menu-toggle" id="mobile-drawer-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Fullscreen Mobile Navigation Drawer -->
-  <div class="mobile-nav-drawer" id="mobile-drawer">
+  <!-- Mobile Off-Canvas Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-drawer" aria-hidden="true">
     <div class="drawer-header">
-      <div class="brand-title-wrap">
-        <span class="brand-title-main">SARWE UNNATI</span>
-        <span class="brand-title-sub">SECTION 8 NON-PROFIT</span>
+      <div class="header-brand" style="display: flex; align-items: center; gap: 0.75rem;">
+        <span class="brand-emblem-seal" style="width: 38px; height: 38px;">
+          <img src="assets/images/logo-emblem-circle.png" alt="Sarwe Unnati Foundation Logo" class="brand-logo-img">
+        </span>
+        <div class="brand-text-col">
+          <span class="brand-main-title" style="color: #FFFFFF;">SARWE UNNATI</span>
+          <span class="brand-sub-tag" style="color: #4ADE80;">ESTD. 14 AUG 2018 • SEC. 8 NGO</span>
+        </div>
       </div>
-      <button class="drawer-close-btn" id="drawer-close">&times;</button>
-    </div>
-    <div class="drawer-links-wrap">
-      <a href="index.html" class="drawer-link">01 // Home</a>
-      <a href="about.html" class="drawer-link active">02 // About the Foundation</a>
-      <a href="programs.html" class="drawer-link">03 // Program Verticals</a>
-      <a href="impact.html" class="drawer-link">04 // Impact &amp; Audit Reports</a>
-      <a href="volunteer.html" class="drawer-link">05 // CSR &amp; Involvement</a>
-      <a href="contact.html" class="drawer-link">06 // Contact Headquarters</a>
-    </div>
-    <div class="drawer-footer">
-      <button class="btn-vibrant-gradient open-giving-modal" style="width:100%;">
-        Direct Bank Wire (80G Relief)
+      <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close navigation drawer">
+        &times;
       </button>
+    </div>
+
+    <div class="drawer-links-list">
+      <a href="index.html" class="drawer-link">Flagship Overview</a>
+      <a href="about.html" class="drawer-link active">Institutional Charter</a>
+      <a href="programs.html" class="drawer-link">Food Relief Model</a>
+      <a href="impact.html" class="drawer-link">Impact &amp; Budget</a>
+      <a href="donate.html" class="drawer-link">CSR Alliances &amp; 80G Donate</a>
+      <a href="volunteer.html" class="drawer-link">Volunteer Ground Cadre</a>
+      <a href="contact.html" class="drawer-link">Founder &amp; Headquarters</a>
+    </div>
+
+    <div>
+      <a href="donate.html#bank-wire" class="btn-primary-glow" style="width: 100%;">
+        Direct Canara Bank Wire [80G]
+      </a>
+      <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #A8A29E; text-align: center; margin-top: 1rem;">
+        CIN: U80902UP2018NPL106959 | 80G URN: AAECH6219BF20261
+      </div>
     </div>
   </div>
 
-  <!-- Page Hero (Full Viewport Aurora Theme with Signifying Grassroots Background Photo) -->
-  <section class="section-hero-vibrant" id="hero-section">
-    <!-- Ambient Immersive Page Hero Background Photo -->
-    <div class="hero-image-bg-wrap" aria-hidden="true">
-      <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1920&q=85" alt="Grassroots community collaboration and tree planting in rural India" class="hero-bg-photo">
-      <div class="hero-photo-overlay"></div>
-    </div>
+  <!-- Section 1: About Page Hero -->
+  <section class="page-hero-banner" id="hero-section">
+    <div class="page-hero-grid-pattern"></div>
+    <div class="page-hero-ambient-glow"></div>
 
-    <!-- Radiant Glowing Aurora Mesh Background Orbs -->
-    <div class="aurora-orb aurora-orb-1"></div>
-    <div class="aurora-orb aurora-orb-2"></div>
-    <div class="aurora-orb aurora-orb-3"></div>
-    
-    <div class="container hero-content-container">
-      <div class="hero-subpage-panel">
-        <div class="hero-badge-pill">
-          <span class="pill-sparkle">🏛️</span>
-          <span class="pill-text">INSTITUTIONAL CHARTER &bull; ESTD. AUGUST 14, 2018</span>
+    <div class="container" style="position: relative; z-index: 2; width: 100%;">
+      <div style="max-width: 880px; margin: 0 auto; text-align: center;">
+        <div class="section-tag-badge sapphire" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1.25rem;">
+          <span class="ticker-dot">✦</span>
+          LEGAL CHARTER • SECTION 8 INCORPORATION
         </div>
-        <h1 class="hero-vibrant-title">
-          Rooted in Community.<br>
-          <span class="hero-title-italic">Engineered for Enduring Transformation.</span>
+
+        <h1 class="hero-title" style="color: #FFFFFF; font-size: clamp(2.35rem, 4.5vw, 3.85rem); line-height: 1.12; font-weight: 800; margin-bottom: 1.25rem;">
+          Institutional Charter &amp; <span class="serif-accent" style="font-family: var(--font-serif); font-style: italic; color: #38BDF8; font-weight: 400;">Fiduciary Governance.</span>
         </h1>
-        <p class="hero-vibrant-lede">
-          Sarwe Unnati Foundation (formerly Haridwar Education Foundation) was incorporated under Section 8 of the Companies Act, 2013 to bridge foundational educational, technological, and healthcare disparities across Northern India.
+
+        <p class="hero-desc" style="color: #CBD5E1; font-size: clamp(1.05rem, 1.8vw, 1.2rem); line-height: 1.65; max-width: 760px; margin: 0 auto 2.25rem;">
+          Incorporated under Section 8 of the Companies Act, 2013 at RoC Kanpur. Dedicated to hunger alleviation with legal transparency, fiduciary discipline, and zero private profit.
         </p>
 
-        <div class="hero-actions-row">
-          <a href="#genesis" class="btn-vibrant-cta">
-            <span class="btn-text">Explore Genesis &amp; Journey</span>
-            <span class="btn-arrow">↓</span>
+        <div class="hero-button-group" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="#principles" class="btn-primary-glow">
+            Explore 5 Core Principles ↓
           </a>
-          <a href="#leadership" class="btn-vibrant-outline">
-            <span class="btn-text">Board of Directors</span>
-            <span class="btn-arrow">→</span>
+          <a href="#leadership" class="btn-secondary-outline">
+            Director &amp; Leadership &rarr;
           </a>
         </div>
-      </div>
-    </div>
 
-    <!-- Photo Archive Telemetry Badge -->
-    <div class="hero-photo-badge">
-      <span class="photo-indicator-dot"></span>
-      <span>FIELD ARCHIVE // COMMUNITY HERITAGE</span>
-    </div>
-  </section>
-
-  <!-- Foundation History & Genesis -->
-  <section class="section-white-intro" id="genesis" style="padding: 5rem 0;">
-    <div class="container">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-        <div>
-          <span class="section-tag-vibrant">// OUR GENESIS &amp; JOURNEY</span>
-          <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.2vw, 2.8rem); font-weight: 800; margin-bottom: 1.5rem; line-height: 1.15;">
-            From Local Classrooms to Regional Social Infrastructure.
-          </h2>
-          <p style="font-size: 1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 1.25rem;">
-            Established in Saharanpur, Uttar Pradesh, on August 14, 2018 with Registration Number 106959 (RoC Kanpur), our organization began as Haridwar Education Foundation with a singular mandate: delivering remedial education to first-generation rural learners.
-          </p>
-          <p style="font-size: 1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 2rem;">
-            As our ground operations expanded to youth computer laboratories, mobile medical camps, and women self-help cooperatives, our name was formally transitioned to <strong>Sarwe Unnati Foundation</strong>—signifying <em>universal progress and equitable empowerment</em> for every stratum of society.
-          </p>
-          <div style="display: flex; gap: 2rem; border-top: 1px solid var(--border-light); padding-top: 1.5rem;">
-            <div>
-              <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: var(--vibrant-purple);">7+</div>
-              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">YEARS CONTINUOUS OPERATION</div>
-            </div>
-            <div>
-              <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: var(--vibrant-orange);">12.5K+</div>
-              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">DIRECT BENEFICIARIES REACHED</div>
-            </div>
-            <div>
-              <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: var(--vibrant-green-dark);">100%</div>
-              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">STATUTORY COMPLIANCE</div>
-            </div>
+        <!-- Metric Telemetry Ribbon -->
+        <div class="hero-metric-ribbon">
+          <div class="hero-metric-item">
+            <span class="hero-metric-val emerald">14 Aug 2018</span>
+            <span class="hero-metric-label">Incorporation Date</span>
+            <span class="hero-metric-sub">RoC Kanpur Certified</span>
           </div>
-        </div>
-
-        <div>
-          <div style="border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg); border: 2px solid #FFFFFF;">
-            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1000&q=85" alt="Community development and team on the ground" style="width: 100%; height: 420px; object-fit: cover;">
+          <div class="hero-metric-divider"></div>
+          <div class="hero-metric-item">
+            <span class="hero-metric-val orange">Section 8</span>
+            <span class="hero-metric-label">Corporate Status</span>
+            <span class="hero-metric-sub">Zero Private Profit Entity</span>
+          </div>
+          <div class="hero-metric-divider"></div>
+          <div class="hero-metric-item">
+            <span class="hero-metric-val blue">80G &amp; 12A</span>
+            <span class="hero-metric-label">Tax Exemption</span>
+            <span class="hero-metric-sub">CBDT Income Tax Exemption</span>
+          </div>
+          <div class="hero-metric-divider"></div>
+          <div class="hero-metric-item">
+            <span class="hero-metric-val">100%</span>
+            <span class="hero-metric-label">Audit Compliance</span>
+            <span class="hero-metric-sub">Annual MCA &amp; ROC Filings</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Core Operating Principles (How We Operate Differently) -->
-  <section class="section-cream-metrics" style="padding: 6rem 0;">
+  <!-- Section 2: 5 Core Ethical Principles (Slide 3) -->
+  <section class="section-components" id="principles" style="padding: 6rem 0; background: #FFFFFF; border-bottom: 1px solid #E2E8F0;">
     <div class="container">
-      <div style="text-align: center; max-width: 780px; margin: 0 auto 3.75rem;">
-        <span class="section-tag-vibrant">// GOVERNING DOCTRINE</span>
-        <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800; margin-bottom: 1rem; line-height: 1.15;">
-          How We Operate Differently.
+      <div style="text-align: center; max-width: 820px; margin: 0 auto 4rem;">
+        <span class="section-tag-badge emerald">ETHICAL FOUNDATION • 5 CORE VALUES</span>
+        <h2 class="section-title">
+          Guiding Principles of <span class="serif-accent" style="font-family: var(--font-serif); font-style: italic; color: #2563EB; font-weight: 400;">Our Relief Cadre.</span>
         </h2>
-        <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.7;">
-          We reject cosmetic charity and ceremonial hand-outs. Every program is engineered with institutional rigor, direct field execution, and verified statutory accountability.
+        <p class="section-desc" style="margin: 0 auto;">
+          The foundation operates under five foundational values ensuring every meal is served with unconditional human dignity, strict hygiene, and full fiduciary accountability.
         </p>
       </div>
 
-      <div class="operate-cards-grid">
-        <!-- Pillar 01 -->
-        <div class="operate-card-premium operate-theme-purple">
-          <div>
-            <div class="operate-card-header">
-              <div class="operate-icon-box">⚖️</div>
-              <span class="operate-pillar-pill">GOVERNANCE</span>
-            </div>
-            <h3 class="operate-card-title">Institutional Rigor</h3>
-            <p class="operate-card-lede">
-              Operated strictly under Section 8 of the Companies Act with 0% dividend distribution and mandatory annual chartered audits.
-            </p>
+      <div class="editorial-divided-list">
+        <div class="editorial-list-item">
+          <div class="editorial-item-num sapphire">01</div>
+          <div class="editorial-item-header">
+            <h3 class="editorial-item-title">Compassion with Dignity</h3>
+            <span class="editorial-item-tag">Non-Judgmental Community Service</span>
           </div>
-          <div class="operate-card-footer">
-            <span class="operate-status-badge">
-              <span class="live-green-pulse"></span>
-              SECTION 8 INCORPORATED
-            </span>
-            <span class="operate-meta-tag">RoC KANPUR</span>
+          <div class="editorial-item-body">
+            Treating every beneficiary with unconditional respect. No cameras thrust in faces, no poverty theater—only dignified, warm, and respectful food service to hungry human beings.
           </div>
         </div>
 
-        <!-- Pillar 02 -->
-        <div class="operate-card-premium operate-theme-amber">
-          <div>
-            <div class="operate-card-header">
-              <div class="operate-icon-box">🎯</div>
-              <span class="operate-pillar-pill">EFFICIENCY</span>
-            </div>
-            <h3 class="operate-card-title">Zero Middlemen</h3>
-            <p class="operate-card-lede">
-              100% of donor contributions deploy directly to ground programs through our local field personnel with sub-5% overhead.
-            </p>
+        <div class="editorial-list-item">
+          <div class="editorial-item-num emerald">02</div>
+          <div class="editorial-item-header">
+            <h3 class="editorial-item-title">Radical Transparency</h3>
+            <span class="editorial-item-tag">Open Procurement Ledgers</span>
           </div>
-          <div class="operate-card-footer">
-            <span class="operate-status-badge">
-              <span class="live-green-pulse"></span>
-              DIRECT FIELD ACTION
-            </span>
-            <span class="operate-meta-tag">100% IMPACT</span>
+          <div class="editorial-item-body">
+            Maintaining clear, immutable records of all donor contributions, APMC wholesale procurement invoices, batch cooking manifests, and daily distribution logs available for verification.
           </div>
         </div>
 
-        <!-- Pillar 03 -->
-        <div class="operate-card-premium operate-theme-emerald">
-          <div>
-            <div class="operate-card-header">
-              <div class="operate-icon-box">🛡️</div>
-              <span class="operate-pillar-pill">TRUST</span>
-            </div>
-            <h3 class="operate-card-title">Statutory Trust</h3>
-            <p class="operate-card-lede">
-              Fully certified with 80G tax deductions (50% relief), 12A non-profit exemption, and central NITI Aayog NGO Darpan approval.
-            </p>
+        <div class="editorial-list-item">
+          <div class="editorial-item-num saffron">03</div>
+          <div class="editorial-item-header">
+            <h3 class="editorial-item-title">Fiduciary Accountability</h3>
+            <span class="editorial-item-tag">Zero Leakage Governance</span>
           </div>
-          <div class="operate-card-footer">
-            <span class="operate-status-badge">
-              <span class="live-green-pulse"></span>
-              80G &bull; 12A &bull; DARPAN
-            </span>
-            <span class="operate-meta-tag">TAX RELIEF</span>
+          <div class="editorial-item-body">
+            Ensuring donated capital reaches vulnerable citizens with zero leakage, backed by internal multi-tier signoffs, direct bank settlements, and independent Chartered Accountant statutory audits.
+          </div>
+        </div>
+
+        <div class="editorial-list-item">
+          <div class="editorial-item-num sapphire">04</div>
+          <div class="editorial-item-header">
+            <h3 class="editorial-item-title">Universal Inclusion</h3>
+            <span class="editorial-item-tag">Non-Discriminatory Service</span>
+          </div>
+          <div class="editorial-item-body">
+            Supporting food-insecure families without discrimination based on caste, creed, gender, or religion. Hunger is universal, and our feeding mission is equally universal across all communities.
+          </div>
+        </div>
+
+        <div class="editorial-list-item">
+          <div class="editorial-item-num amber">05</div>
+          <div class="editorial-item-header">
+            <h3 class="editorial-item-title">Operational Sustainability</h3>
+            <span class="editorial-item-tag">365-Day Unbroken Operations</span>
+          </div>
+          <div class="editorial-item-body">
+            Building enduring multi-year institutional alliances with wholesale agricultural mandis, corporate CSR committees under Section 135 Schedule VII, and an active volunteer network to guarantee uninterrupted daily relief.
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Board of Directors -->
-  <section class="section-leadership-vibrant" id="leadership" style="padding: 5rem 0;">
+  <!-- Section 3: Leadership & Founder Profile (Slide 1 & 2) -->
+  <section id="leadership" style="padding: 6rem 0; background: #F8FAFC; border-bottom: 1px solid #E2E8F0;">
     <div class="container">
-      <div style="text-align: center; max-width: 750px; margin: 0 auto 4rem;">
-        <span class="section-tag-vibrant">// FIDUCIARY STEWARDSHIP</span>
-        <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800; margin-bottom: 1rem;">
-          Leadership &amp; Board of Directors.
-        </h2>
-        <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.7;">
-          Governed by dedicated leaders with deep roots in social entrepreneurship, community organization, and education management.
-        </p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; max-width: 950px; margin: 0 auto;">
-        <!-- Director 1: Priyesh Garg -->
-        <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm); padding: 2.5rem; display: flex; gap: 2rem; align-items: center;">
-          <div style="width: 100px; height: 100px; border-radius: 50%; background: #F3E8FF; border: 2px solid var(--vibrant-purple); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: var(--vibrant-purple); flex-shrink: 0;">
-            PG
-          </div>
+      <div class="dossier-clean-grid">
+        <div class="dossier-clean-info">
           <div>
-            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--vibrant-purple); font-weight: 700; margin-bottom: 0.35rem;">CO-FOUNDER &bull; DIRECTOR</div>
-            <h3 style="font-family: var(--font-display); font-size: 1.45rem; font-weight: 800; margin-bottom: 0.4rem;">Priyesh Garg</h3>
-            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.75rem;">
-              Leads grassroots educational initiatives, public hospital outreach, and corporate CSR statutory alliances across Uttar Pradesh.
-            </p>
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">
-              DIN: <strong>08201201</strong> &bull; TEL: +91 99974 26815
-            </div>
+            <span class="section-tag-badge emerald">LEADERSHIP &amp; STEWARDSHIP</span>
+            <h2 class="section-title" style="margin-top: 0.75rem;">
+              Founded by <span class="serif-accent" style="font-family: var(--font-serif); font-style: italic; color: #2563EB; font-weight: 400;">Priyesh Garg.</span>
+            </h2>
           </div>
-        </div>
-
-        <!-- Director 2: Dipesh Garg -->
-        <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm); padding: 2.5rem; display: flex; gap: 2rem; align-items: center;">
-          <div style="width: 100px; height: 100px; border-radius: 50%; background: #FEF3C7; border: 2px solid var(--vibrant-amber); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: var(--vibrant-amber-dark); flex-shrink: 0;">
-            DG
-          </div>
-          <div>
-            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--vibrant-amber-dark); font-weight: 700; margin-bottom: 0.35rem;">CO-FOUNDER &bull; DIRECTOR</div>
-            <h3 style="font-family: var(--font-display); font-size: 1.45rem; font-weight: 800; margin-bottom: 0.4rem;">Dipesh Garg</h3>
-            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.75rem;">
-              Directs vocational IT curriculum, financial controls, logistics infrastructure, and rural community welfare programs.
-            </p>
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">
-              DIN: <strong>08201202</strong> &bull; TEL: +91 99971 97236
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Complete Statutory Timeline -->
-  <section class="section-governance-vibrant" id="legal" style="padding: 5rem 0;">
-    <div class="container">
-      <div style="text-align: center; max-width: 750px; margin: 0 auto 4rem;">
-        <span class="section-tag-vibrant">// LEGAL TRANSPARENCY</span>
-        <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800; margin-bottom: 1rem;">
-          Statutory Incorporation &amp; Certifications.
-        </h2>
-        <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.7;">
-          Every certificate is on public record with central government ministries.
-        </p>
-      </div>
-
-      <div class="governance-cards-grid">
-        <div class="gov-card-vibrant gov-theme-mca">
-          <div class="gov-card-authority">// ROC KANPUR &bull; MCA</div>
-          <h3 class="gov-card-title">Section 8 License</h3>
-          <div class="gov-card-code">CIN: U80902UP2018NPL106959</div>
-          <p class="gov-card-desc">Incorporated on August 14, 2018 under Section 8 of the Companies Act, 2013 for non-profit charitable objects.</p>
-          <div class="gov-badge-verified">ACTIVE &bull; ROC KANPUR</div>
-        </div>
-
-        <div class="gov-card-vibrant gov-theme-80g">
-          <div class="gov-card-authority">// INCOME TAX DEPARTMENT</div>
-          <h3 class="gov-card-title">Section 80G Approval</h3>
-          <div class="gov-card-code">URN: AAECH6219BF20261</div>
-          <p class="gov-card-desc">Grants 50% tax deductions on all eligible donations under Section 80G of the Income Tax Act.</p>
-          <div class="gov-badge-verified">50% TAX RELIEF</div>
-        </div>
-
-        <div class="gov-card-vibrant gov-theme-12a">
-          <div class="gov-card-authority">// INCOME TAX DEPARTMENT</div>
-          <h3 class="gov-card-title">Section 12A Trust</h3>
-          <div class="gov-card-code">URN: AAECH6219BE20251</div>
-          <p class="gov-card-desc">Approved unconditional non-profit charitable status with statutory annual chartered accountant audits.</p>
-          <div class="gov-badge-verified">CHARITABLE STATUS</div>
-        </div>
-
-        <div class="gov-card-vibrant gov-theme-niti">
-          <div class="gov-card-authority">// NITI AAYOG, GOVT OF INDIA</div>
-          <h3 class="gov-card-title">NGO Darpan Listing</h3>
-          <div class="gov-card-code">ID: UP/2025/0710389</div>
-          <p class="gov-card-desc">Verified central registry on NITI Aayog portal authorizing state and central institutional collaborations.</p>
-          <div class="gov-badge-verified">DARPAN VERIFIED</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Modern Bright & Deep Navy Footer -->
-  <footer class="site-modern-footer">
-    <div class="container">
-      <div class="footer-top-columns">
-        <div class="footer-col-brand">
-          <div class="footer-brand-huge">SARWE UNNATI FOUNDATION</div>
-          <p class="footer-brand-p">
-            A government-certified Section 8 non-profit company (incorporated August 14, 2018) operating large-scale grassroots education, IT vocational skilling, and public health infrastructure across Northern India.
+          <p style="font-size: 1.05rem; line-height: 1.75; color: var(--text-body); margin: 0;">
+            Priyesh Garg founded <strong>SARWE UNNATI FOUNDATION</strong> with the conviction that no citizen in a civilized society should endure involuntary starvation. Under his guidance, the organization was formally incorporated under Section 8 of the Companies Act on 14 August 2018 at RoC Kanpur.
           </p>
+          <p style="font-size: 0.98rem; line-height: 1.7; color: #64748B; margin: 0;">
+            He personally oversees the foundation's wholesale procurement contracts, kitchen food safety protocols, and daily ground dispatches from the registered headquarters in Saharanpur, Uttar Pradesh.
+          </p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
+            <a href="contact.html" class="btn-primary-glow">Connect with Director &rarr;</a>
+            <a href="donate.html#csr-tiers" class="btn-secondary-outline">Corporate CSR Alliances</a>
+          </div>
         </div>
 
         <div>
-          <h4 class="footer-col-heading">NAVIGATION</h4>
-          <ul class="footer-links-list">
-            <li><a href="index.html" class="footer-link-a">↳ Home</a></li>
-            <li><a href="about.html" class="footer-link-a">↳ About Us</a></li>
-            <li><a href="programs.html" class="footer-link-a">↳ Verticals</a></li>
-            <li><a href="impact.html" class="footer-link-a">↳ Impact &amp; Audit</a></li>
-            <li><a href="volunteer.html" class="footer-link-a">↳ Get Involved</a></li>
-            <li><a href="donate.html" class="footer-link-a">↳ 80G Donate</a></li>
-            <li><a href="contact.html" class="footer-link-a">↳ Contact</a></li>
+          <div class="dossier-table-block">
+            <div style="padding: 1.5rem 1.75rem; background: #0F172A; color: #FFFFFF; display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #38BDF8; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; display: block;">EXECUTIVE STEWARDSHIP</span>
+                <span style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF; margin-top: 0.2rem; display: block;">Priyesh Garg</span>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #34D399; background: rgba(52, 211, 153, 0.15); padding: 0.25rem 0.65rem; border-radius: 999px; border: 1px solid rgba(52, 211, 153, 0.3);">ACTIVE DIRECTOR</span>
+            </div>
+
+            <div class="dossier-row">
+              <span class="dossier-row-label">Corporate Designation</span>
+              <span class="dossier-row-val">Director &amp; Founder</span>
+            </div>
+
+            <div class="dossier-row">
+              <span class="dossier-row-label">Direct Email</span>
+              <a href="mailto:priyesh.chanu@gmail.com" class="dossier-row-val" style="color: #2563EB; text-decoration: underline;">priyesh.chanu@gmail.com</a>
+            </div>
+
+            <div class="dossier-row">
+              <span class="dossier-row-label">Direct WhatsApp / Phone</span>
+              <a href="tel:+919997426815" class="dossier-row-val" style="color: #059669; font-weight: 800;">+91 99974 26815</a>
+            </div>
+
+            <div class="dossier-row" style="flex-direction: column; align-items: flex-start; gap: 0.35rem;">
+              <span class="dossier-row-label">Registered Headquarters</span>
+              <span style="font-size: 0.92rem; color: #334155; line-height: 1.5;">
+                House No. 119, Vaishali Vihar, Near Dharia Builder, Delhi Road, Saharanpur — 247001, UP
+              </span>
+            </div>
+
+            <div style="padding: 1.25rem 1.75rem; background: #F8FAFC; border-top: 1px solid #E2E8F0; display: flex; gap: 0.75rem;">
+              <a href="tel:+919997426815" class="btn-primary-glow btn-sm" style="flex: 1; text-align: center;">Direct Voice Call</a>
+              <a href="https://wa.me/919997426815" target="_blank" rel="noopener noreferrer" class="btn-secondary-outline btn-sm" style="flex: 1; text-align: center;">WhatsApp Chat</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Institutional Call to Action Banner -->
+  <section style="padding: 5rem 0; background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.22) 0%, rgba(11, 15, 25, 0.98) 75%), #0B0F19; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+    <div class="container" style="text-align: center; max-width: 780px;">
+      <span class="section-tag-badge emerald">
+        FIDUCIARY INTEGRITY • DIGNIFIED RELIEF
+      </span>
+      <h2 style="font-family: var(--font-heading); font-size: clamp(2rem, 3.2vw, 2.75rem); font-weight: 800; color: #FFFFFF; margin-top: 1rem; margin-bottom: 1rem;">
+        Partner with a Certified Section 8 Foundation
+      </h2>
+      <p style="color: #CBD5E1; font-size: 1.05rem; line-height: 1.65; margin-bottom: 2rem;">
+        Support verified hunger relief under full statutory oversight. Claim 50% tax deductions on your donation under Section 80G.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="donate.html" class="btn-primary-glow">
+          Donate Online with 80G Receipt &rarr;
+        </a>
+        <a href="donate.html#bank-wire" class="btn-secondary-outline">
+          Canara Bank Direct Wire
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <div class="header-brand footer-brand" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+            <span class="brand-emblem-seal" style="width: 42px; height: 42px;">
+              <img src="assets/images/logo-emblem-circle.png" alt="Sarwe Unnati Foundation Logo" class="brand-logo-img">
+            </span>
+            <div class="brand-text-col">
+              <span class="brand-main-name" style="color: #FFFFFF; font-size: 1.15rem;">SARWE UNNATI FOUNDATION</span>
+              <span class="brand-sub-tag" style="color: #4ADE80;">ESTABLISHED 14 AUGUST 2018</span>
+            </div>
+          </div>
+          <p class="footer-brand-summary">
+            A government-certified Section 8 non-profit company dedicated to providing and distributing food to people facing hunger with dignity, transparency, and clinical FSSAI standards.
+          </p>
+          <span class="footer-legal-badge-pill">CIN: U80902UP2018NPL106959</span>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links-col">
+            <li><a href="index.html">Flagship Home</a></li>
+            <li><a href="about.html">About Foundation</a></li>
+            <li><a href="programs.html">Food Relief Model</a></li>
+            <li><a href="impact.html">Impact &amp; Budget</a></li>
+            <li><a href="volunteer.html">Volunteer Cadre</a></li>
+            <li><a href="contact.html">Contact Founder</a></li>
           </ul>
         </div>
-
         <div>
-          <h4 class="footer-col-heading">SPECIALIZATIONS</h4>
-          <ul class="footer-links-list">
-            <li><a href="programs.html#education" class="footer-link-a">↳ Shiksha Unnati</a></li>
-            <li><a href="programs.html#skills" class="footer-link-a">↳ Kaushal Unnati</a></li>
-            <li><a href="programs.html#health" class="footer-link-a">↳ Aarogya Unnati</a></li>
-            <li><a href="programs.html#women" class="footer-link-a">↳ Women Autonomy</a></li>
-            <li><a href="programs.html#rural" class="footer-link-a">↳ Rural Welfare</a></li>
-            <li><a href="volunteer.html#fellowship" class="footer-link-a">↳ Volunteer Fellowship</a></li>
+          <div class="footer-col-title">Governance</div>
+          <ul class="footer-links-col">
+            <li><a href="about.html#leadership">Director &amp; Leadership</a></li>
+            <li><a href="impact.html#budget-allocation">Itemized Allocation</a></li>
+            <li><a href="donate.html#csr-tiers">CSR Schedule VII</a></li>
+            <li><a href="donate.html#bank-wire">Canara Bank Wire</a></li>
           </ul>
         </div>
-
         <div>
-          <h4 class="footer-col-heading">REGISTERED OFFICE</h4>
-          <p class="footer-address-p">
-            House No. 119, Vaishali Vihar, Near Dharia Builder, Delhi Road, Saharanpur City, Saharanpur — 247001, Uttar Pradesh, India
+          <div class="footer-col-title">Headquarters</div>
+          <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+            House No. 119, Vaishali Vihar, Near Dharia Builder, Delhi Road, Saharanpur — 247001, UP
           </p>
-          <div class="footer-contact-details">
-            <div>PHONE: <strong class="gold-text">+91 99974 26815</strong></div>
-            <div>ALT: <strong>+91 99971 97236</strong></div>
-            <div>EMAIL: <strong>PRIYESH.CHANU@GMAIL.COM</strong></div>
+          <div style="font-family: var(--font-mono); font-size: 0.82rem; color: #E2E8F0; margin-top: 0.75rem;">
+            Director: Priyesh Garg<br>
+            Phone: +91 99974 26815
           </div>
         </div>
       </div>
-
-      <div class="footer-giant-watermark">
-        SARWE UNNATI
-      </div>
-
-      <div class="footer-copyright-bar">
-        <div>
-          &copy; 2026 SARWE UNNATI FOUNDATION. ALL RIGHTS RESERVED. DIRECTORS: PRIYESH GARG &amp; DIPESH GARG.
-        </div>
-        <div class="footer-legal-links">
-          <a href="about.html#legal">↳ Legal Disclosures</a>
-          <a href="donate.html#tax">↳ 80G Guidelines</a>
-          <a href="contact.html">↳ Grievance Redressal</a>
-        </div>
+      <div class="footer-bottom-bar">
+        <div>&copy; 2018–2026 SARWE UNNATI FOUNDATION. All Rights Reserved.</div>
+        <div style="font-family: var(--font-mono); font-size: 0.75rem;">12A: AAECH6219BE20251 | 80G: AAECH6219BF20261</div>
       </div>
     </div>
   </footer>
 
-  <!-- Modal Dialog -->
-  <div class="modal-overlay-dark" id="giving-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal-window-box">
-      <div class="modal-header-bar">
-        <h3 id="modal-title" class="modal-header-title">SUPPORT SARWE UNNATI FOUNDATION</h3>
-        <button class="modal-close-x close-modal-trigger">&times;</button>
-      </div>
-      <div class="modal-inner-content">
-        <div class="modal-alert-80g">
-          <span class="alert-title">[ 80G TAX DEDUCTIBLE CONTRIBUTION ]</span>
-          <span class="alert-badge">50% RELIEF</span>
-        </div>
-        <div class="modal-bank-box">
-          <div class="modal-bank-row">
-            <span class="m-label">BANK NAME</span>
-            <strong class="m-val">CANARA BANK</strong>
-          </div>
-          <div class="modal-bank-row">
-            <span class="m-label">BENEFICIARY</span>
-            <strong class="m-val">SARWE UNNATI FOUNDATION</strong>
-          </div>
-          <div class="modal-bank-row">
-            <span class="m-label">ACCOUNT NUMBER</span>
-            <strong class="m-val val-highlight">2201201002013</strong>
-          </div>
-          <div class="modal-bank-row">
-            <span class="m-label">IFSC CODE</span>
-            <strong class="m-val">CNRB0002201</strong>
-          </div>
-          <div class="modal-bank-row">
-            <span class="m-label">BRANCH</span>
-            <span class="m-val">COURT ROAD, SAHARANPUR, UP</span>
-          </div>
-        </div>
-        <button class="btn-vibrant-cta close-modal-trigger" style="width:100%; justify-content:center;">
-          ACKNOWLEDGE &amp; CLOSE
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Smooth Inertia Scrolling Engine (Lenis) -->
-  <script src="js/lenis.min.js"></script>
-  <script src="js/main.js"></script>
+  <div class="toast-notification" id="global-toast"></div>
+  <button type="button" class="scroll-to-top-btn" id="scroll-to-top" aria-label="Scroll to top">&uarr;</button>
+  <script src="js/main.js?v=20261113_v7"></script>
 </body>
 </html>

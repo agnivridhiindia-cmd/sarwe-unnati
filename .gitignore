@@ -10,3 +10,12 @@ docs/
 # System files
 .DS_Store
 Thumbs.db
+
+# Temporary screenshots & build artifacts (root only)
+/*.png
+audit_screenshots/
+backup_old_project/
+audit_report.json
+pitch_deck_full_text.txt
+test-logo-display.html
+

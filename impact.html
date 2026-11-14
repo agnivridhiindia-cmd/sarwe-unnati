@@ -3,652 +3,781 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impact &amp; Audits | Sarwe Unnati Foundation</title>
-  <meta name="description" content="Review verified ground metrics, geographical footprints, financial audit disclosures, and statutory certifications of Sarwe Unnati Foundation.">
-  
-  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <title>Impact Telemetry & ₹2 Cr Capital Budget | Sarwe Unnati Foundation</title>
+  <meta name="description" content="Audited telemetry, unit economics (₹66.67/meal), and the comprehensive ₹2,00,00,000 capital expenditure plan of Sarwe Unnati Foundation under Section 8.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400;1,9..40,700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261114_vibrant">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
 </head>
-<body class="light-theme">
+<body class="page-impact bg-warm-surface text-warm-charcoal antialiased selection:bg-brand-amber selection:text-white">
 
-  <div class="scroll-progress-bar" id="scroll-progress"></div>
-  <div class="film-grain-overlay" aria-hidden="true"></div>
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+  </div>
 
-  <!-- Architectural Navbar -->
-  <header class="main-navbar" id="site-header">
-    <div class="container navbar-inner">
-      <a href="index.html" class="navbar-brand" aria-label="Sarwe Unnati Foundation">
-        <div class="brand-emblem-vibrant">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
-            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-            <polyline points="2 17 12 22 22 17"/>
-            <polyline points="2 12 12 17 22 12"/>
-          </svg>
-        </div>
-        <div class="brand-title-wrap">
-          <span class="brand-title-main">SARWE UNNATI</span>
-          <span class="brand-title-sub">FOUNDATION &bull; ESTD. 2018</span>
+    <!-- Floating Frosted Navigation Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-brand" aria-label="Sarwe Unnati Foundation Home">
+        <span class="brand-emblem-seal">
+          <img src="assets/images/logo-emblem-circle.png" alt="Sarwe Unnati Foundation Logo" class="brand-logo-img">
+        </span>
+        <div class="brand-text-col">
+          <span class="brand-main-title">SARWE UNNATI</span>
+          <span class="brand-sub-tag">FOUNDATION • ESTD. 2018</span>
         </div>
       </a>
 
-      <nav class="nav-menu" aria-label="Main Navigation">
-        <a href="index.html" class="nav-link-item">Home</a>
-        <a href="about.html" class="nav-link-item">About Foundation</a>
-        <a href="programs.html" class="nav-link-item">Programs &amp; Verticals</a>
-        <a href="impact.html" class="nav-link-item active">Impact &amp; Audits</a>
-        <a href="volunteer.html" class="nav-link-item">Get Involved</a>
-        <a href="contact.html" class="nav-link-item">Contact</a>
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-desktop-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="about.html" class="nav-item">About Us</a>
+        <a href="programs.html" class="nav-item">Relief Model</a>
+        <a href="impact.html" class="nav-item active">Impact &amp; Budget</a>
+        <a href="volunteer.html" class="nav-item">Volunteer</a>
+        <a href="contact.html" class="nav-item">Contact</a>
       </nav>
 
-      <div class="nav-actions-wrap">
-        <button class="btn-vibrant-gradient open-giving-modal" aria-label="Support the foundation">
-          <span class="btn-text">Support Mission [80G]</span>
-          <span class="btn-arrow">→</span>
-        </button>
-        <button class="mobile-menu-btn" aria-label="Toggle Navigation">
-          <span></span>
-          <span></span>
-          <span></span>
+      <!-- Header CTAs -->
+      <div class="header-cta-group">
+        <a href="donate.html" class="btn-header-donate">
+          <span>CSR [80G] Donate</span>
+          <svg class="donate-btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <button type="button" class="mobile-menu-toggle" id="mobile-drawer-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Fullscreen Mobile Navigation Drawer -->
-  <div class="mobile-nav-drawer" id="mobile-drawer">
+  <!-- Mobile Off-Canvas Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-drawer" aria-hidden="true">
     <div class="drawer-header">
-      <div class="brand-title-wrap">
-        <span class="brand-title-main">SARWE UNNATI</span>
-        <span class="brand-title-sub">SECTION 8 NON-PROFIT</span>
+      <div class="header-brand" style="display: flex; align-items: center; gap: 0.75rem;">
+        <span class="brand-emblem-seal" style="width: 38px; height: 38px;">
+          <img src="assets/images/logo-emblem-circle.png" alt="Sarwe Unnati Foundation Logo" class="brand-logo-img">
+        </span>
+        <div class="brand-text-col">
+          <span class="brand-main-title" style="color: #FFFFFF;">SARWE UNNATI</span>
+          <span class="brand-sub-tag" style="color: #4ADE80;">ESTD. 14 AUG 2018 • SEC. 8 NGO</span>
+        </div>
       </div>
-      <button class="drawer-close-btn" id="drawer-close">&times;</button>
-    </div>
-    <div class="drawer-links-wrap">
-      <a href="index.html" class="drawer-link">01 // Home</a>
-      <a href="about.html" class="drawer-link">02 // About the Foundation</a>
-      <a href="programs.html" class="drawer-link">03 // Program Verticals</a>
-      <a href="impact.html" class="drawer-link active">04 // Impact &amp; Audit Reports</a>
-      <a href="volunteer.html" class="drawer-link">05 // CSR &amp; Involvement</a>
-      <a href="contact.html" class="drawer-link">06 // Contact Headquarters</a>
-    </div>
-    <div class="drawer-footer">
-      <button class="btn-vibrant-gradient open-giving-modal" style="width:100%;">
-        Direct Bank Wire (80G Relief)
+      <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close navigation drawer">
+        &times;
       </button>
+    </div>
+
+    <div class="drawer-links-list">
+      <a href="index.html" class="drawer-link">Flagship Overview</a>
+      <a href="about.html" class="drawer-link">Institutional Charter</a>
+      <a href="programs.html" class="drawer-link">Food Relief Model</a>
+      <a href="impact.html" class="drawer-link active">Impact &amp; Budget</a>
+      <a href="donate.html" class="drawer-link">CSR Alliances &amp; 80G Donate</a>
+      <a href="volunteer.html" class="drawer-link">Volunteer Ground Cadre</a>
+      <a href="contact.html" class="drawer-link">Founder &amp; Headquarters</a>
+    </div>
+
+    <div>
+      <a href="donate.html#bank-wire" class="btn-primary-glow" style="width: 100%;">
+        Direct Canara Bank Wire [80G]
+      </a>
+      <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #A8A29E; text-align: center; margin-top: 1rem;">
+        CIN: U80902UP2018NPL106959 | 80G URN: AAECH6219BF20261
+      </div>
     </div>
   </div>
 
-  <!-- Page Hero (Full Viewport Aurora Theme with Signifying Verified Impact Background Photo) -->
-  <section class="section-hero-vibrant" id="hero-section">
-    <!-- Ambient Immersive Page Hero Background Photo -->
-    <div class="hero-image-bg-wrap" aria-hidden="true">
-      <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1920&q=85" alt="Joyful rural Indian children empowered through Sarwe Unnati Foundation initiatives" class="hero-bg-photo">
-      <div class="hero-photo-overlay"></div>
-    </div>
+  <!-- Section 1: Impact Page Hero -->
+  <section class="page-hero-banner" id="hero-section">
+    <div class="page-hero-grid-pattern"></div>
+    <div class="page-hero-ambient-glow"></div>
 
-    <!-- Radiant Glowing Aurora Mesh Background Orbs -->
-    <div class="aurora-orb aurora-orb-1"></div>
-    <div class="aurora-orb aurora-orb-2"></div>
-    <div class="aurora-orb aurora-orb-3"></div>
-    
-    <div class="container hero-content-container">
-      <div class="hero-subpage-panel">
-        <div class="hero-badge-pill">
-          <span class="pill-sparkle">📊</span>
-          <span class="pill-text">STATUTORY AUDIT &bull; RADICAL TRANSPARENCY</span>
+    <div class="container" style="position: relative; z-index: 2; width: 100%;">
+      <div style="max-width: 880px; margin: 0 auto; text-align: center;">
+        <div class="section-tag-badge emerald" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1.25rem;">
+          <span class="ticker-dot">✦</span>
+          FINANCIAL DISCLOSURES • AUDITED ITEMIZATION
         </div>
-        <h1 class="hero-vibrant-title">
-          Verifiable Ground Impact.<br>
-          <span class="hero-title-italic">Absolute Financial Accountability.</span>
+
+        <h1 class="hero-title" style="color: #FFFFFF; font-size: clamp(2.35rem, 4.5vw, 3.85rem); line-height: 1.12; font-weight: 800; margin-bottom: 1.25rem;">
+          Impact Telemetry &amp; <span class="serif-accent" style="font-family: var(--font-serif); font-style: italic; color: #F59E0B; font-weight: 400;">₹2 Crore Budget.</span>
         </h1>
-        <p class="hero-vibrant-lede">
-          Every contribution entrusted to Sarwe Unnati Foundation is tracked with strict audit trails. Explore our cumulative 7-year social impact metrics and statutory disclosure documentation.
+
+        <p class="hero-desc" style="color: #CBD5E1; font-size: clamp(1.05rem, 1.8vw, 1.2rem); line-height: 1.65; max-width: 760px; margin: 0 auto 2.25rem;">
+          Every single rupee tracked, verified, and audited across 3,00,000 hot meals, central wholesale procurement, and continuous FSSAI laboratory sampling.
         </p>
 
-        <div class="hero-actions-row">
-          <a href="#metrics" class="btn-vibrant-cta">
-            <span class="btn-text">View 7-Year Impact Metrics</span>
-            <span class="btn-arrow">↓</span>
+        <div class="hero-button-group" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="#budget-allocation" class="btn-primary-glow">
+            Inspect ₹2 Cr Itemized Budget ↓
           </a>
-          <a href="#statutory" class="btn-vibrant-outline">
-            <span class="btn-text">Statutory Disclosures</span>
-            <span class="btn-arrow">→</span>
+          <a href="donate.html#csr-tiers" class="btn-secondary-outline">
+            Section 135 CSR Alliances &rarr;
           </a>
+        </div>
+
+        <!-- Metric Telemetry Ribbon -->
+        <div class="hero-metric-ribbon">
+          <div class="hero-metric-item">
+            <span class="hero-metric-val emerald">3,00,000</span>
+            <span class="hero-metric-label">Annual Hot Meals</span>
+            <span class="hero-metric-sub">822 Nourishing Thalis / Day</span>
+          </div>
+          <div class="hero-metric-divider"></div>
+          <div class="hero-metric-item">
+            <span class="hero-metric-val orange">₹66.67</span>
+            <span class="hero-metric-label">Unit Cost / Meal</span>
+            <span class="hero-metric-sub">Wholesale Steam-Kettle Prep</span>
+          </div>
+          <div class="hero-metric-divider"></div>
+          <div class="hero-metric-item">
+            <span class="hero-metric-val blue">100%</span>
+            <span class="hero-metric-label">FSSAI Compliance</span>
+            <span class="hero-metric-sub">NABL Lab Tested Integrity</span>
+          </div>
+          <div class="hero-metric-divider"></div>
+          <div class="hero-metric-item">
+            <span class="hero-metric-val">₹2.00 Cr</span>
+            <span class="hero-metric-label">Annual Capital Goal</span>
+            <span class="hero-metric-sub">Statutory ROC Itemized</span>
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- Photo Archive Telemetry Badge -->
-    <div class="hero-photo-badge">
-      <span class="photo-indicator-dot"></span>
-      <span>FIELD ARCHIVE // 7-YEAR VERIFIED IMPACT</span>
-    </div>
   </section>
 
-  <!-- Core Quantifiable Metrics -->
-  <section class="section-white-intro" id="metrics" style="padding: 6rem 0;">
+  <!-- Section 2: Unit Economics & Financial Sustainability (Slide 14) -->
+  <section class="section-impact-light" style="padding: 6rem 0; background: #FAFAF9; border-top: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0;">
     <div class="container">
-      <div style="text-align: center; max-width: 780px; margin: 0 auto 3.5rem;">
-        <span class="section-tag-vibrant">// 7-YEAR ACCUMULATIVE AUDIT</span>
-        <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800; margin-bottom: 1rem; line-height: 1.15;">
-          Quantifiable Social Returns.
+      <div style="max-width: 820px;">
+        <span class="section-tag-badge sapphire">UNIT ECONOMICS • SLIDE 14</span>
+        <h2 class="section-title" style="color: #0F172A;">
+          Precision Efficiency: <span style="font-family: var(--font-serif); font-style: italic; color: #2563EB; font-weight: 400;">₹66.67 Per Complete Meal.</span>
         </h2>
-        <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.7;">
-          Every program metric is verified through field logbooks, attendance registers, photo-stamped geo-coordinates, and annual statutory filings with the Registrar of Companies.
+        <p class="section-desc" style="color: #475569;">
+          Unlike ad-hoc feeding drives, our central wholesale procurement, batch steam-kettle prep, and volunteer field dispatch drive industry-leading capital efficiency.
         </p>
       </div>
 
-      <div class="impact-metrics-modern-grid">
-        <!-- Metric 1: Lives Reached -->
-        <div class="impact-metric-card-premium impact-theme-amber">
-          <div>
-            <div class="metric-header-row">
-              <div class="metric-icon-badge">🎓</div>
-              <span class="metric-verified-tag">
-                <span class="live-green-pulse"></span>
-                AUDITED BENEFICIARIES
-              </span>
-            </div>
-            <div class="metric-number-wrap">
-              <span class="metric-giant-number counter-figure" data-target="12500">12,500</span>
-              <span class="metric-plus-sign">+</span>
-            </div>
-            <h3 class="metric-card-title">Lives Directly Reached</h3>
-            <p class="metric-card-desc">
-              Rural students, women in self-help cooperatives, and underprivileged village families receiving preventive medical diagnosis.
-            </p>
-          </div>
-          <div class="metric-telemetry-footer">
-            <span>2018 LAUNCH</span>
-            <div class="metric-progress-line">
-              <div class="metric-progress-fill" style="width: 100%;"></div>
-            </div>
-            <span>2026 ACTIVE</span>
-          </div>
+      <!-- Open Economics Strip (De-Carded) -->
+      <div class="open-economics-strip" style="border-top-color: #E2E8F0; border-bottom-color: #E2E8F0;">
+        <div class="economics-metric-block">
+          <span class="economics-metric-tag saffron" style="color: #EA580C;">UNIT BENCHMARK</span>
+          <div class="economics-metric-num" style="color: #EA580C;">₹66.67</div>
+          <div class="economics-metric-label" style="color: #0F172A;">All-Inclusive Cost / Meal</div>
+          <p class="economics-metric-desc" style="color: #64748B;">
+            Covers wholesale grains &amp; lentils (₹38.00), fresh seasonal vegetables &amp; spices (₹12.00), biodegradable compostable packaging (₹7.00), and kitchen labor &amp; logistics (₹9.67).
+          </p>
         </div>
 
-        <!-- Metric 2: School Kits -->
-        <div class="impact-metric-card-premium impact-theme-purple">
-          <div>
-            <div class="metric-header-row">
-              <div class="metric-icon-badge">🎒</div>
-              <span class="metric-verified-tag">
-                <span class="live-green-pulse"></span>
-                SHIKSHA UNNATI
-              </span>
-            </div>
-            <div class="metric-number-wrap">
-              <span class="metric-giant-number counter-figure" data-target="5000">5,000</span>
-              <span class="metric-plus-sign">+</span>
-            </div>
-            <h3 class="metric-card-title">School Kits Distributed</h3>
-            <p class="metric-card-desc">
-              Full sets of academic textbooks, writing notebooks, geometry kits, backpacks, and remedial tuition centers across Uttar Pradesh.
-            </p>
-          </div>
-          <div class="metric-telemetry-footer">
-            <span>DISTRIBUTION</span>
-            <div class="metric-progress-line">
-              <div class="metric-progress-fill" style="width: 92%;"></div>
-            </div>
-            <span>100% FREE</span>
-          </div>
+        <div class="economics-metric-block">
+          <span class="economics-metric-tag emerald" style="color: #059669;">DAILY DISPATCH</span>
+          <div class="economics-metric-num" style="color: #059669;">₹54,795</div>
+          <div class="economics-metric-label" style="color: #0F172A;">Daily Operating Outlay</div>
+          <p class="economics-metric-desc" style="color: #64748B;">
+            Funds the end-to-end cooking, hot insulated transport, and dignified distribution of ~822 fresh nutritious thalis across 365 consecutive days without pause.
+          </p>
         </div>
 
-        <!-- Metric 3: Medical Camps -->
-        <div class="impact-metric-card-premium impact-theme-emerald">
-          <div>
-            <div class="metric-header-row">
-              <div class="metric-icon-badge">🩺</div>
-              <span class="metric-verified-tag">
-                <span class="live-green-pulse"></span>
-                AAROGYA UNNATI
-              </span>
-            </div>
-            <div class="metric-number-wrap">
-              <span class="metric-giant-number counter-figure" data-target="35">35</span>
-              <span class="metric-plus-sign">+</span>
-            </div>
-            <h3 class="metric-card-title">Free Medical Camps</h3>
-            <p class="metric-card-desc">
-              Multi-specialty doctor consultations, diagnostic health screening, clean water drives, and free prescription medicine dispensaries.
-            </p>
-          </div>
-          <div class="metric-telemetry-footer">
-            <span>FIELD CLINICS</span>
-            <div class="metric-progress-line">
-              <div class="metric-progress-fill" style="width: 85%;"></div>
-            </div>
-            <span>ZERO FEE</span>
-          </div>
-        </div>
-
-        <!-- Metric 4: IT Certifications -->
-        <div class="impact-metric-card-premium impact-theme-cerulean">
-          <div>
-            <div class="metric-header-row">
-              <div class="metric-icon-badge">💻</div>
-              <span class="metric-verified-tag">
-                <span class="live-green-pulse"></span>
-                KAUSHAL UNNATI
-              </span>
-            </div>
-            <div class="metric-number-wrap">
-              <span class="metric-giant-number counter-figure" data-target="1200">1,200</span>
-              <span class="metric-plus-sign">+</span>
-            </div>
-            <h3 class="metric-card-title">Youth IT Certifications</h3>
-            <p class="metric-card-desc">
-              Vocational computer hardware, software fundamentals, coding bootcamps, and workplace productivity certifications.
-            </p>
-          </div>
-          <div class="metric-telemetry-footer">
-            <span>JOB READINESS</span>
-            <div class="metric-progress-line">
-              <div class="metric-progress-fill" style="width: 88%;"></div>
-            </div>
-            <span>ACCREDITED</span>
-          </div>
-        </div>
-
-        <!-- Metric 5: Trees Planted -->
-        <div class="impact-metric-card-premium impact-theme-rose">
-          <div>
-            <div class="metric-header-row">
-              <div class="metric-icon-badge">🌱</div>
-              <span class="metric-verified-tag">
-                <span class="live-green-pulse"></span>
-                GRAMIN UTTHAN
-              </span>
-            </div>
-            <div class="metric-number-wrap">
-              <span class="metric-giant-number counter-figure" data-target="15000">15,000</span>
-              <span class="metric-plus-sign">+</span>
-            </div>
-            <h3 class="metric-card-title">Trees &amp; Saplings Planted</h3>
-            <p class="metric-card-desc">
-              Rural environmental greening corridors, village agro-forestry plantations, and community ecological conservation initiatives.
-            </p>
-          </div>
-          <div class="metric-telemetry-footer">
-            <span>ECOLOGICAL</span>
-            <div class="metric-progress-line">
-              <div class="metric-progress-fill" style="width: 95%;"></div>
-            </div>
-            <span>SUSTAINED</span>
-          </div>
-        </div>
-
-        <!-- Metric 6: Years of Service -->
-        <div class="impact-metric-card-premium impact-theme-indigo">
-          <div>
-            <div class="metric-header-row">
-              <div class="metric-icon-badge">🏛️</div>
-              <span class="metric-verified-tag">
-                <span class="live-green-pulse"></span>
-                SECTION 8 CHARTER
-              </span>
-            </div>
-            <div class="metric-number-wrap">
-              <span class="metric-giant-number counter-figure" data-target="7">7</span>
-              <span class="metric-plus-sign">+</span>
-            </div>
-            <h3 class="metric-card-title">Years Continuous Service</h3>
-            <p class="metric-card-desc">
-              Incorporated August 14, 2018 with Registrar of Companies, Kanpur. Over 2,500 continuous days of audited non-profit operation.
-            </p>
-          </div>
-          <div class="metric-telemetry-footer">
-            <span>INCORPORATED 2018</span>
-            <div class="metric-progress-line">
-              <div class="metric-progress-fill" style="width: 100%;"></div>
-            </div>
-            <span>PERPETUAL</span>
-          </div>
+        <div class="economics-metric-block">
+          <span class="economics-metric-tag blue" style="color: #2563EB;">MONTHLY CADENCE</span>
+          <div class="economics-metric-num" style="color: #2563EB;">₹16.67 L</div>
+          <div class="economics-metric-label" style="color: #0F172A;">Monthly Operating Capital</div>
+          <p class="economics-metric-desc" style="color: #64748B;">
+            Full-cycle overhead covering 25,000 monthly meals, centralized kitchen utility expenses, fleet maintenance, supervisor stipends, and continuous laboratory quality audits.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Fund Deployment & Financial Integrity -->
-  <section class="section-cream-metrics" style="padding: 6rem 0;">
+  <!-- Section 3: Itemized Budget Allocation Matrix (Slide 13) -->
+  <section id="budget-allocation" class="section-impact-light" style="padding: 6rem 0; background: #F8FAFC; border-bottom: 1px solid #E2E8F0;">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 4.5rem; align-items: center;">
-        <div>
-          <span class="section-tag-vibrant">// CAPITAL DEPLOYMENT EFFICIENCY</span>
-          <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.2vw, 2.8rem); font-weight: 800; margin-bottom: 1.25rem; line-height: 1.15;">
-            Where Every Rupee is Deployed.
-          </h2>
-          <p style="font-size: 1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 2.25rem;">
-            Sarwe Unnati Foundation maintains one of the leanest administrative overhead ratios among Section 8 institutions in Uttar Pradesh. We reject intermediary agencies and third-party commission overheads, ensuring radical capital flow directly to grassroots beneficiaries.
-          </p>
+      <div style="max-width: 840px;">
+        <span class="section-tag-badge sapphire">BUDGET ALLOCATION • SLIDE 13</span>
+        <h2 class="section-title" style="color: #0F172A;">
+          Itemized ₹2,00,00,000 (2 Crore) <span style="font-family: var(--font-serif); font-style: italic; color: #2563EB; font-weight: 400;">Annual Capital Plan.</span>
+        </h2>
+        <p class="section-desc" style="color: #64748B;">
+          Every rupee itemized with exact deliverables, vendor categories, and operational timelines for statutory inspection and CSR governance committees.
+        </p>
+      </div>
 
-          <div style="display: flex; flex-direction: column; gap: 1.6rem;">
-            <!-- Progress Bar 1 -->
-            <div style="background: #FFFFFF; border: 1.5px solid rgba(226, 232, 240, 0.9); border-radius: 14px; padding: 1.25rem 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-              <div style="display: flex; justify-content: space-between; font-weight: 800; font-size: 0.92rem; margin-bottom: 0.65rem; color: var(--text-dark);">
-                <span style="display: flex; align-items: center; gap: 0.5rem;">
-                  <span>🎯</span> Direct Field Interventions &amp; Beneficiary Kits
-                </span>
-                <span style="font-family: var(--font-mono); font-size: 1rem; color: #7E22CE; background: #F3E8FF; padding: 0.15rem 0.6rem; border-radius: 6px;">88.0%</span>
-              </div>
-              <div style="width: 100%; height: 10px; background: #F1F5F9; border-radius: 6px; overflow: hidden;">
-                <div style="width: 88%; height: 100%; background: linear-gradient(90deg, #7E22CE 0%, #A855F7 100%); border-radius: 6px;"></div>
-              </div>
-            </div>
-
-            <!-- Progress Bar 2 -->
-            <div style="background: #FFFFFF; border: 1.5px solid rgba(226, 232, 240, 0.9); border-radius: 14px; padding: 1.25rem 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-              <div style="display: flex; justify-content: space-between; font-weight: 800; font-size: 0.92rem; margin-bottom: 0.65rem; color: var(--text-dark);">
-                <span style="display: flex; align-items: center; gap: 0.5rem;">
-                  <span>🔍</span> Field Monitoring, Verification &amp; Ground Logistics
-                </span>
-                <span style="font-family: var(--font-mono); font-size: 1rem; color: #B45309; background: #FEF3C7; padding: 0.15rem 0.6rem; border-radius: 6px;">7.0%</span>
-              </div>
-              <div style="width: 100%; height: 10px; background: #F1F5F9; border-radius: 6px; overflow: hidden;">
-                <div style="width: 7%; height: 100%; background: linear-gradient(90deg, #D97706 0%, #F59E0B 100%); border-radius: 6px;"></div>
-              </div>
-            </div>
-
-            <!-- Progress Bar 3 -->
-            <div style="background: #FFFFFF; border: 1.5px solid rgba(226, 232, 240, 0.9); border-radius: 14px; padding: 1.25rem 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-              <div style="display: flex; justify-content: space-between; font-weight: 800; font-size: 0.92rem; margin-bottom: 0.65rem; color: var(--text-dark);">
-                <span style="display: flex; align-items: center; gap: 0.5rem;">
-                  <span>⚖️</span> Statutory Audits, Chartered Compliance &amp; Admin
-                </span>
-                <span style="font-family: var(--font-mono); font-size: 1rem; color: #047857; background: #D1FAE5; padding: 0.15rem 0.6rem; border-radius: 6px;">5.0%</span>
-              </div>
-              <div style="width: 100%; height: 10px; background: #F1F5F9; border-radius: 6px; overflow: hidden;">
-                <div style="width: 5%; height: 100%; background: linear-gradient(90deg, #059669 0%, #10B981 100%); border-radius: 6px;"></div>
-              </div>
-            </div>
-          </div>
+      <div class="budget-floating-container">
+        <!-- Filter Tabs -->
+        <div class="modern-budget-tabs">
+          <button type="button" class="budget-tab-pill active" data-filter="all">All Heads (100%)</button>
+          <button type="button" class="budget-tab-pill" data-filter="food-kitchen">Food &amp; Kitchen (56%)</button>
+          <button type="button" class="budget-tab-pill" data-filter="logistics">Logistics (17%)</button>
+          <button type="button" class="budget-tab-pill" data-filter="support-infra">Infrastructure (12%)</button>
+          <button type="button" class="budget-tab-pill" data-filter="compliance-admin">Admin &amp; Audits (15%)</button>
         </div>
 
-        <!-- Statutory Balance Sheet Summary (Digital Ledger Vault Card) -->
-        <div style="background: #FFFFFF; border: 1.5px solid rgba(226, 232, 240, 0.95); border-radius: 22px; padding: 2.75rem 2.5rem; box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.08); position: relative; overflow: hidden;">
-          <div style="position: absolute; top: -40px; right: -40px; width: 120px; height: 120px; border-radius: 50%; background: rgba(205, 180, 219, 0.2); filter: blur(30px); pointer-events: none;"></div>
-
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; padding-bottom: 1.25rem; border-bottom: 1.5px solid rgba(226, 232, 240, 0.9);">
+        <!-- Floating Cards Grid -->
+        <div class="budget-floating-grid">
+          <!-- Card 1 -->
+          <div class="budget-floating-card" data-category="food-kitchen" style="--card-accent: #EA580C; --card-glow: rgba(234, 88, 12, 0.4);">
             <div>
-              <div style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 800; color: #7E22CE; letter-spacing: 0.08em; margin-bottom: 0.25rem;">[ STATUTORY TELEMETRY ]</div>
-              <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; color: var(--text-dark); margin: 0;">Audited Balance Ledger</h3>
+              <div class="budget-card-top-row">
+                <span class="budget-card-head-tag">DIRECT PROGRAM EXPENSE</span>
+                <span class="budget-card-pct-badge" style="color: #FB923C; background: rgba(234, 88, 12, 0.16); border-color: rgba(234, 88, 12, 0.35);">56.0%</span>
+              </div>
+              <div class="budget-card-amount">₹1,12,00,000</div>
+              <div class="budget-card-progress">
+                <div class="budget-card-progress-bar" style="width: 56%; background: linear-gradient(90deg, #EA580C, #FB923C);"></div>
+              </div>
+              <h3 class="budget-card-title">Food &amp; Kitchen Operations</h3>
+              <div class="budget-card-sub">Core Daily Feeding Logistics</div>
+              <p class="budget-card-desc">
+                Wholesale grains, pulses, fresh seasonal vegetables, cooking oil, spices, professional chefs, kitchen helpers, and biodegradable compostable packaging for 3,00,000 wholesome meals.
+              </p>
             </div>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; background: #D1FAE5; color: #065F46; border: 1px solid #A7F3D0; padding: 0.35rem 0.75rem; border-radius: 20px; font-weight: 800; display: inline-flex; align-items: center; gap: 0.35rem;">
-              <span class="live-green-pulse"></span>
-              VERIFIED
-            </span>
+            <div class="budget-card-footer">
+              <span>✦ FSSAI Hygiene</span>
+              <span style="color: #FB923C; font-weight: 700;">3,00,000 Meals</span>
+            </div>
           </div>
 
-          <div style="display: flex; flex-direction: column; gap: 1.15rem; font-size: 0.92rem;">
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed rgba(226, 232, 240, 0.9); padding-bottom: 0.85rem;">
-              <span style="color: var(--text-muted); font-size: 0.88rem;">Charter Status</span>
-              <strong style="color: var(--text-dark); font-family: var(--font-mono); font-size: 0.85rem; background: #F8FAFC; padding: 0.25rem 0.6rem; border-radius: 6px;">Section 8 Non-Profit</strong>
+          <!-- Card 2 -->
+          <div class="budget-floating-card" data-category="logistics" style="--card-accent: #2563EB; --card-glow: rgba(37, 99, 235, 0.4);">
+            <div>
+              <div class="budget-card-top-row">
+                <span class="budget-card-head-tag">FLEET &amp; TRANSIT</span>
+                <span class="budget-card-pct-badge" style="color: #93C5FD; background: rgba(37, 99, 235, 0.16); border-color: rgba(37, 99, 235, 0.35);">17.0%</span>
+              </div>
+              <div class="budget-card-amount">₹34,00,000</div>
+              <div class="budget-card-progress">
+                <div class="budget-card-progress-bar" style="width: 17%; background: linear-gradient(90deg, #2563EB, #60A5FA);"></div>
+              </div>
+              <h3 class="budget-card-title">Logistics &amp; Distribution</h3>
+              <div class="budget-card-sub">Hot Insulated Van Network</div>
+              <p class="budget-card-desc">
+                Lease/operation of custom insulated delivery vans, route fuel, driver wages, vehicle maintenance, and transit temperature monitoring above 65°C.
+              </p>
             </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed rgba(226, 232, 240, 0.9); padding-bottom: 0.85rem;">
-              <span style="color: var(--text-muted); font-size: 0.88rem;">Dividend Distribution</span>
-              <strong style="color: #047857; font-family: var(--font-mono); font-size: 0.85rem; background: #D1FAE5; padding: 0.25rem 0.6rem; border-radius: 6px;">0.00% (Strictly Prohibited)</strong>
+            <div class="budget-card-footer">
+              <span>✦ &gt;65°C Temperature Control</span>
+              <span style="color: #93C5FD; font-weight: 700;">5–10 Hubs Daily</span>
             </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed rgba(226, 232, 240, 0.9); padding-bottom: 0.85rem;">
-              <span style="color: var(--text-muted); font-size: 0.88rem;">Income Tax 80G Status</span>
-              <strong style="color: #0284C7; font-family: var(--font-mono); font-size: 0.85rem; background: #E0F2FE; padding: 0.25rem 0.6rem; border-radius: 6px;">Active (50% Deduction)</strong>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="budget-floating-card" data-category="support-infra" style="--card-accent: #D97706; --card-glow: rgba(217, 119, 6, 0.4);">
+            <div>
+              <div class="budget-card-top-row">
+                <span class="budget-card-head-tag">CAPITAL EXPENDITURE</span>
+                <span class="budget-card-pct-badge" style="color: #FDE68A; background: rgba(245, 158, 11, 0.16); border-color: rgba(245, 158, 11, 0.35);">12.0%</span>
+              </div>
+              <div class="budget-card-amount">₹24,00,000</div>
+              <div class="budget-card-progress">
+                <div class="budget-card-progress-bar" style="width: 12%; background: linear-gradient(90deg, #D97706, #F59E0B);"></div>
+              </div>
+              <h3 class="budget-card-title">Infrastructure &amp; Setup</h3>
+              <div class="budget-card-sub">Kitchen Equipment &amp; Storage</div>
+              <p class="budget-card-desc">
+                Commercial stainless steel steam kettles, industrial burners, cold room refrigeration, dry grain storage racks, and FSSAI sanitation gear.
+              </p>
             </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed rgba(226, 232, 240, 0.9); padding-bottom: 0.85rem;">
-              <span style="color: var(--text-muted); font-size: 0.88rem;">Income Tax 12A Status</span>
-              <strong style="color: #7E22CE; font-family: var(--font-mono); font-size: 0.85rem; background: #F3E8FF; padding: 0.25rem 0.6rem; border-radius: 6px;">Approved Charitable Trust</strong>
+            <div class="budget-card-footer">
+              <span>✦ SS-304 Food Grade</span>
+              <span style="color: #FDE68A; font-weight: 700;">Zero Contamination</span>
             </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 0.35rem;">
-              <span style="color: var(--text-muted); font-size: 0.88rem;">Operating Bank Account</span>
-              <div style="display: flex; align-items: center; gap: 0.5rem;">
-                <strong style="color: #1E293B; font-family: var(--font-mono); font-size: 0.88rem;">2201201002013</strong>
-                <button class="vault-copy-btn btn-copy-chip" data-copy-target="2201201002013" aria-label="Copy Account Number">COPY</button>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="budget-floating-card" data-category="compliance-admin" style="--card-accent: #7C3AED; --card-glow: rgba(124, 58, 237, 0.4);">
+            <div>
+              <div class="budget-card-top-row">
+                <span class="budget-card-head-tag">EXECUTIVE STEWARDSHIP</span>
+                <span class="budget-card-pct-badge" style="color: #D8B4FE; background: rgba(147, 51, 234, 0.16); border-color: rgba(147, 51, 234, 0.35);">9.0%</span>
+              </div>
+              <div class="budget-card-amount">₹18,00,000</div>
+              <div class="budget-card-progress">
+                <div class="budget-card-progress-bar" style="width: 9%; background: linear-gradient(90deg, #7C3AED, #A855F7);"></div>
+              </div>
+              <h3 class="budget-card-title">Program Admin &amp; Governance</h3>
+              <div class="budget-card-sub">Statutory Corporate Oversight</div>
+              <p class="budget-card-desc">
+                Project coordinator, field supervisors, legal &amp; financial compliance, ROC annual filings, and administrative utilities.
+              </p>
+            </div>
+            <div class="budget-card-footer">
+              <span>✦ Section 8 Corporation</span>
+              <span style="color: #D8B4FE; font-weight: 700;">RoC Kanpur</span>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="budget-floating-card" data-category="compliance-admin" style="--card-accent: #059669; --card-glow: rgba(5, 150, 105, 0.4);">
+            <div>
+              <div class="budget-card-top-row">
+                <span class="budget-card-head-tag">HUMAN CAPACITY</span>
+                <span class="budget-card-pct-badge" style="color: #6EE7B7; background: rgba(16, 185, 129, 0.16); border-color: rgba(16, 185, 129, 0.35);">3.5%</span>
+              </div>
+              <div class="budget-card-amount">₹7,00,000</div>
+              <div class="budget-card-progress">
+                <div class="budget-card-progress-bar" style="width: 3.5%; background: linear-gradient(90deg, #059669, #10B981);"></div>
+              </div>
+              <h3 class="budget-card-title">Community &amp; Volunteer Training</h3>
+              <div class="budget-card-sub">Field Hygiene &amp; Dignity Cadre</div>
+              <p class="budget-card-desc">
+                Safety gear, health screenings, food handling certification for 50-100 volunteers, and beneficiary awareness materials.
+              </p>
+            </div>
+            <div class="budget-card-footer">
+              <span>✦ Field Safety Protocol</span>
+              <span style="color: #6EE7B7; font-weight: 700;">50–100 Cadre</span>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="budget-floating-card" data-category="compliance-admin" style="--card-accent: #0284C7; --card-glow: rgba(2, 132, 199, 0.4);">
+            <div>
+              <div class="budget-card-top-row">
+                <span class="budget-card-head-tag">STATUTORY ASSURANCE</span>
+                <span class="budget-card-pct-badge" style="color: #7DD3FC; background: rgba(14, 165, 233, 0.16); border-color: rgba(14, 165, 233, 0.35);">2.5%</span>
+              </div>
+              <div class="budget-card-amount">₹5,00,000</div>
+              <div class="budget-card-progress">
+                <div class="budget-card-progress-bar" style="width: 2.5%; background: linear-gradient(90deg, #0284C7, #38BDF8);"></div>
+              </div>
+              <h3 class="budget-card-title">Monitoring, Evaluation &amp; Audits</h3>
+              <div class="budget-card-sub">Third-Party Quality Assurance</div>
+              <p class="budget-card-desc">
+                Independent third-party financial audits, FSSAI nutritional food testing in NABL labs, tracking software, and impact publishing.
+              </p>
+            </div>
+            <div class="budget-card-footer">
+              <span>✦ NABL Lab Audited</span>
+              <span style="color: #7DD3FC; font-weight: 700;">Form 10BD / CA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Summary Card -->
+        <div class="budget-floating-summary">
+          <div style="flex: 1; min-width: 280px;">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+              <span class="section-tag-badge emerald" style="padding: 0.25rem 0.65rem; font-size: 0.72rem;">FULL OPERATIONAL EXPENDITURE</span>
+              <span style="font-family: var(--font-mono); font-size: 0.82rem; color: #34D399; font-weight: 700;">100% CAPITAL TARGET</span>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; color: #FFFFFF; line-height: 1.1;">
+              ₹2,00,00,000 <span style="font-size: 1.15rem; color: #34D399; font-weight: 600;">(₹2.00 Crore)</span>
+            </div>
+            <p style="color: #94A3B8; font-size: 0.92rem; margin-top: 0.4rem; margin-bottom: 1rem;">
+              3,00,000 Complete Meals @ ₹66.67 / Meal • 365 Consecutive Days Unbroken Relief Across Northern India
+            </p>
+            <div class="budget-card-progress" style="height: 8px; margin-bottom: 0;">
+              <div class="budget-card-progress-bar" style="width: 100%; background: linear-gradient(90deg, #10B981, #38BDF8);"></div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="donate.html" class="btn-primary-glow">Sponsor Program Heads &rarr;</a>
+            <a href="contact.html" class="btn-secondary-outline">Request Audit Dossier</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Impact Measurement Framework (Slide 12) -->
+  <section id="impact-measurement" class="section-impact-light" style="padding: 6rem 0; background: #FFFFFF; border-top: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0;">
+    <div class="container">
+      <div class="impact-slider-section-header">
+        <div style="max-width: 720px;">
+          <span class="section-tag-badge sapphire">VERIFICATION ARCHITECTURE • SLIDE 12</span>
+          <h2 class="section-title" style="color: #0F172A; margin-top: 0.75rem;">
+            6-Point Impact <span style="font-family: var(--font-serif); font-style: italic; color: #2563EB; font-weight: 400;">Measurement Framework.</span>
+          </h2>
+          <p class="section-desc" style="color: #64748B; margin-bottom: 0;">
+            Strict auditability guidelines applied to verify output volume, nutritional integrity, and beneficiary welfare.
+          </p>
+        </div>
+
+        <!-- Arrow Controls -->
+        <div class="slider-controls-wrap">
+          <span class="slider-counter-pill" id="impact-slider-counter">1 / 6</span>
+          <button type="button" class="slider-arrow-btn prev-btn" aria-label="Previous Slide">←</button>
+          <button type="button" class="slider-arrow-btn next-btn" aria-label="Next Slide">→</button>
+        </div>
+      </div>
+
+      <!-- Horizontal Scroll Slider -->
+      <div class="impact-slider-container">
+        <div class="impact-slider-track" id="impact-slider-track">
+          <!-- Slide 1 -->
+          <div class="impact-slide-card" style="--slide-accent: #EA580C; --slide-glow: rgba(234, 88, 12, 0.4); --target-bg: rgba(234, 88, 12, 0.16); --target-color: #FB923C; --target-border: rgba(234, 88, 12, 0.35);">
+            <div>
+              <div class="slide-card-header">
+                <span class="slide-step-badge">POINT 01 / 06</span>
+                <span style="font-size: 1.3rem;">🍲</span>
+              </div>
+              <h3 class="slide-indicator-title">Meals Distributed</h3>
+              <div class="slide-target-pill">
+                <span>✦</span> 3,00,000 / Year (822/day)
+              </div>
+              <div class="slide-info-block">
+                <div class="slide-info-label"><span>📊</span> Measurement Methodology</div>
+                <div class="slide-info-text">
+                  Daily kitchen raw material consumption and batch cooking dispatch manifests logged per run.
+                </div>
+              </div>
+            </div>
+            <div class="slide-audit-box">
+              <div class="slide-info-label" style="color: #FB923C;"><span>🛡️</span> Verification &amp; Audit Trail</div>
+              <div style="font-size: 0.86rem; color: #E2E8F0; line-height: 1.5;">
+                GPS-geotagged distribution photographs and ground supervisor counter-signatures.
               </div>
             </div>
           </div>
 
-          <div style="margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1.5px solid rgba(226, 232, 240, 0.9); display: flex; align-items: center; justify-content: space-between; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">
-            <span>CANARA BANK &bull; COURT RD</span>
-            <span style="color: #047857; font-weight: 700;">✓ AUDITED BY CHARTERED ACCOUNTANTS</span>
+          <!-- Slide 2 -->
+          <div class="impact-slide-card" style="--slide-accent: #2563EB; --slide-glow: rgba(37, 99, 235, 0.4); --target-bg: rgba(37, 99, 235, 0.16); --target-color: #93C5FD; --target-border: rgba(37, 99, 235, 0.35);">
+            <div>
+              <div class="slide-card-header">
+                <span class="slide-step-badge">POINT 02 / 06</span>
+                <span style="font-size: 1.3rem;">👥</span>
+              </div>
+              <h3 class="slide-indicator-title">Individuals Reached</h3>
+              <div class="slide-target-pill">
+                <span>✦</span> 10,000+ Unique Beneficiaries
+              </div>
+              <div class="slide-info-block">
+                <div class="slide-info-label"><span>📊</span> Measurement Methodology</div>
+                <div class="slide-info-text">
+                  Community center registrations, night shelter headcounts, and statistical field sampling.
+                </div>
+              </div>
+            </div>
+            <div class="slide-audit-box" style="border-left-color: #2563EB;">
+              <div class="slide-info-label" style="color: #93C5FD;"><span>🛡️</span> Verification &amp; Audit Trail</div>
+              <div style="font-size: 0.86rem; color: #E2E8F0; line-height: 1.5;">
+                Quarterly demographic audits and route beneficiary registers inspected by trust board.
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="impact-slide-card" style="--slide-accent: #16A34A; --slide-glow: rgba(22, 163, 74, 0.4); --target-bg: rgba(22, 163, 74, 0.16); --target-color: #86EFAC; --target-border: rgba(22, 163, 74, 0.35);">
+            <div>
+              <div class="slide-card-header">
+                <span class="slide-step-badge">POINT 03 / 06</span>
+                <span style="font-size: 1.3rem;">🧪</span>
+              </div>
+              <h3 class="slide-indicator-title">Nutritional Quality</h3>
+              <div class="slide-target-pill">
+                <span>✦</span> 100% FSSAI Compliant
+              </div>
+              <div class="slide-info-block">
+                <div class="slide-info-label"><span>📊</span> Measurement Methodology</div>
+                <div class="slide-info-text">
+                  Weekly menu composition tracking (balanced calories, protein, and micro-nutrient profiles).
+                </div>
+              </div>
+            </div>
+            <div class="slide-audit-box" style="border-left-color: #16A34A;">
+              <div class="slide-info-label" style="color: #86EFAC;"><span>🛡️</span> Verification &amp; Audit Trail</div>
+              <div style="font-size: 0.86rem; color: #E2E8F0; line-height: 1.5;">
+                Periodic independent testing and microbial assays by certified NABL food laboratories.
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="impact-slide-card" style="--slide-accent: #D97706; --slide-glow: rgba(217, 119, 6, 0.4); --target-bg: rgba(245, 158, 11, 0.16); --target-color: #FDE68A; --target-border: rgba(245, 158, 11, 0.35);">
+            <div>
+              <div class="slide-card-header">
+                <span class="slide-step-badge">POINT 04 / 06</span>
+                <span style="font-size: 1.3rem;">♻️</span>
+              </div>
+              <h3 class="slide-indicator-title">Food Waste Diverted</h3>
+              <div class="slide-target-pill">
+                <span>✦</span> 30+ Metric Tons
+              </div>
+              <div class="slide-info-block">
+                <div class="slide-info-label"><span>📊</span> Measurement Methodology</div>
+                <div class="slide-info-text">
+                  Weigh-scale digital logs at agricultural mandi, banquet, and commercial wholesale pickup points.
+                </div>
+              </div>
+            </div>
+            <div class="slide-audit-box" style="border-left-color: #D97706;">
+              <div class="slide-info-label" style="color: #FDE68A;"><span>🛡️</span> Verification &amp; Audit Trail</div>
+              <div style="font-size: 0.86rem; color: #E2E8F0; line-height: 1.5;">
+                Monthly waste recovery reconciliation reports shared directly with institutional donors.
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="impact-slide-card" style="--slide-accent: #7C3AED; --slide-glow: rgba(124, 58, 237, 0.4); --target-bg: rgba(147, 51, 234, 0.16); --target-color: #D8B4FE; --target-border: rgba(147, 51, 234, 0.35);">
+            <div>
+              <div class="slide-card-header">
+                <span class="slide-step-badge">POINT 05 / 06</span>
+                <span style="font-size: 1.3rem;">🤝</span>
+              </div>
+              <h3 class="slide-indicator-title">Volunteer Cadre</h3>
+              <div class="slide-target-pill">
+                <span>✦</span> 50–100 Active Cadre
+              </div>
+              <div class="slide-info-block">
+                <div class="slide-info-label"><span>📊</span> Measurement Methodology</div>
+                <div class="slide-info-text">
+                  Digital attendance tracking, shift hour verification, and mobile coordinator dispatch registries.
+                </div>
+              </div>
+            </div>
+            <div class="slide-audit-box" style="border-left-color: #7C3AED;">
+              <div class="slide-info-label" style="color: #D8B4FE;"><span>🛡️</span> Verification &amp; Audit Trail</div>
+              <div style="font-size: 0.86rem; color: #E2E8F0; line-height: 1.5;">
+                Timesheet logs, food handling hygiene certificates, and quarterly volunteer reviews.
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 6 -->
+          <div class="impact-slide-card" style="--slide-accent: #0284C7; --slide-glow: rgba(2, 132, 199, 0.4); --target-bg: rgba(14, 165, 233, 0.16); --target-color: #7DD3FC; --target-border: rgba(14, 165, 233, 0.35);">
+            <div>
+              <div class="slide-card-header">
+                <span class="slide-step-badge">POINT 06 / 06</span>
+                <span style="font-size: 1.3rem;">★</span>
+              </div>
+              <h3 class="slide-indicator-title">Community Satisfaction</h3>
+              <div class="slide-target-pill">
+                <span>✦</span> 80%+ Positive Rating
+              </div>
+              <div class="slide-info-block">
+                <div class="slide-info-label"><span>📊</span> Measurement Methodology</div>
+                <div class="slide-info-text">
+                  Monthly beneficiary dignity feedback interviews and field community welfare survey forms.
+                </div>
+              </div>
+            </div>
+            <div class="slide-audit-box" style="border-left-color: #0284C7;">
+              <div class="slide-info-label" style="color: #7DD3FC;"><span>🛡️</span> Verification &amp; Audit Trail</div>
+              <div style="font-size: 0.86rem; color: #E2E8F0; line-height: 1.5;">
+                Independent third-party surveyor feedback sheets and community impact testimonials.
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Slider Dots -->
+        <div class="impact-slider-dots" id="impact-slider-dots"></div>
       </div>
     </div>
   </section>
-  </section>
 
-  <!-- Downloadable Statutory Certifications -->
-  <section class="section-statutory-vault" id="statutory" style="padding: 6rem 0;">
+  <!-- Section 5: Risk Assessment & Mitigation Strategy (Slide 19) -->
+  <section class="section-impact-light" style="padding: 6rem 0; background: #F8FAFC; border-bottom: 1px solid #E2E8F0;">
     <div class="container">
-      <div style="text-align: center; max-width: 780px; margin: 0 auto 3.5rem;">
-        <span class="section-tag-vibrant">// PUBLIC DISCLOSURE REPOSITORY</span>
-        <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800; margin-bottom: 1rem; line-height: 1.15;">
-          Statutory Verification Vault.
+      <div style="max-width: 820px;">
+        <span class="section-tag-badge sapphire">GOVERNANCE &amp; RESILIENCE • SLIDE 19</span>
+        <h2 class="section-title" style="color: #0F172A;">
+          Operational Risk Assessment &amp; <span style="font-family: var(--font-serif); font-style: italic; color: #EA580C; font-weight: 400;">Mitigation Protocols.</span>
         </h2>
-        <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.7;">
-          Official certificates and legal approvals issued by the Ministry of Corporate Affairs, Income Tax Department, and NITI Aayog. Every identifier is cryptographically logged and publicly auditable.
+        <p class="section-desc" style="color: #64748B;">
+          Proactive contingency protocols engineered into our daily supply chain and financial management to guarantee unbroken relief.
         </p>
       </div>
 
-      <div class="statutory-vault-grid">
-        <!-- Vault Doc 1: MCA -->
-        <div class="statutory-vault-card vault-theme-mca">
+      <div class="risk-matrix-grid">
+        <div class="risk-protocol-card">
           <div>
-            <div class="vault-card-authority-badge">
-              <span>🏛️</span>
-              <span>MINISTRY OF CORPORATE AFFAIRS</span>
+            <div class="risk-badge-header">
+              <span class="risk-level-tag red">HIGH PRIORITY • RISK 01</span>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #94A3B8;">SUPPLY CHAIN</span>
             </div>
-            <div class="vault-icon-stamp">📜</div>
-            <h4 class="vault-card-title">Certificate of Incorporation</h4>
-            <p class="vault-card-desc">
-              Section 8 non-profit company license issued by Registrar of Companies (RoC Kanpur), Ministry of Corporate Affairs, Govt of India.
+            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.5rem;">Supply Chain Disruption &amp; Inflation</h3>
+            <p style="color: #A8A29E; font-size: 0.9rem; line-height: 1.6;">
+              Surges in commodity grain, pulse, or fuel pricing threatening budget ceilings.
             </p>
-            <div class="vault-code-chip-box">
-              <span class="vault-code-text">CIN: U80902UP2018NPL106959</span>
-              <button class="vault-copy-btn btn-copy-chip" data-copy-target="U80902UP2018NPL106959" aria-label="Copy CIN">COPY</button>
-            </div>
           </div>
-          <div class="vault-status-footer">
-            <span class="vault-verified-pill">
-              <span class="live-green-pulse"></span>
-              RoC KANPUR ACTIVE
-            </span>
-            <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim);">ESTD 2018</span>
+          <div class="risk-mitigation-box">
+            <strong>Mitigation Protocol</strong>
+            Long-term forward contracts with regional APMC wholesale suppliers; 15-day dry grain buffer stock maintained in central Saharanpur facility.
           </div>
         </div>
 
-        <!-- Vault Doc 2: 80G -->
-        <div class="statutory-vault-card vault-theme-80g">
+        <div class="risk-protocol-card">
           <div>
-            <div class="vault-card-authority-badge">
-              <span>📑</span>
-              <span>INCOME TAX DEPT &bull; 80G</span>
+            <div class="risk-badge-header">
+              <span class="risk-level-tag red">HIGH PRIORITY • RISK 02</span>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #94A3B8;">FOOD SAFETY</span>
             </div>
-            <div class="vault-icon-stamp">⚖️</div>
-            <h4 class="vault-card-title">Form 10AC (80G Approval)</h4>
-            <p class="vault-card-desc">
-              Statutory certification granting 50% income tax deduction relief to individual and corporate donors under Section 80G(5)(iv).
+            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.5rem;">Food Safety &amp; Temperature Spoilage</h3>
+            <p style="color: #A8A29E; font-size: 0.9rem; line-height: 1.6;">
+              Risk of bacterial proliferation during summer transit and high humidity seasons.
             </p>
-            <div class="vault-code-chip-box">
-              <span class="vault-code-text">URN: AAECH6219BF20261</span>
-              <button class="vault-copy-btn btn-copy-chip" data-copy-target="AAECH6219BF20261" aria-label="Copy 80G URN">COPY</button>
-            </div>
           </div>
-          <div class="vault-status-footer">
-            <span class="vault-verified-pill">
-              <span class="live-green-pulse"></span>
-              50% TAX RELIEF
-            </span>
-            <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim);">PERPETUAL</span>
+          <div class="risk-mitigation-box">
+            <strong>Mitigation Protocol</strong>
+            Strict adherence to FSSAI protocols, hot-holding at &gt;65°C in insulated containers, 2-hour distribution window post-cooking, and daily batch retention samples.
           </div>
         </div>
 
-        <!-- Vault Doc 3: 12A -->
-        <div class="statutory-vault-card vault-theme-12a">
+        <div class="risk-protocol-card">
           <div>
-            <div class="vault-card-authority-badge">
-              <span>📜</span>
-              <span>INCOME TAX DEPT &bull; 12A</span>
+            <div class="risk-badge-header">
+              <span class="risk-level-tag red">HIGH PRIORITY • RISK 03</span>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #94A3B8;">CAPITAL FLOW</span>
             </div>
-            <div class="vault-icon-stamp">🛡️</div>
-            <h4 class="vault-card-title">Form 10AC (12A Tax Exempt)</h4>
-            <p class="vault-card-desc">
-              Registration under Section 12A of the Income Tax Act, 1961 conferring zero tax liability on charitable income and donations.
+            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.5rem;">Funding Shortfall &amp; Cash Flow Delays</h3>
+            <p style="color: #A8A29E; font-size: 0.9rem; line-height: 1.6;">
+              CSR grant disbursement lag times or donor attrition during economic slowdowns.
             </p>
-            <div class="vault-code-chip-box">
-              <span class="vault-code-text">URN: AAECH6219BE20251</span>
-              <button class="vault-copy-btn btn-copy-chip" data-copy-target="AAECH6219BE20251" aria-label="Copy 12A URN">COPY</button>
-            </div>
           </div>
-          <div class="vault-status-footer">
-            <span class="vault-verified-pill">
-              <span class="live-green-pulse"></span>
-              NON-PROFIT EXEMPT
-            </span>
-            <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim);">CBDT CERTIFIED</span>
+          <div class="risk-mitigation-box">
+            <strong>Mitigation Protocol</strong>
+            Multi-stream revenue portfolio across CSR grants, individual giving, and foundations. A 3-month operational reserve fund is systematically built.
           </div>
         </div>
 
-        <!-- Vault Doc 4: NITI Aayog -->
-        <div class="statutory-vault-card vault-theme-niti">
+        <div class="risk-protocol-card">
           <div>
-            <div class="vault-card-authority-badge">
-              <span>🇮🇳</span>
-              <span>NITI AAYOG &bull; NGO DARPAN</span>
+            <div class="risk-badge-header">
+              <span class="risk-level-tag amber">MODERATE • RISK 04</span>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #94A3B8;">STATUTORY</span>
             </div>
-            <div class="vault-icon-stamp">🏛️</div>
-            <h4 class="vault-card-title">NGO Darpan Portal Registry</h4>
-            <p class="vault-card-desc">
-              Verified national central registry authorization by NITI Aayog, Government of India, establishing eligibility for govt grants &amp; CSR.
+            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.5rem;">Regulatory &amp; Statutory Compliance</h3>
+            <p style="color: #A8A29E; font-size: 0.9rem; line-height: 1.6;">
+              Evolving MCA, Income Tax Form 10BD, and Section 8 governance requirements.
             </p>
-            <div class="vault-code-chip-box">
-              <span class="vault-code-text">ID: UP/2025/0710389</span>
-              <button class="vault-copy-btn btn-copy-chip" data-copy-target="UP/2025/0710389" aria-label="Copy Darpan ID">COPY</button>
-            </div>
           </div>
-          <div class="vault-status-footer">
-            <span class="vault-verified-pill">
-              <span class="live-green-pulse"></span>
-              DARPAN VERIFIED
-            </span>
-            <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim);">GOVT OF INDIA</span>
+          <div class="risk-mitigation-box" style="border-left-color: #F59E0B;">
+            <strong style="color: #FBBF24;">Mitigation Protocol</strong>
+            Retained Chartered Accountants and legal counsel ensuring timely Form 10BD filings, MCA returns, 80G renewal certificates, and Section 8 compliance.
+          </div>
+        </div>
+
+        <div class="risk-protocol-card">
+          <div>
+            <div class="risk-badge-header">
+              <span class="risk-level-tag amber">MODERATE • RISK 05</span>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #94A3B8;">HUMAN CADRE</span>
+            </div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.5rem;">Volunteer Attrition &amp; Field Fatigue</h3>
+            <p style="color: #A8A29E; font-size: 0.9rem; line-height: 1.6;">
+              High volunteer turnover leading to dispatch inconsistencies or field delays.
+            </p>
+          </div>
+          <div class="risk-mitigation-box" style="border-left-color: #F59E0B;">
+            <strong style="color: #FBBF24;">Mitigation Protocol</strong>
+            Rotating shifts, structured onboarding curriculum, formal recognition ceremonies, and certified community service accreditations.
+          </div>
+        </div>
+
+        <div class="risk-protocol-card">
+          <div>
+            <div class="risk-badge-header">
+              <span class="risk-level-tag amber">MODERATE • RISK 06</span>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #94A3B8;">OPERATIONS</span>
+            </div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.5rem;">Fleet Breakdown &amp; Weather Extremes</h3>
+            <p style="color: #A8A29E; font-size: 0.9rem; line-height: 1.6;">
+              Monsoon inundation or vehicular mechanical failure disrupting morning dispatches.
+            </p>
+          </div>
+          <div class="risk-mitigation-box" style="border-left-color: #F59E0B;">
+            <strong style="color: #FBBF24;">Mitigation Protocol</strong>
+            Annual vehicle maintenance contracts (AMC), backup transport tie-ups with regional logistics operators, and rainproof insulated packaging.
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Modern Bright & Deep Navy Footer -->
-  <footer class="site-modern-footer">
+  <!-- Section 6: Institutional Call to Action Banner -->
+  <section class="section-impact-light" style="padding: 5.5rem 0; background: #FAFAF9; border-top: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0;">
+    <div class="container" style="text-align: center; max-width: 780px;">
+      <span class="section-tag-badge sapphire" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+        ✦ CORPORATE ALLIANCES &amp; TAX EXEMPTION
+      </span>
+      <h2 style="font-family: var(--font-heading); font-size: clamp(2rem, 3.2vw, 2.75rem); font-weight: 800; color: #0F172A; margin-top: 1rem; margin-bottom: 1rem;">
+        Partner with Our Audited Feeding Network
+      </h2>
+      <p style="color: #475569; font-size: 1.05rem; line-height: 1.65; margin-bottom: 2rem;">
+        Whether co-funding an entire delivery hub or claiming Section 80G tax deductions for individual giving, your capital directly fuels daily hot meals.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="donate.html" class="btn-primary-glow">
+          Explore CSR Partnership Tiers &rarr;
+        </a>
+        <a href="donate.html#bank-wire" class="btn-secondary-outline" style="background: #FFFFFF; border-color: #CBD5E1; color: #0F172A;">
+          Direct Canara Bank Wire [80G]
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
     <div class="container">
-      <div class="footer-top-columns">
-        <div class="footer-col-brand">
-          <div class="footer-brand-huge">SARWE UNNATI FOUNDATION</div>
-          <p class="footer-brand-p">
-            A government-certified Section 8 non-profit company (incorporated August 14, 2018) operating large-scale grassroots education, IT vocational skilling, and public health infrastructure across Northern India.
-          </p>
-        </div>
-
+      <div class="footer-top-grid">
         <div>
-          <h4 class="footer-col-heading">NAVIGATION</h4>
-          <ul class="footer-links-list">
-            <li><a href="index.html" class="footer-link-a">↳ Home</a></li>
-            <li><a href="about.html" class="footer-link-a">↳ About Us</a></li>
-            <li><a href="programs.html" class="footer-link-a">↳ Verticals</a></li>
-            <li><a href="impact.html" class="footer-link-a">↳ Impact &amp; Audit</a></li>
-            <li><a href="volunteer.html" class="footer-link-a">↳ Get Involved</a></li>
-            <li><a href="donate.html" class="footer-link-a">↳ 80G Donate</a></li>
-            <li><a href="contact.html" class="footer-link-a">↳ Contact</a></li>
+          <div class="header-brand footer-brand" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+            <span class="brand-emblem-seal" style="width: 42px; height: 42px;">
+              <img src="assets/images/logo-emblem-circle.png" alt="Sarwe Unnati Foundation Logo" class="brand-logo-img">
+            </span>
+            <div class="brand-text-col">
+              <span class="brand-main-name" style="color: #FFFFFF; font-size: 1.15rem;">SARWE UNNATI FOUNDATION</span>
+              <span class="brand-sub-tag" style="color: #4ADE80;">ESTABLISHED 14 AUGUST 2018</span>
+            </div>
+          </div>
+          <p class="footer-brand-summary">
+            A government-certified Section 8 non-profit company dedicated to providing and distributing food to people facing hunger with dignity, transparency, and clinical FSSAI standards.
+          </p>
+          <span class="footer-legal-badge-pill">CIN: U80902UP2018NPL106959</span>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links-col">
+            <li><a href="index.html">Flagship Home</a></li>
+            <li><a href="about.html">About Foundation</a></li>
+            <li><a href="programs.html">Food Relief Model</a></li>
+            <li><a href="impact.html">Impact &amp; Budget</a></li>
+            <li><a href="volunteer.html">Volunteer Cadre</a></li>
+            <li><a href="contact.html">Contact Founder</a></li>
           </ul>
         </div>
-
         <div>
-          <h4 class="footer-col-heading">SPECIALIZATIONS</h4>
-          <ul class="footer-links-list">
-            <li><a href="programs.html#education" class="footer-link-a">↳ Shiksha Unnati</a></li>
-            <li><a href="programs.html#skills" class="footer-link-a">↳ Kaushal Unnati</a></li>
-            <li><a href="programs.html#health" class="footer-link-a">↳ Aarogya Unnati</a></li>
-            <li><a href="programs.html#women" class="footer-link-a">↳ Women Autonomy</a></li>
-            <li><a href="programs.html#rural" class="footer-link-a">↳ Rural Welfare</a></li>
-            <li><a href="volunteer.html#fellowship" class="footer-link-a">↳ Volunteer Fellowship</a></li>
+          <div class="footer-col-title">Governance</div>
+          <ul class="footer-links-col">
+            <li><a href="about.html#leadership">Director &amp; Leadership</a></li>
+            <li><a href="impact.html#budget-allocation">Itemized Allocation</a></li>
+            <li><a href="donate.html#csr-tiers">CSR Schedule VII</a></li>
+            <li><a href="donate.html#bank-wire">Canara Bank Wire</a></li>
           </ul>
         </div>
-
         <div>
-          <h4 class="footer-col-heading">REGISTERED OFFICE</h4>
-          <p class="footer-address-p">
-            House No. 119, Vaishali Vihar, Near Dharia Builder, Delhi Road, Saharanpur City, Saharanpur — 247001, Uttar Pradesh, India
+          <div class="footer-col-title">Headquarters</div>
+          <p style="font-size: 0.9rem; color: #94A3B8; line-height: 1.6;">
+            House No. 119, Vaishali Vihar, Near Dharia Builder, Delhi Road, Saharanpur — 247001, UP
           </p>
-          <div class="footer-contact-details">
-            <div>PHONE: <strong class="gold-text">+91 99974 26815</strong></div>
-            <div>ALT: <strong>+91 99971 97236</strong></div>
-            <div>EMAIL: <strong>PRIYESH.CHANU@GMAIL.COM</strong></div>
+          <div style="font-family: var(--font-mono); font-size: 0.82rem; color: #E2E8F0; margin-top: 0.75rem;">
+            Director: Priyesh Garg<br>
+            Phone: +91 99974 26815
           </div>
         </div>
       </div>
-
-      <div class="footer-giant-watermark">
-        SARWE UNNATI
-      </div>
-
-      <div class="footer-copyright-bar">
-        <div>
-          &copy; 2026 SARWE UNNATI FOUNDATION. ALL RIGHTS RESERVED. DIRECTORS: PRIYESH GARG &amp; DIPESH GARG.
-        </div>
-        <div class="footer-legal-links">
-          <a href="about.html#legal">↳ Legal Disclosures</a>
-          <a href="donate.html#tax">↳ 80G Guidelines</a>
-          <a href="contact.html">↳ Grievance Redressal</a>
-        </div>
+      <div class="footer-bottom-bar">
+        <div>&copy; 2018–2026 SARWE UNNATI FOUNDATION. All Rights Reserved.</div>
+        <div style="font-family: var(--font-mono); font-size: 0.75rem;">12A: AAECH6219BE20251 | 80G: AAECH6219BF20261</div>
       </div>
     </div>
   </footer>
 
-  <!-- Modal Dialog -->
-  <div class="modal-overlay-dark" id="giving-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal-window-box">
-      <div class="modal-header-bar">
-        <h3 id="modal-title" class="modal-header-title">SUPPORT SARWE UNNATI FOUNDATION</h3>
-        <button class="modal-close-x close-modal-trigger">&times;</button>
-      </div>
-      <div class="modal-inner-content">
-        <div class="modal-alert-80g">
-          <span class="alert-title">[ 80G TAX DEDUCTIBLE CONTRIBUTION ]</span>
-          <span class="alert-badge">50% RELIEF</span>
-        </div>
-        <div class="modal-bank-box">
-          <div class="modal-bank-row">
-            <span class="m-label">BANK NAME</span>
-            <strong class="m-val">CANARA BANK</strong>
-          </div>
-          <div class="modal-bank-row">
-            <span class="m-label">BENEFICIARY</span>
-            <strong class="m-val">SARWE UNNATI FOUNDATION</strong>
-          </div>
-          <div class="modal-bank-row">
-            <span class="m-label">ACCOUNT NUMBER</span>
-            <strong class="m-val val-highlight">2201201002013</strong>
-          </div>
-          <div class="modal-bank-row">
-            <span class="m-label">IFSC CODE</span>
-            <strong class="m-val">CNRB0002201</strong>
-          </div>
-          <div class="modal-bank-row">
-            <span class="m-label">BRANCH</span>
-            <span class="m-val">COURT ROAD, SAHARANPUR, UP</span>
-          </div>
-        </div>
-        <button class="btn-vibrant-cta close-modal-trigger" style="width:100%; justify-content:center;">
-          ACKNOWLEDGE &amp; CLOSE
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Smooth Inertia Scrolling Engine (Lenis) -->
-  <script src="js/lenis.min.js"></script>
-  <script src="js/main.js"></script>
+  <div class="toast-notification" id="global-toast"></div>
+  <button type="button" class="scroll-to-top-btn" id="scroll-to-top" aria-label="Scroll to top">&uarr;</button>
+  <script src="js/main.js?v=20261113_v7"></script>
 </body>
 </html>

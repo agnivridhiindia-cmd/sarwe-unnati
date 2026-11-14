@@ -1,0 +1,682 @@
+const fs = require('fs');
+
+const donateHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSR Alliances &amp; 80G Tax Exempt Giving | Sarwe Unnati Foundation</title>
+  <meta name="description" content="Partner with Sarwe Unnati Foundation under Section 135 CSR Schedule VII. Direct bank transfer via Canara Bank, 50% tax deduction under Section 80G.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="stylesheet" href="css/style.css?v=20261113_v7">
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-bar" id="scroll-progress"></div>
+
+  <!-- Modern Floating Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-identity" aria-label="Sarwe Unnati Foundation Home">
+        <div class="brand-emblem-icon">
+          <svg width="22" height="22" viewBox="0 0 100 100" fill="none">
+            <polygon points="50,6 88,24 88,76 50,94 12,76 12,24" fill="#1C1917" stroke="#EA580C" stroke-width="6"/>
+            <path d="M50 22 L74 48 L50 74 L26 48 Z" fill="url(#brandGold)"/>
+            <circle cx="50" cy="48" r="7" fill="#1C1917"/>
+            <defs>
+              <linearGradient id="brandGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#F59E0B"/>
+                <stop offset="100%" stop-color="#EA580C"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-main-name">Sarwe Unnati</span>
+          <span class="brand-sub-badge">FOOD RELIEF MISSION</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links-desktop" aria-label="Main Navigation">
+        <a href="index.html" class="nav-item-link">Home</a>
+        <a href="about.html" class="nav-item-link">About Us</a>
+        <a href="programs.html" class="nav-item-link">Relief Model</a>
+        <a href="impact.html" class="nav-item-link">Impact &amp; Budget</a>
+        <a href="volunteer.html" class="nav-item-link">Volunteer</a>
+        <a href="contact.html" class="nav-item-link">Contact</a>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="header-actions">
+        <a href="donate.html" class="btn-header-donate">
+          <span>CSR [80G] Donate</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <button type="button" class="mobile-menu-toggle" id="mobile-drawer-toggle" aria-label="Toggle navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Off-Canvas Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand-identity">
+        <div class="brand-emblem-icon">
+          <svg width="20" height="20" viewBox="0 0 100 100" fill="none">
+            <polygon points="50,6 88,24 88,76 50,94 12,76 12,24" fill="#1C1917" stroke="#EA580C" stroke-width="6"/>
+            <path d="M50 22 L74 48 L50 74 L26 48 Z" fill="url(#brandGoldDrawer)"/>
+            <circle cx="50" cy="48" r="7" fill="#1C1917"/>
+            <defs>
+              <linearGradient id="brandGoldDrawer" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#F59E0B"/>
+                <stop offset="100%" stop-color="#EA580C"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-main-name" style="color: #FFFFFF;">Sarwe Unnati</span>
+          <span class="brand-sub-badge">FOOD RELIEF MISSION</span>
+        </div>
+      </div>
+      <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div class="drawer-links-list">
+      <a href="index.html" class="drawer-link">Flagship Overview</a>
+      <a href="about.html" class="drawer-link">Institutional Charter</a>
+      <a href="programs.html" class="drawer-link">Food Relief Model</a>
+      <a href="impact.html" class="drawer-link">Impact &amp; Budget</a>
+      <a href="donate.html" class="drawer-link active">CSR Alliances &amp; 80G Donate</a>
+      <a href="volunteer.html" class="drawer-link">Volunteer Ground Cadre</a>
+      <a href="contact.html" class="drawer-link">Founder &amp; Headquarters</a>
+    </div>
+
+    <div>
+      <a href="donate.html#bank-wire" class="btn-primary-glow" style="width: 100%;">
+        Direct Canara Bank Wire [80G]
+      </a>
+      <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #A8A29E; text-align: center; margin-top: 1rem;">
+        CIN: U80902UP2018NPL106959 | 80G URN: AAECH6219BF20261
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SECTION 1: HERO - CSR & DONOR PORTAL
+       ========================================================================= -->
+  <section class="section-hero" id="hero-section" style="min-height: 85vh; padding-top: 8rem;">
+    <!-- Ambient Background Video -->
+    <div class="hero-bg-video-wrapper" aria-hidden="true">
+      <video class="hero-video-element" autoplay muted loop playsinline preload="auto">
+        <source src="videos/hero-bg.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="container">
+      <div class="hero-split-layout">
+        <!-- Left: Mission Copy & Actions -->
+        <div>
+          <div class="hero-eyebrow-pill">
+            <span class="eyebrow-pulse-dot"></span>
+            <span class="eyebrow-text">100% DIRECT WIRE DEPLOYMENT • SECTION 80G TAX RELIEF</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Partner With Us <span class="serif-accent">to Fight Hunger.</span>
+          </h1>
+
+          <p class="hero-lead-text">
+            SARWE UNNATI FOUNDATION invites corporate CSR boards, philanthropic foundations, and institutional donors to fund our structured food relief initiative. Transfer directly to our verified Canara Bank account with zero intermediary commissions and an immediate <strong>50% tax deduction under Section 80G</strong>.
+          </p>
+
+          <div class="hero-button-group">
+            <a href="#csr-tiers" class="btn-primary-glow">
+              <span>Review CSR Tiers</span>
+              <span>↓</span>
+            </a>
+            <a href="#bank-wire" class="btn-secondary-outline">
+              <span>Canara Bank Wire Details</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- Open Metric Ribbon -->
+          <div class="hero-metric-ribbon">
+            <div class="hero-metric-item">
+              <span class="hero-metric-val emerald" data-counter="66" data-prefix="₹" data-suffix=".67">₹66.67</span>
+              <span class="hero-metric-label">Unit Program Cost</span>
+              <span class="hero-metric-sub">Fresh Balanced Thali</span>
+            </div>
+            <div class="hero-metric-divider" aria-hidden="true"></div>
+            <div class="hero-metric-item">
+              <span class="hero-metric-val orange" data-counter="50" data-suffix="%">50%</span>
+              <span class="hero-metric-label">Section 80G Relief</span>
+              <span class="hero-metric-sub">Form 10BE Tax Exemption</span>
+            </div>
+            <div class="hero-metric-divider" aria-hidden="true"></div>
+            <div class="hero-metric-item">
+              <span class="hero-metric-val blue" data-counter="100" data-suffix="%">100%</span>
+              <span class="hero-metric-label">Direct Settlement</span>
+              <span class="hero-metric-sub">Zero Intermediary Fees</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Field Photography Slideshow Frame -->
+        <div>
+          <div class="hero-visual-card">
+            <div class="hero-visual-inner">
+              <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1200&q=85" alt="Volunteers serving hot nutritious meals" class="hero-slide-image active" loading="eager">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=85" alt="Nutritious balanced plate with grains, lentils and vegetables" class="hero-slide-image" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=85" alt="Children and elderly receiving meals with dignity" class="hero-slide-image" loading="lazy">
+
+              <div class="hero-visual-badge-overlay">
+                <div>
+                  <div class="overlay-tag" id="hero-slide-tag">CORPORATE CSR SCHEDULE VII</div>
+                  <div class="overlay-title" id="hero-slide-title">Item (i): Eradicating Hunger &amp; Malnutrition</div>
+                </div>
+                <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #FBBF24; font-weight: 700;">
+                  ROC KANPUR
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: CSR SCHEDULE VII PARTNERSHIP TIERS
+       ========================================================================= -->
+  <section class="section-csr-tiers" id="csr-tiers">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="section-tag-badge">CORPORATE ALLIANCES • SCHEDULE VII CSR</span>
+        <h2 class="section-title">
+          Strategic CSR <span class="italic-flair">Partnership Models.</span>
+        </h2>
+        <p class="section-desc" style="margin: 0 auto;">
+          Fully compliant with Schedule VII of the Companies Act, 2013. Supported by Chartered Accountant audited utilization certificates, Form 10BE, and quarterly ESG impact reports.
+        </p>
+      </div>
+
+      <div class="csr-tier-grid modern-csr-grid">
+        <!-- Tier 1: Grassroots -->
+        <div class="csr-card modern-tier-card">
+          <div class="tier-card-header">
+            <span class="tier-badge-chip">GRASSROOTS CSR</span>
+            <h3 class="csr-title">Sponsor a Meal Batch</h3>
+            <div class="csr-price">₹5,000 – ₹50,000</div>
+            <p class="csr-desc">Support ongoing daily steam-kettle preparation and nutritious field distribution batches.</p>
+          </div>
+          <div class="tier-card-body">
+            <div class="tier-deliverables-title">Verified Inclusions:</div>
+            <ul class="clean-bullet-list tier-bullets">
+              <li>
+                <span class="bullet-marker">✓</span>
+                <div><strong>Flexible Batches:</strong> 75 to 750 hot, balanced thalis deployed in verified distribution queues.</div>
+              </li>
+              <li>
+                <span class="bullet-marker">✓</span>
+                <div><strong>Statutory 80G Tax Deduction:</strong> Immediate 50% tax exemption certificate with Form 10BE filing.</div>
+              </li>
+              <li>
+                <span class="bullet-marker">✓</span>
+                <div><strong>Photographic Proof:</strong> Digital verification summary of food preparation and dignified service.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="tier-card-footer">
+            <a href="#bank-wire" class="btn-secondary-outline tier-btn">Sponsor Meal Batch →</a>
+          </div>
+        </div>
+
+        <!-- Tier 2: FEATURED CORPORATE BENCHMARK -->
+        <div class="csr-card modern-tier-card featured-csr-tier">
+          <div class="featured-tier-ribbon">
+            <span class="star-icon">★</span>
+            <span>MOST POPULAR • CORPORATE BENCHMARK</span>
+          </div>
+          <div class="tier-card-header">
+            <span class="tier-badge-chip orange-chip">SILVER ANNADAAN</span>
+            <h3 class="csr-title">Day-of-Service Sponsorship</h3>
+            <div class="csr-price orange-price">₹54,795 <span style="font-size: 0.95rem; font-weight: 500; color: #A8A29E;">/ full day</span></div>
+            <p class="csr-desc">Sponsor a full day of foundation operations (~822 meals) or dedicate a day to commemorate corporate milestones.</p>
+          </div>
+          <div class="tier-card-body">
+            <div class="tier-deliverables-title">Comprehensive CSR Deliverables:</div>
+            <ul class="clean-bullet-list tier-bullets">
+              <li>
+                <span class="bullet-marker orange-marker">✓</span>
+                <div><strong>Entire Daily Run (822 Thalis):</strong> Direct capital coverage of morning procurement, kitchen prep, and field logistics.</div>
+              </li>
+              <li>
+                <span class="bullet-marker orange-marker">✓</span>
+                <div><strong>Dedicated Distribution Drive:</strong> Field photo and video documentation honoring company sponsorship.</div>
+              </li>
+              <li>
+                <span class="bullet-marker orange-marker">✓</span>
+                <div><strong>CA Utilization Certificate:</strong> Signed audit document ready for corporate CSR Schedule VII compliance.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="tier-card-footer">
+            <a href="#bank-wire" class="btn-primary-glow tier-btn orange-btn">
+              <span>Sponsor Full Day Operations (₹54,795)</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tier 3: Strategic Community Adoption -->
+        <div class="csr-card modern-tier-card">
+          <div class="tier-card-header">
+            <span class="tier-badge-chip">COMMUNITY ADOPTION</span>
+            <h3 class="csr-title">Adopt a Relief Sector</h3>
+            <div class="csr-price">₹1L – ₹5L <span class="price-cadence">/ Month</span></div>
+            <p class="csr-desc">Adopt an identified high-vulnerability slum cluster, night shelter, or construction corridor with recurring food security.</p>
+          </div>
+          <div class="tier-card-body">
+            <div class="tier-deliverables-title">Strategic Institutional Support:</div>
+            <ul class="clean-bullet-list tier-bullets">
+              <li>
+                <span class="bullet-marker">✓</span>
+                <div><strong>Recurring Sustenance:</strong> 3, 6, or 12 months guaranteed nutritional relief for 200+ vulnerable residents.</div>
+              </li>
+              <li>
+                <span class="bullet-marker">✓</span>
+                <div><strong>Corporate Plaque &amp; Signage:</strong> Designated distribution banner recognizing corporate alliance.</div>
+              </li>
+              <li>
+                <span class="bullet-marker">✓</span>
+                <div><strong>Executive ESG Reporting:</strong> Quarterly impact telemetry formatted for corporate annual ESG disclosures.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="tier-card-footer">
+            <a href="contact.html?type=adopt-community" class="btn-secondary-outline tier-btn">Inquire for Cluster →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: INTERACTIVE MEAL SIMULATOR & 80G TAX CALCULATOR
+       ========================================================================= -->
+  <section class="section-calculator" id="calculator">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+        <span class="section-tag-badge">INTERACTIVE IMPACT SIMULATOR</span>
+        <h2 class="section-title">
+          Calculate Your Human Impact &amp; <span class="italic-flair">80G Tax Savings.</span>
+        </h2>
+        <p class="section-desc" style="margin: 0 auto;">
+          Every ₹66.67 deploys an all-inclusive fresh balanced thali prepared under FSSAI hygiene standards. Move the slider to calculate instant meal volumes and statutory Section 80G tax deductions.
+        </p>
+      </div>
+
+      <div class="calculator-card-wrapper" style="max-width: 960px; margin: 0 auto;">
+        <div class="calc-slider-box">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.25rem;">
+            <label for="meal-slider" style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: #FFFFFF;">
+              Contribution Amount:
+            </label>
+            <span id="slider-val-display" style="font-family: var(--font-mono); font-size: 2.2rem; font-weight: 800; color: #FBBF24;">₹10,000</span>
+          </div>
+
+          <input type="range" id="meal-slider" class="calc-range-slider" min="1000" max="300000" step="500" value="10000" aria-label="Donation amount in rupees">
+
+          <div class="calc-presets-row">
+            <button type="button" class="calc-preset-btn" data-val="2000">₹2,000 (30 Meals)</button>
+            <button type="button" class="calc-preset-btn active" data-val="10000">₹10,000 (150 Meals)</button>
+            <button type="button" class="calc-preset-btn" data-val="54795">₹54,795 (Full Day / 822 Meals)</button>
+            <button type="button" class="calc-preset-btn" data-val="150000">₹1,50,000 (Adopt Cluster)</button>
+          </div>
+        </div>
+
+        <div class="calc-telemetry-output-grid">
+          <div class="calc-output-item">
+            <span class="calc-output-val" id="calc-meals-count" style="color: #4ADE80;">150</span>
+            <span class="calc-output-label">Wholesome Meals Provided</span>
+          </div>
+          <div class="calc-output-item">
+            <span class="calc-output-val" id="calc-people-count" style="color: #FBBF24;">150</span>
+            <span class="calc-output-label">Individuals Fed Dignified Food</span>
+          </div>
+          <div class="calc-output-item">
+            <span class="calc-output-val" id="calc-tax-count" style="color: #60A5FA;">₹5,000</span>
+            <span class="calc-output-label">Section 80G Tax Deduction (50%)</span>
+          </div>
+          <div class="calc-output-item">
+            <span class="calc-output-val" style="color: #FFFFFF;">100%</span>
+            <span class="calc-output-label">Direct Kitchen Deployment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: DIRECT CANARA BANK SETTLEMENT TERMINAL
+       ========================================================================= -->
+  <section class="section-wire-terminal" id="bank-wire" style="background: var(--bg-warm);">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 3.5rem;">
+        <span class="section-tag-badge">STATUTORY WIRE SETTLEMENT • SLIDE 20</span>
+        <h2 class="section-title">
+          Direct Canara Bank <span class="italic-flair">Settlement Terminal.</span>
+        </h2>
+        <p class="section-desc" style="margin: 0 auto;">
+          Wire directly into the foundation's official non-profit current account via NEFT, RTGS, or IMPS. 100% of funds deploy directly to meal preparation with zero platform fees.
+        </p>
+      </div>
+
+      <div class="wire-terminal-split">
+        <!-- Left: Passbook Terminal Card -->
+        <div class="passbook-terminal-card">
+          <div class="passbook-header">
+            <div>
+              <div class="bank-brand-title">CANARA BANK</div>
+              <div class="bank-branch-name">COURT ROAD BRANCH, SAHARANPUR (02201)</div>
+            </div>
+            <span class="footer-legal-badge-pill" style="color: #4ADE80; background: rgba(74, 222, 128, 0.15); border-color: rgba(74, 222, 128, 0.3);">
+              VERIFIED SEC 8 A/C
+            </span>
+          </div>
+
+          <div class="passbook-data-table">
+            <div class="passbook-row">
+              <span class="passbook-lbl">BENEFICIARY</span>
+              <div class="passbook-val-box">
+                <span class="passbook-val-strong" style="font-size: 1.05rem;">SARWE UNNATI FOUNDATION</span>
+              </div>
+            </div>
+
+            <div class="passbook-row">
+              <span class="passbook-lbl">ACCOUNT NUMBER</span>
+              <div class="passbook-val-box">
+                <span class="passbook-val-strong" style="color: #FBBF24; letter-spacing: 0.05em;">2201201002013</span>
+                <button type="button" class="btn-copy-chip" data-copy="2201201002013" aria-label="Copy account number">Copy</button>
+              </div>
+            </div>
+
+            <div class="passbook-row">
+              <span class="passbook-lbl">IFSC CODE</span>
+              <div class="passbook-val-box">
+                <span class="passbook-val-strong" style="letter-spacing: 0.05em;">CNRB0002201</span>
+                <button type="button" class="btn-copy-chip" data-copy="CNRB0002201" aria-label="Copy IFSC code">Copy</button>
+              </div>
+            </div>
+
+            <div class="passbook-row">
+              <span class="passbook-lbl">ACCOUNT TYPE</span>
+              <div class="passbook-val-box">
+                <span class="passbook-val-strong" style="font-size: 0.95rem;">Current Account (Non-Profit)</span>
+              </div>
+            </div>
+
+            <div class="passbook-row">
+              <span class="passbook-lbl">80G TAX URN</span>
+              <div class="passbook-val-box">
+                <span class="passbook-val-strong" style="color: #4ADE80; font-size: 0.95rem;">AAECH6219BF20261</span>
+                <button type="button" class="btn-copy-chip" data-copy="AAECH6219BF20261" aria-label="Copy 80G URN">Copy</button>
+              </div>
+            </div>
+
+            <div class="passbook-row">
+              <span class="passbook-lbl">12A REGISTRATION</span>
+              <div class="passbook-val-box">
+                <span class="passbook-val-strong" style="font-size: 0.92rem; color: #D6D3D1;">AAECH6219BE20251</span>
+              </div>
+            </div>
+
+            <div class="passbook-row">
+              <span class="passbook-lbl">CORPORATE CIN</span>
+              <div class="passbook-val-box">
+                <span class="passbook-val-strong" style="font-size: 0.92rem; color: #D6D3D1;">U80902UP2018NPL106959</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px dashed rgba(255,255,255,0.15); font-size: 0.85rem; color: #A8A29E; line-height: 1.6;">
+            After transferring funds via mobile banking or RTGS/NEFT, submit your transaction UTR reference below or email to <strong>priyesh.chanu@gmail.com</strong> to receive your Form 10BE tax certificate.
+          </div>
+        </div>
+
+        <!-- Right: 80G Claim Form Card -->
+        <div style="background: #FFFFFF; border: 1.5px solid var(--border-subtle); border-radius: 24px; padding: 2.5rem; box-shadow: var(--shadow-sm);">
+          <div class="section-tag-badge">STATUTORY FORM 10BE</div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800; color: var(--text-heading); margin: 0.5rem 0 0.5rem;">
+            Claim Your 80G Donation Receipt
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; line-height: 1.6;">
+            Submit your transfer reference (UTR) below to receive your statutory Form 10BE certificate for income tax filing.
+          </p>
+
+          <form id="donation-claim-form" onsubmit="event.preventDefault(); showToast('Donation reference submitted! Form 10BE certificate will be emailed within 24h.'); this.reset();">
+            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <div>
+                <label style="display: block; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.4rem;">
+                  Bank Reference / UTR Number *
+                </label>
+                <input type="text" required placeholder="e.g. CNRBN24012345678" style="width: 100%; padding: 0.8rem 1rem; background: var(--bg-slate); border: 1.5px solid var(--border-subtle); border-radius: 12px; color: var(--text-heading); font-family: var(--font-mono); font-size: 0.9rem;">
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div>
+                  <label style="display: block; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.4rem;">
+                    Amount (₹) *
+                  </label>
+                  <input type="number" required placeholder="e.g. 54795" style="width: 100%; padding: 0.8rem 1rem; background: var(--bg-slate); border: 1.5px solid var(--border-subtle); border-radius: 12px; color: var(--text-heading); font-family: var(--font-mono); font-size: 0.9rem;">
+                </div>
+                <div>
+                  <label style="display: block; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.4rem;">
+                    PAN Number *
+                  </label>
+                  <input type="text" required pattern="[A-Za-z]{5}[0-9]{4}[A-Za-z]{1}" placeholder="ABCDE1234F" style="width: 100%; padding: 0.8rem 1rem; background: var(--bg-slate); border: 1.5px solid var(--border-subtle); border-radius: 12px; color: var(--text-heading); font-family: var(--font-mono); font-size: 0.9rem; text-transform: uppercase;">
+                </div>
+              </div>
+
+              <div>
+                <label style="display: block; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.4rem;">
+                  Donor / Entity Name *
+                </label>
+                <input type="text" required placeholder="As shown on PAN card" style="width: 100%; padding: 0.8rem 1rem; background: var(--bg-slate); border: 1.5px solid var(--border-subtle); border-radius: 12px; color: var(--text-heading); font-family: var(--font-sans); font-size: 0.9rem;">
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div>
+                  <label style="display: block; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.4rem;">
+                    Email Address *
+                  </label>
+                  <input type="email" required placeholder="name@example.com" style="width: 100%; padding: 0.8rem 1rem; background: var(--bg-slate); border: 1.5px solid var(--border-subtle); border-radius: 12px; color: var(--text-heading); font-family: var(--font-sans); font-size: 0.9rem;">
+                </div>
+                <div>
+                  <label style="display: block; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.4rem;">
+                    Phone / WhatsApp *
+                  </label>
+                  <input type="tel" required placeholder="+91 98765 43210" style="width: 100%; padding: 0.8rem 1rem; background: var(--bg-slate); border: 1.5px solid var(--border-subtle); border-radius: 12px; color: var(--text-heading); font-family: var(--font-sans); font-size: 0.9rem;">
+                </div>
+              </div>
+
+              <button type="submit" class="btn-primary-glow" style="width: 100%; margin-top: 0.5rem; padding: 0.95rem;">
+                Submit UTR Reference &amp; Request Form 10BE →
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: FREQUENTLY ASKED QUESTIONS (ACCORDION)
+       ========================================================================= -->
+  <section style="padding: 6rem 0; background: #FFFFFF;" id="faq-section">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+        <span class="section-tag-badge">DONOR ASSURANCE • STATUTORY FAQ</span>
+        <h2 class="section-title">
+          Giving &amp; Compliance <span class="italic-flair">Questions.</span>
+        </h2>
+        <p class="section-desc" style="margin: 0 auto;">
+          Everything you need to know about our 80G tax deductions, FSSAI kitchen audits, Schedule VII CSR compliance, and how your donation feeds hungry citizens.
+        </p>
+      </div>
+
+      <div class="faq-wrap-box">
+        <div class="faq-card-item active">
+          <button type="button" class="faq-trigger-btn" aria-expanded="true">
+            <span>Is my donation eligible for Section 80G tax deductions?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-content-drawer" style="max-height: 350px; padding: 0 2rem 1.75rem;">
+            <p>Yes. Sarwe Unnati Foundation holds provisional registration under Section 80G (Unique Registration Number: AAECH6219BF20261) issued by the Income Tax Department of India. Indian tax-paying entities and individuals are eligible for a 50% tax deduction on qualifying donations.</p>
+          </div>
+        </div>
+
+        <div class="faq-card-item">
+          <button type="button" class="faq-trigger-btn" aria-expanded="false">
+            <span>Are contributions eligible for Corporate CSR under Section 135?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-content-drawer">
+            <p>Yes. Providing relief from hunger, eradicating malnutrition, and promoting food security are explicitly eligible CSR activities covered under Item (i) of Schedule VII of the Companies Act, 2013. We are registered on the Ministry of Corporate Affairs NGO Darpan portal under ID: UP/2025/0710389.</p>
+          </div>
+        </div>
+
+        <div class="faq-card-item">
+          <button type="button" class="faq-trigger-btn" aria-expanded="false">
+            <span>When and how do I receive my Form 10BE certificate?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-content-drawer">
+            <p>Upon verifying your bank wire transfer against the UTR submitted in our notification form, an immediate stamped digital acknowledgement receipt is issued within 24 hours. Formal Form 10BE certificates are generated as part of our annual ROC and Income Tax Department compliance filings.</p>
+          </div>
+        </div>
+
+        <div class="faq-card-item">
+          <button type="button" class="faq-trigger-btn" aria-expanded="false">
+            <span>Can our CSR committee conduct an in-person kitchen audit?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-content-drawer">
+            <p>We welcome institutional partners and CSR committees for physical kitchen inspections, hygiene audits, temperature monitoring checks, and route distribution shadowing. Reach out to Director Priyesh Garg directly at priyesh.chanu@gmail.com or WhatsApp +91 99974 26815.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER (COMPREHENSIVE STATUTORY & DISCLOSURES)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1 -->
+        <div>
+          <div class="brand-identity">
+            <div class="brand-emblem-icon">
+              <svg width="20" height="20" viewBox="0 0 100 100" fill="none">
+                <polygon points="50,6 88,24 88,76 50,94 12,76 12,24" fill="#1C1917" stroke="#EA580C" stroke-width="6"/>
+                <path d="M50 22 L74 48 L50 74 L26 48 Z" fill="url(#brandGoldFooter)"/>
+                <circle cx="50" cy="48" r="7" fill="#1C1917"/>
+                <defs>
+                  <linearGradient id="brandGoldFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#F59E0B"/>
+                    <stop offset="100%" stop-color="#EA580C"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-main-name" style="color: #FFFFFF;">Sarwe Unnati</span>
+              <span class="brand-sub-badge">FOOD RELIEF MISSION</span>
+            </div>
+          </div>
+          <p class="footer-brand-summary">
+            A government-certified Section 8 non-profit company dedicated to providing and distributing food to people facing hunger. Transparent governance, FSSAI hygiene, and 50% 80G tax deductions.
+          </p>
+          <span class="footer-legal-badge-pill">CIN: U80902UP2018NPL106959</span>
+        </div>
+
+        <!-- Col 2 -->
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links-col">
+            <li><a href="index.html">Flagship Home</a></li>
+            <li><a href="about.html">About Foundation</a></li>
+            <li><a href="programs.html">Food Relief Model</a></li>
+            <li><a href="impact.html">Impact &amp; ₹2 Cr Budget</a></li>
+            <li><a href="volunteer.html">Volunteer Cadre</a></li>
+            <li><a href="contact.html">Contact Founder</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div>
+          <div class="footer-col-title">Governance</div>
+          <ul class="footer-links-col">
+            <li><a href="about.html#governance">Board Oversight</a></li>
+            <li><a href="impact.html#budget-allocation">Itemized Allocation</a></li>
+            <li><a href="impact.html#risk-matrix">Risk Mitigation</a></li>
+            <li><a href="donate.html#csr-tiers">CSR Schedule VII</a></li>
+            <li><a href="donate.html#bank-wire">Canara Bank Wire</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div>
+          <div class="footer-col-title">Headquarters</div>
+          <p style="font-size: 0.9rem; color: #A8A29E; line-height: 1.6; margin-bottom: 1rem;">
+            House No. 119, Vaishali Vihar, Near Dharia Builder, Delhi Road, Saharanpur — 247001, Uttar Pradesh, India
+          </p>
+          <div style="font-family: var(--font-mono); font-size: 0.82rem; color: #E2E8F0; display: flex; flex-direction: column; gap: 0.4rem;">
+            <span>Director: Priyesh Garg</span>
+            <span>Email: priyesh.chanu@gmail.com</span>
+            <span>Direct: +91 99974 26815</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © 2018–2026 SARWE UNNATI FOUNDATION. All Rights Reserved. Incorporated under Section 8 of the Companies Act, 2013.
+        </div>
+        <div style="font-family: var(--font-mono); font-size: 0.75rem;">
+          12A URN: AAECH6219BE20251 | 80G URN: AAECH6219BF20261
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Elements -->
+  <div class="toast-notification" id="global-toast"></div>
+  <button type="button" class="scroll-to-top-btn" id="scroll-to-top" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Master Interactive Script -->
+  <script src="js/main.js?v=20261113_v7"></script>
+</body>
+</html>
+`;
+
+fs.writeFileSync('donate.html', donateHtml, 'utf8');
+console.log('Successfully generated modern donate.html!');

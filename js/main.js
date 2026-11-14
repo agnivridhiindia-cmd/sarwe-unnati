@@ -1,235 +1,576 @@
 /**
- * SARWE UNNATI FOUNDATION (सर्व उन्नति फाउंडेशन)
- * Interactive Script - Bright, Vibrant & Modern Non-Profit
- * Scroll Progress, Kinetic Scrub, Dynamic Metrics, Modal & Clipboard
+ * SARWE UNNATI FOUNDATION - Flagship Interactive Engine
+ * Fully modular, accessible, zero-dependency vanilla JavaScript
+ * Coordinates & statutory data strictly derived from pitch deck (Slide 1-21)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  setupLenisScroll();
   setupScrollProgress();
-  setupKineticScrub();
-  setupTextReveal();
-  setup3DCardTilt();
+  setupStickyHeader();
   setupMobileDrawer();
-  setupAnimatedMetrics();
-  setupModals();
-  setupClipboardCopy();
-  setupNewsletter();
-  setupHeroVideoPlayback();
   setupHeroSlideshow();
+  setupMealCalculator();
+  setupThaliExplorer();
+  setupBudgetFilter();
+  setupImpactSlider();
+  setupFaqAccordion();
+  setupClipboardCopy();
+  setupScrollToTop();
+  setupStatsCounters();
+  setupSpotlightTracker();
+  setupScrollReveal();
+  setupInteractiveTilt();
+  setupOperatingModelPipeline();
 });
 
 /* ==========================================================================
-   1. SCROLL PROGRESS INDICATOR & DYNAMIC NAVBAR SLIDE-IN
-   Navbar remains hidden while on the hero section and smoothly slides down
-   into view once the user scrolls / slides down.
+   1. SCROLL PROGRESS BAR & STICKY HEADER
    ========================================================================== */
 function setupScrollProgress() {
   const progressBar = document.getElementById('scroll-progress');
-  const navbar = document.getElementById('site-header');
+  if (!progressBar) return;
 
-  function updateNavbarVisibility(scrollY) {
-    const scrollTop = typeof scrollY === 'number' ? scrollY : (window.scrollY || document.documentElement.scrollTop);
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  window.addEventListener('scroll', () => {
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (totalHeight <= 0) return;
+    const progress = (window.scrollY / totalHeight) * 100;
+    progressBar.style.width = `${progress}%`;
+  }, { passive: true });
+}
 
-    if (progressBar) {
-      progressBar.style.width = `${scrollPercent}%`;
+function setupStickyHeader() {
+  const header = document.getElementById('site-header');
+  if (!header) return;
+
+  const handleScroll = () => {
+    if (window.scrollY > 40) {
+      header.classList.add('nav-scrolled');
+    } else {
+      header.classList.remove('nav-scrolled');
     }
+  };
 
-    if (navbar) {
-      // Hidden on hero section (scrollTop <= 80px), reveals with smooth slide-down when user slides down
-      if (scrollTop > 80) {
-        navbar.classList.add('nav-visible');
-      } else {
-        navbar.classList.remove('nav-visible');
-      }
-    }
-  }
-
-  window.onPageScroll = updateNavbarVisibility;
-  window.addEventListener('scroll', () => updateNavbarVisibility(), { passive: true });
-  // Initialize state on page load
-  updateNavbarVisibility();
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
 }
 
 /* ==========================================================================
-   2. KINETIC SCROLL SCRUB (Get To Know Us Section)
-   Splits paragraph into words and dynamically illuminates them on scroll
-   ========================================================================== */
-function setupKineticScrub() {
-  const scrubTarget = document.querySelector('.kinetic-lead-paragraph');
-  if (!scrubTarget) return;
-
-  const rawText = scrubTarget.textContent.trim();
-  const words = rawText.split(/\s+/);
-  scrubTarget.innerHTML = words.map(w => `<span class="scrub-word">${w}</span>`).join(' ');
-
-  const scrubWords = scrubTarget.querySelectorAll('.scrub-word');
-  const totalWords = scrubWords.length;
-
-  function updateScrub() {
-    const rect = scrubTarget.getBoundingClientRect();
-    const windowH = window.innerHeight;
-    
-    // When the top enters lower 85% to when bottom reaches upper 25%
-    const start = windowH * 0.85;
-    const end = windowH * 0.25;
-    const current = rect.top;
-
-    let progress = (start - current) / (start - end);
-    progress = Math.max(0, Math.min(1, progress));
-
-    const wordsToLight = Math.floor(progress * totalWords);
-
-    scrubWords.forEach((wordSpan, index) => {
-      if (index <= wordsToLight) {
-        wordSpan.classList.add('active');
-      } else {
-        wordSpan.classList.remove('active');
-      }
-    });
-  }
-
-  window.addEventListener('scroll', updateScrub, { passive: true });
-  updateScrub();
-}
-
-/* ==========================================================================
-   3. MOBILE NAVIGATION DRAWER
+   2. MOBILE OFF-CANVAS DRAWER
    ========================================================================== */
 function setupMobileDrawer() {
-  const toggleBtn = document.querySelector('.mobile-menu-btn');
-  const drawer = document.getElementById('mobile-drawer');
-  const closeBtn = document.getElementById('drawer-close');
+  const toggleBtn = document.getElementById('mobile-drawer-toggle') || document.getElementById('mobile-menu-btn');
+  const drawer = document.getElementById('mobile-nav-drawer') || document.getElementById('mobile-drawer');
+  const closeBtn = document.getElementById('drawer-close-btn');
 
-  if (!drawer) return;
+  if (!toggleBtn || !drawer) return;
 
   function openDrawer() {
     drawer.classList.add('open');
-    if (window.lenis) window.lenis.stop();
+    drawer.classList.add('active');
+    toggleBtn.setAttribute('aria-expanded', 'true');
+    drawer.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
   }
 
   function closeDrawer() {
     drawer.classList.remove('open');
-    if (window.lenis) window.lenis.start();
+    drawer.classList.remove('active');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    drawer.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
   }
 
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', openDrawer);
-  }
+  toggleBtn.addEventListener('click', openDrawer);
+  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
 
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeDrawer);
-  }
-
-  // Close on link click
   drawer.querySelectorAll('.drawer-link').forEach(link => {
     link.addEventListener('click', closeDrawer);
   });
-}
-
-/* ==========================================================================
-   4. ANIMATED METRICS COUNTER
-   ========================================================================== */
-function setupAnimatedMetrics() {
-  const metricElements = document.querySelectorAll('.counter-figure');
-  if (!metricElements.length) return;
-
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const target = parseInt(el.getAttribute('data-target'), 10);
-        animateCounter(el, 0, target, 2000);
-        obs.unobserve(el);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  metricElements.forEach(el => observer.observe(el));
-
-  function animateCounter(obj, start, end, duration) {
-    let startTimestamp = null;
-    const step = (timestamp) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      // easeOutExpo
-      const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
-      const current = Math.floor(ease * (end - start) + start);
-      obj.textContent = current.toLocaleString('en-IN');
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      } else {
-        obj.textContent = end.toLocaleString('en-IN');
-      }
-    };
-    window.requestAnimationFrame(step);
-  }
-}
-
-/* ==========================================================================
-   5. MODALS & SERVICE DIALOGS
-   ========================================================================== */
-function setupModals() {
-  const modal = document.getElementById('giving-modal');
-  const closeTriggers = document.querySelectorAll('.close-modal-trigger');
-
-  if (!modal) return;
-
-  function closeModal() {
-    modal.classList.remove('active');
-    if (window.lenis) window.lenis.start();
-  }
-
-  function openModal() {
-    modal.classList.add('active');
-    if (window.lenis) window.lenis.stop();
-  }
-
-  closeTriggers.forEach(btn => {
-    btn.addEventListener('click', closeModal);
-  });
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-      closeModal();
+    if (e.key === 'Escape' && (drawer.classList.contains('open') || drawer.classList.contains('active'))) {
+      closeDrawer();
     }
   });
+}
 
-  document.querySelectorAll('.open-giving-modal').forEach(btn => {
+/* ==========================================================================
+   3. HERO IMAGE SLIDESHOW (Smooth Crossfade with Live Tagline)
+   ========================================================================== */
+function setupHeroSlideshow() {
+  const slides = document.querySelectorAll('.hero-slide-image, .hero-slideshow-wrap .hero-slide-img');
+  const captionTag = document.getElementById('hero-slide-tag') || document.getElementById('hero-caption-tag');
+  const captionTitle = document.getElementById('hero-slide-title') || document.getElementById('hero-caption-title');
+
+  if (!slides || slides.length < 2) return;
+
+  const slideData = [
+    { tag: 'FLAGSHIP RELIEF', title: 'Nutritious Meal Preparation & Hot Street Distribution' },
+    { tag: 'FSSAI HYGIENE', title: 'Certified Safe Kitchens & Food Safety Regulations' },
+    { tag: 'NUTRITION FIRST', title: 'Balanced Thali: Staple Grains, Lentils, Vegetables & Fruit' },
+    { tag: 'COMMUNITY REACH', title: 'Daily Wage Workers, Street Dwellers & Homeless Families' },
+    { tag: 'VOLUNTEER CADRE', title: '50-100 Dedicated Frontline Volunteers on the Ground' }
+  ];
+
+  let currentIdx = 0;
+
+  function nextSlide() {
+    slides[currentIdx].classList.remove('active');
+    currentIdx = (currentIdx + 1) % slides.length;
+    slides[currentIdx].classList.add('active');
+
+    if (captionTag && slideData[currentIdx]) {
+      captionTag.textContent = slideData[currentIdx].tag;
+    }
+    if (captionTitle && slideData[currentIdx]) {
+      captionTitle.textContent = slideData[currentIdx].title;
+    }
+  }
+
+  setInterval(nextSlide, 3500);
+}
+
+/* ==========================================================================
+   4. INTERACTIVE MEAL SIMULATOR & 80G TAX CALCULATOR
+   Unit economics: ₹66.67/meal (₹2 Crore / 3,00,000 meals)
+   ========================================================================== */
+function setupMealCalculator() {
+  const slider = document.getElementById('meal-slider');
+  if (!slider) return;
+
+  const COST_PER_MEAL = 66.67;
+  const isAmountBased = parseInt(slider.getAttribute('max'), 10) > 5000;
+
+  const countEl = document.getElementById('calc-meal-count') || document.getElementById('calc-meals-count');
+  const costEl = document.getElementById('calc-total-cost') || document.getElementById('slider-val-display');
+  const taxEl = document.getElementById('calc-tax-relief') || document.getElementById('calc-tax-count');
+  const peopleEl = document.getElementById('calc-people-count');
+  const foodEl = document.getElementById('calc-food-kg');
+  const waterEl = document.getElementById('calc-water-lt');
+  const donateBtn = document.getElementById('calc-donate-btn');
+  const presetBtns = document.querySelectorAll('.calc-preset-btn');
+
+  function updateByMeals(meals) {
+    const totalCost = Math.round(meals * COST_PER_MEAL);
+    const taxRelief = Math.round(totalCost * 0.50);
+    const foodKg = Math.round(meals * 0.45);
+    const waterL = Math.round(meals * 0.50);
+
+    if (countEl) countEl.textContent = meals.toLocaleString('en-IN');
+    if (costEl) costEl.textContent = '\u20B9' + totalCost.toLocaleString('en-IN');
+    if (taxEl) taxEl.textContent = '\u20B9' + taxRelief.toLocaleString('en-IN');
+    if (foodEl) foodEl.textContent = foodKg.toLocaleString('en-IN') + ' kg';
+    if (waterEl) waterEl.textContent = waterL.toLocaleString('en-IN') + ' L';
+    if (peopleEl) peopleEl.textContent = meals.toLocaleString('en-IN');
+
+    presetBtns.forEach(btn => {
+      const btnMeals = parseInt(btn.dataset.meals, 10);
+      btn.classList.toggle('active', btnMeals === meals);
+    });
+
+    if (donateBtn) donateBtn.setAttribute('data-amount', totalCost);
+  }
+
+  function updateByAmount(amount) {
+    const meals = Math.floor(amount / COST_PER_MEAL);
+    const taxRelief = Math.round(amount * 0.50);
+
+    if (costEl) costEl.textContent = '\u20B9' + amount.toLocaleString('en-IN');
+    if (countEl) countEl.textContent = meals.toLocaleString('en-IN');
+    if (peopleEl) peopleEl.textContent = meals.toLocaleString('en-IN');
+    if (taxEl) taxEl.textContent = '\u20B9' + taxRelief.toLocaleString('en-IN');
+  }
+
+  function updateSliderFill(val) {
+    const min = parseFloat(slider.min) || (isAmountBased ? 500 : 15);
+    const max = parseFloat(slider.max) || (isAmountBased ? 300000 : 1500);
+    const pct = Math.min(100, Math.max(0, ((val - min) / (max - min)) * 100));
+    slider.style.background = `linear-gradient(to right, #B45309 0%, #EA580C ${pct}%, rgba(255,255,255,0.14) ${pct}%, rgba(255,255,255,0.14) 100%)`;
+  }
+
+  slider.addEventListener('input', () => {
+    const val = parseInt(slider.value, 10);
+    if (isAmountBased) {
+      updateByAmount(val);
+    } else {
+      updateByMeals(val);
+    }
+    updateSliderFill(val);
+  });
+  updateSliderFill(parseInt(slider.value, 10));
+
+  presetBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      openModal();
+      const val = parseInt(btn.dataset.val, 10);
+      const meals = parseInt(btn.dataset.meals, 10);
+
+      presetBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      if (!isNaN(val)) {
+        slider.value = val;
+        updateByAmount(val);
+        updateSliderFill(val);
+      } else if (!isNaN(meals)) {
+        slider.value = meals;
+        updateByMeals(meals);
+        updateSliderFill(meals);
+      }
+    });
+  });
+
+  if (isAmountBased) {
+    updateByAmount(parseInt(slider.value, 10) || 10000);
+  } else {
+    updateByMeals(parseInt(slider.value, 10) || 75);
+  }
+}
+
+/* ==========================================================================
+   5. INTERACTIVE BALANCED THALI EXPLORER (CONTINUOUS 1-SEC AUTO-LOOP)
+   ========================================================================== */
+function setupThaliExplorer() {
+  const tabs = document.querySelectorAll('.thali-nav-btn');
+  const badge = document.getElementById('thali-badge');
+  const title = document.getElementById('thali-title');
+  const desc = document.getElementById('thali-desc');
+  const img = document.getElementById('thali-img');
+  const macroBars = document.getElementById('thali-macro-bars');
+
+  if (!tabs.length) return;
+
+  const components = {
+    staple: {
+      badge: 'STAPLE GRAINS • ENERGY ENGINE',
+      title: 'Fresh Steamed Rice & Warm Whole-Wheat Roti',
+      desc: 'High-energy complex carbohydrates providing essential daily caloric foundation for daily wage earners and street dwellers. Freshly prepared in hygienic vessels.',
+      img: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80',
+      macros: [
+        { name: 'Carbohydrates', pct: 85, color: '#F97316' },
+        { name: 'Dietary Fiber', pct: 60, color: '#10B981' },
+        { name: 'Protein', pct: 30, color: '#2563EB' }
+      ]
+    },
+    protein: {
+      badge: 'PROTEIN ENGINE • TISSUE REPAIR',
+      title: 'Nutrient-Dense Dal, Lentils & Legume Gravy',
+      desc: 'Slow-simmered yellow arhar dal, chana, or whole black lentils seasoned with cumin and turmeric. Essential amino acids for physical strength.',
+      img: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80',
+      macros: [
+        { name: 'Plant Protein', pct: 88, color: '#F97316' },
+        { name: 'Iron & Zinc', pct: 70, color: '#2563EB' },
+        { name: 'Dietary Fiber', pct: 65, color: '#10B981' }
+      ]
+    },
+    vegetable: {
+      badge: 'MICRONUTRIENT DEFENSE • IMMUNITY',
+      title: 'Fresh Seasonal Subzi (Greens & Roots)',
+      desc: 'Cooked fresh daily with seasonal market produce—potatoes, spinach, cauliflower, carrots, and bottle gourd. Packed with Vitamins A, C, and potassium.',
+      img: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80',
+      macros: [
+        { name: 'Vitamins A & C', pct: 90, color: '#10B981' },
+        { name: 'Minerals', pct: 75, color: '#F97316' },
+        { name: 'Dietary Fiber', pct: 80, color: '#2563EB' }
+      ]
+    },
+    supplement: {
+      badge: 'VITAL FORTIFICATION • SPECIALIZED CARE',
+      title: 'Seasonal Fruit, Jaggery & Nutrition Adds',
+      desc: 'Fresh bananas, oranges, or jaggery blocks provided to malnourished children, nursing mothers, and destitute senior citizens.',
+      img: 'https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&w=800&q=80',
+      macros: [
+        { name: 'Micronutrients', pct: 95, color: '#10B981' },
+        { name: 'Natural Sugar', pct: 70, color: '#F97316' },
+        { name: 'Electrolytes', pct: 80, color: '#2563EB' }
+      ]
+    },
+    water: {
+      badge: 'HYDRATION SECURITY • POTABLE & SAFE',
+      title: 'Certified Potable Drinking Water',
+      desc: 'Tested, clean drinking water provided in hygienic refills to prevent severe dehydration and waterborne diseases among street populations.',
+      img: 'https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=800&q=80',
+      macros: [
+        { name: 'Purity Level', pct: 100, color: '#2563EB' },
+        { name: 'Zero Contaminants', pct: 100, color: '#10B981' },
+        { name: 'TDS Calibrated', pct: 90, color: '#F97316' }
+      ]
+    }
+  };
+
+  const keys = ['staple', 'protein', 'vegetable', 'supplement', 'water'];
+  let currentIdx = 0;
+  let loopTimer = null;
+
+  function selectTab(key, manual = false) {
+    const data = components[key];
+    if (!data) return;
+
+    currentIdx = keys.indexOf(key);
+
+    tabs.forEach(btn => {
+      const isActive = (btn.dataset.thali === key);
+      btn.classList.toggle('active', isActive);
+    });
+
+    if (badge) {
+      badge.textContent = data.badge;
+      badge.style.color = '#EA580C';
+      badge.style.borderColor = 'rgba(249, 115, 22, 0.45)';
+      badge.style.background = 'rgba(249, 115, 22, 0.12)';
+    }
+    if (title) title.textContent = data.title;
+    if (desc) desc.textContent = data.desc;
+
+    if (img) {
+      img.style.opacity = '0.4';
+      img.style.transform = 'scale(1.02)';
+      setTimeout(() => {
+        img.src = data.img;
+        img.style.opacity = '1';
+        img.style.transform = 'scale(1)';
+      }, 120);
+    }
+
+    if (macroBars) {
+      macroBars.innerHTML = data.macros.map(m => `
+        <div class="macro-bar-row">
+          <span>${m.name}</span>
+          <div class="macro-track">
+            <div class="macro-fill" style="width: ${m.pct}%; background: ${m.color};"></div>
+          </div>
+          <span style="font-weight:700; color:${m.color}; text-align:right;">${m.pct}%</span>
+        </div>
+      `).join('');
+    }
+
+    if (manual) {
+      restartLoop();
+    }
+  }
+
+  function advanceNext() {
+    currentIdx = (currentIdx + 1) % keys.length;
+    selectTab(keys[currentIdx]);
+  }
+
+  function restartLoop() {
+    clearInterval(loopTimer);
+    loopTimer = setInterval(advanceNext, 1200); // Continuous ~1 second kinetic loop
+  }
+
+  tabs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      selectTab(btn.dataset.thali, true);
+    });
+  });
+
+  // Pause loop on hover so users can inspect macros, resume on leave
+  const thaliContainer = document.querySelector('.thali-visual-layout');
+  if (thaliContainer) {
+    thaliContainer.addEventListener('mouseenter', () => clearInterval(loopTimer));
+    thaliContainer.addEventListener('mouseleave', () => restartLoop());
+  }
+
+  selectTab('staple');
+  restartLoop();
+}
+
+/* ==========================================================================
+   6. BUDGET CATEGORY FILTER TABS
+   ========================================================================== */
+function setupBudgetFilter() {
+  const filterBtns = document.querySelectorAll('.budget-filter-btn, .budget-tab-btn, .budget-tab-pill');
+  const items = document.querySelectorAll('.budget-row, table.budget-table tbody tr[data-category], .budget-floating-card[data-category]');
+
+  if (!filterBtns.length || !items.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+      items.forEach(item => {
+        const isMatch = (filter === 'all' || item.dataset.category === filter);
+        if (item.tagName === 'TR') {
+          item.style.display = isMatch ? 'table-row' : 'none';
+        } else if (item.classList.contains('budget-floating-card')) {
+          item.style.display = isMatch ? 'flex' : 'none';
+        } else {
+          item.style.display = isMatch ? 'grid' : 'none';
+        }
+      });
     });
   });
 }
 
 /* ==========================================================================
-   6. CLIPBOARD COPY UTILITIES
+   6B. 6-POINT IMPACT SCROLL ANIMATION ARROW SLIDER
    ========================================================================== */
+function setupImpactSlider() {
+  const track = document.getElementById('impact-slider-track');
+  const prevBtn = document.querySelector('.slider-arrow-btn.prev-btn');
+  const nextBtn = document.querySelector('.slider-arrow-btn.next-btn');
+  const counterPill = document.getElementById('impact-slider-counter');
+  const dotsContainer = document.getElementById('impact-slider-dots');
+
+  if (!track || !prevBtn || !nextBtn) return;
+
+  const slides = track.querySelectorAll('.impact-slide-card');
+  if (!slides.length) return;
+
+  const updateControls = () => {
+    const scrollLeft = track.scrollLeft;
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    prevBtn.disabled = scrollLeft <= 8;
+    nextBtn.disabled = scrollLeft >= maxScroll - 8;
+
+    const slideWidth = slides[0].offsetWidth + 24; // card width + track gap
+    const activeIndex = Math.min(Math.max(0, Math.round(scrollLeft / slideWidth)), slides.length - 1);
+
+    if (counterPill) {
+      counterPill.textContent = `${activeIndex + 1} / ${slides.length}`;
+    }
+
+    if (dotsContainer) {
+      const dots = dotsContainer.querySelectorAll('.impact-slider-dot');
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === activeIndex);
+      });
+    }
+  };
+
+  prevBtn.addEventListener('click', () => {
+    const slideWidth = slides[0].offsetWidth + 24;
+    track.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    const slideWidth = slides[0].offsetWidth + 24;
+    track.scrollBy({ left: slideWidth, behavior: 'smooth' });
+  });
+
+  track.addEventListener('scroll', updateControls, { passive: true });
+
+  // Generate dots dynamically if dotsContainer is empty
+  if (dotsContainer && !dotsContainer.children.length) {
+    slides.forEach((_, idx) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = `impact-slider-dot ${idx === 0 ? 'active' : ''}`;
+      dot.setAttribute('aria-label', `Slide ${idx + 1}`);
+      dot.addEventListener('click', () => {
+        const slideWidth = slides[0].offsetWidth + 24;
+        track.scrollTo({ left: idx * slideWidth, behavior: 'smooth' });
+      });
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  // Initial state check
+  setTimeout(updateControls, 100);
+}
+
+/* ==========================================================================
+   7. INTERACTIVE FAQ ACCORDION
+   ========================================================================== */
+function setupFaqAccordion() {
+  const items = document.querySelectorAll('.faq-card-item, .faq-item');
+  if (!items.length) return;
+
+  function closeAll() {
+    items.forEach(it => {
+      it.classList.remove('active');
+      const b = it.querySelector('.faq-trigger-btn, .faq-question');
+      if (b) b.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  function openItem(targetItem) {
+    items.forEach(other => {
+      if (other !== targetItem) {
+        other.classList.remove('active');
+        const otherBtn = other.querySelector('.faq-trigger-btn, .faq-question');
+        if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    targetItem.classList.add('active');
+    const btn = targetItem.querySelector('.faq-trigger-btn, .faq-question');
+    if (btn) btn.setAttribute('aria-expanded', 'true');
+  }
+
+  // Ensure all items are closed at startup
+  closeAll();
+
+  items.forEach(item => {
+    const btn = item.querySelector('.faq-trigger-btn, .faq-question');
+    if (!btn) return;
+
+    // Hover to open
+    item.addEventListener('mouseenter', () => {
+      openItem(item);
+    });
+
+    // Click toggle (supports touch / mobile)
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = item.classList.contains('active');
+      if (isOpen) {
+        item.classList.remove('active');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        openItem(item);
+      }
+    });
+  });
+
+  // When mouse leaves the entire FAQ container, collapse
+  const containers = document.querySelectorAll('.faq-wrap-box, .faq-grid');
+  containers.forEach(container => {
+    container.addEventListener('mouseleave', () => {
+      closeAll();
+    });
+  });
+}
+
+/* ==========================================================================
+   8. 1-CLICK CLIPBOARD COPY WITH FLOATING TOAST
+   ========================================================================== */
+function showToast(message, duration = 3000) {
+  let toast = document.getElementById('global-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'global-toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+  }
+  toast.innerHTML = `<span style="color:#10B981; font-weight:800;">✓</span> <span>${message}</span>`;
+  toast.classList.add('show');
+
+  clearTimeout(toast._timer);
+  toast._timer = setTimeout(() => {
+    toast.classList.remove('show');
+  }, duration);
+}
+window.showToast = showToast;
+
 function setupClipboardCopy() {
-  document.querySelectorAll('[data-copy-target]').forEach(button => {
+  document.querySelectorAll('[data-copy-target], [data-copy]').forEach(button => {
     button.addEventListener('click', () => {
-      const text = button.getAttribute('data-copy-target');
+      const text = button.getAttribute('data-copy-target') || button.getAttribute('data-copy');
       if (!text) return;
 
       navigator.clipboard.writeText(text).then(() => {
-        showToast(`COPIED: ${text}`);
+        showToast(`Copied ${text} to clipboard!`);
         const originalText = button.innerHTML;
-        button.innerHTML = `✓ COPIED`;
-        button.style.backgroundColor = 'var(--vibrant-purple)';
-        button.style.color = '#FFFFFF';
+        button.innerHTML = 'COPIED!';
+        button.style.backgroundColor = '#10B981';
+        button.style.borderColor = '#10B981';
         setTimeout(() => {
           button.innerHTML = originalText;
           button.style.backgroundColor = '';
-          button.style.color = '';
+          button.style.borderColor = '';
         }, 2200);
       }).catch(() => {
         showToast(`Selected: ${text}`);
@@ -239,510 +580,282 @@ function setupClipboardCopy() {
 }
 
 /* ==========================================================================
-   7. TOAST NOTIFICATIONS
+   9. SCROLL TO TOP BUTTON
    ========================================================================== */
-function showToast(message) {
-  let toast = document.getElementById('site-toast');
-  if (!toast) {
-    toast = document.createElement('div');
-    toast.id = 'site-toast';
-    toast.className = 'toast-terminal';
-    document.body.appendChild(toast);
+function setupScrollToTop() {
+  let btn = document.getElementById('scroll-to-top');
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.id = 'scroll-to-top';
+    btn.className = 'scroll-to-top-btn';
+    btn.setAttribute('aria-label', 'Scroll back to top');
+    btn.innerHTML = `
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    `;
+    document.body.appendChild(btn);
   }
 
-  toast.innerHTML = `<span style="color: var(--pastel-pink-candy); font-weight: 700; margin-right: 6px;">✓</span> ${message}`;
-  toast.classList.add('show');
-  setTimeout(() => {
-    toast.classList.remove('show');
-  }, 3200);
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 }
 
 /* ==========================================================================
-   8. FORMS & FEEDBACK (Newsletter, Volunteer, CSR, Receipt, Contact)
+   10. STATS NUMERICAL COUNTERS ANIMATION (60fps Eased RequestAnimationFrame)
    ========================================================================== */
-function setupNewsletter() {
-  const form = document.getElementById('newsletter-form');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const input = form.querySelector('input[type="email"]');
-      if (input && input.value) {
-        showToast('SUBSCRIBED TO FOUNDATION TELEMETRY');
-        input.value = '';
-      }
-    });
-  }
+function setupStatsCounters() {
+  const counterEls = document.querySelectorAll('[data-counter]');
+  if (!counterEls.length) return;
 
-  // Volunteer form
-  const volForm = document.getElementById('volunteer-form');
-  if (volForm) {
-    volForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      showToast('APPLICATION RECEIVED. OUR GROUND DESK WILL CONTACT YOU.');
-      volForm.reset();
-    });
-  }
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.getAttribute('data-counter'), 10);
+      const prefix = el.getAttribute('data-prefix') || '';
+      const suffix = el.getAttribute('data-suffix') || '';
+      if (isNaN(target)) return;
 
-  // CSR form
-  const csrForm = document.getElementById('csr-form');
-  if (csrForm) {
-    csrForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      showToast('CSR PROPOSAL INQUIRY TRANSMITTED TO DIRECTORS.');
-      csrForm.reset();
-    });
-  }
+      const duration = 1400; // ms
+      const startTime = performance.now();
 
-  // Receipt form
-  const receiptForm = document.getElementById('receipt-form');
-  if (receiptForm) {
-    receiptForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      showToast('PAYMENT DETAILS RECEIVED. 80G RECEIPT ISSUED WITHIN 24 HRS.');
-      receiptForm.reset();
-    });
-  }
+      function updateCounter(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const val = Math.round(target * easeOut);
+        el.textContent = `${prefix}${val.toLocaleString('en-IN')}${suffix}`;
 
-  // Contact form
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      showToast('MESSAGE TRANSMITTED TO FOUNDATION LEADERSHIP.');
-      contactForm.reset();
-    });
-  }
-}
-
-/* ==========================================================================
-   9. HERO BACKGROUND VIDEO (AUTOPLAY ON VIEW, AUTO-PAUSE ON SCROLL DOWN)
-   ========================================================================== */
-function setupHeroVideoPlayback() {
-  const video = document.getElementById('hero-bg-video');
-  const heroSection = document.getElementById('hero-section');
-  const toggleBtn = document.getElementById('hero-video-toggle');
-  const label = toggleBtn ? toggleBtn.querySelector('.video-toggle-label') : null;
-
-  if (!video || !heroSection) return;
-
-  let isManualPaused = false;
-
-  function playVideo() {
-    if (isManualPaused) return;
-    const playPromise = video.play();
-    if (playPromise !== undefined) {
-      playPromise.then(() => {
-        if (toggleBtn) {
-          toggleBtn.classList.remove('paused');
-          if (label) label.textContent = 'PLAYING';
-        }
-      }).catch(() => {
-        // Autoplay policy fallback: muted allows play
-      });
-    }
-  }
-
-  function pauseVideo(reason) {
-    video.pause();
-    if (toggleBtn) {
-      toggleBtn.classList.add('paused');
-      if (label) label.textContent = reason === 'scroll' ? 'PAUSED' : 'PAUSED';
-    }
-  }
-
-  // 1. IntersectionObserver: Monitors when hero section enters or leaves viewport
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        // If hero section is visible by at least 10%
-        if (entry.isIntersecting && entry.intersectionRatio > 0.08) {
-          playVideo();
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
         } else {
-          // As soon as hero scrolls out of view: pause immediately
-          pauseVideo('scroll');
-        }
-      });
-    }, {
-      root: null,
-      threshold: [0, 0.08, 0.25, 0.5, 0.75, 1.0]
-    });
-
-    observer.observe(heroSection);
-  } else {
-    // Fallback scroll listener for browsers without IntersectionObserver
-    window.addEventListener('scroll', () => {
-      const heroRect = heroSection.getBoundingClientRect();
-      if (heroRect.bottom > 100 && heroRect.top < window.innerHeight) {
-        playVideo();
-      } else {
-        pauseVideo('scroll');
-      }
-    }, { passive: true });
-  }
-
-  // 2. Pause when switching tab / window to save CPU
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-      pauseVideo('hidden');
-    } else {
-      const heroRect = heroSection.getBoundingClientRect();
-      if (heroRect.bottom > 100 && heroRect.top < window.innerHeight) {
-        playVideo();
-      }
-    }
-  });
-
-  // 3. User toggle button click handler
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      if (video.paused) {
-        isManualPaused = false;
-        playVideo();
-      } else {
-        isManualPaused = true;
-        pauseVideo('manual');
-      }
-    });
-  }
-}
-
-/* ==========================================================================
-   9. HERO IMAGE SLIDESHOW (Cycles Pictures Smoothly Every 1.5 Seconds)
-   ========================================================================== */
-function setupHeroSlideshow() {
-  const slideshowBox = document.getElementById('hero-slideshow-box');
-  if (!slideshowBox) return;
-
-  const slides = slideshowBox.querySelectorAll('.hero-slide');
-  const dotsContainer = document.getElementById('hero-slideshow-dots');
-  const counterSpan = document.getElementById('hero-slide-counter');
-  if (!slides || slides.length === 0) return;
-
-  let currentIndex = 0;
-  const totalSlides = slides.length;
-  const intervalMs = 1500; // Exact 1.5 seconds per user specification
-  let slideTimer = null;
-
-  // Render clickable pagination dots
-  if (dotsContainer) {
-    dotsContainer.innerHTML = '';
-    slides.forEach((_, idx) => {
-      const dot = document.createElement('button');
-      dot.className = `slideshow-dot ${idx === 0 ? 'active' : ''}`;
-      dot.setAttribute('aria-label', `View slide ${idx + 1}`);
-      dot.addEventListener('click', (e) => {
-        e.stopPropagation();
-        goToSlide(idx);
-        restartTimer();
-      });
-      dotsContainer.appendChild(dot);
-    });
-  }
-
-  function updateSlide(newIndex) {
-    slides.forEach((slide, idx) => {
-      if (idx === newIndex) {
-        slide.classList.add('active');
-      } else {
-        slide.classList.remove('active');
-      }
-    });
-
-    if (dotsContainer) {
-      const dots = dotsContainer.querySelectorAll('.slideshow-dot');
-      dots.forEach((dot, idx) => {
-        dot.classList.toggle('active', idx === newIndex);
-      });
-    }
-
-    if (counterSpan) {
-      counterSpan.textContent = `${String(newIndex + 1).padStart(2, '0')} / ${String(totalSlides).padStart(2, '0')}`;
-    }
-
-    currentIndex = newIndex;
-  }
-
-  function nextSlide() {
-    const nextIdx = (currentIndex + 1) % totalSlides;
-    updateSlide(nextIdx);
-  }
-
-  function goToSlide(idx) {
-    updateSlide(idx);
-  }
-
-  function startTimer() {
-    if (!slideTimer) {
-      slideTimer = setInterval(nextSlide, intervalMs);
-    }
-  }
-
-  function stopTimer() {
-    if (slideTimer) {
-      clearInterval(slideTimer);
-      slideTimer = null;
-    }
-  }
-
-  function restartTimer() {
-    stopTimer();
-    startTimer();
-  }
-
-  // Start auto-cycling every 1.5 seconds
-  startTimer();
-
-  // Resource optimization: Pause timer when user leaves the browser tab
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-      stopTimer();
-    } else {
-      startTimer();
-    }
-  });
-}
-
-/* ==========================================================================
-   10. SMOOTH INERTIA SCROLL (LENIS ENGINE)
-   Silky smooth momentum scrolling with zero layout shift
-   ========================================================================== */
-function setupLenisScroll() {
-  if (typeof Lenis === 'undefined') return;
-
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (prefersReduced) return;
-
-  const lenis = new Lenis({
-    duration: 1.15,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    orientation: 'vertical',
-    gestureOrientation: 'vertical',
-    smoothWheel: true,
-    wheelMultiplier: 1.0,
-    touchMultiplier: 1.25,
-    infinite: false,
-  });
-
-  window.lenis = lenis;
-
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
-
-  // Hook Lenis scroll events to navbar and progress updates
-  lenis.on('scroll', (e) => {
-    if (typeof window.onPageScroll === 'function') {
-      window.onPageScroll(e.scroll);
-    }
-  });
-
-  // Smooth scroll for anchor clicks (href="#...")
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href');
-      if (targetId && targetId !== '#') {
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          e.preventDefault();
-          lenis.scrollTo(targetElement, { offset: -70, duration: 1.2 });
+          el.textContent = `${prefix}${target.toLocaleString('en-IN')}${suffix}`;
         }
       }
+
+      requestAnimationFrame(updateCounter);
+      obs.unobserve(el);
     });
-  });
+  }, { threshold: 0.12 });
+
+  counterEls.forEach(el => observer.observe(el));
 }
 
 /* ==========================================================================
-   11. 3D GYROSCOPIC CARD TILT & SPECULAR LIGHT SWEEP
-   Interactive perspective physics on About, Impact & Program cards
+   11. INTERACTIVE MOUSE-FOLLOWING SPOTLIGHT ON CARDS
    ========================================================================== */
-function setup3DCardTilt() {
-  // Disable on coarse pointer (touch/mobile devices)
-  if (window.matchMedia('(pointer: coarse)').matches) return;
-
-  const cardSelectors = [
-    '.operate-card-premium',
-    '.impact-metric-card-premium',
-    '.statutory-vault-card',
-    '.gov-card-vibrant',
-    '.vertical-card',
-    '.manifesto-stat-card',
-    '.leader-card-vibrant',
-    '.volunteer-role-card'
-  ].join(',');
-
-  const cards = document.querySelectorAll(cardSelectors);
+function setupSpotlightTracker() {
+  const cards = document.querySelectorAll(
+    '.spotlight-card, .bento-card, .csr-card, .csr-tier-card, .stat-card, .passbook-card, .passbook-terminal-card, .calculator-card-wrapper, .kpi-mini-card, .challenge-row-card, .particular-item, .roadmap-step-card'
+  );
 
   cards.forEach(card => {
-    card.classList.add('tilt-card-3d');
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
 
-    let rafId = null;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+}
+
+/* ==========================================================================
+   12. SCROLL-DRIVEN ENTRANCE CHOREOGRAPHY (REVEAL)
+   ========================================================================== */
+function setupScrollReveal() {
+  const autoRevealSelectors = [
+    'section > .container',
+    '.bento-card',
+    '.csr-card',
+    '.stat-card',
+    '.problem-stat-box',
+    '.charter-card',
+    '.timeline-card',
+    '.challenge-row-card',
+    '.roadmap-step-card',
+    '.passbook-terminal-card'
+  ];
+
+  document.querySelectorAll(autoRevealSelectors.join(', ')).forEach((el, index) => {
+    if (!el.hasAttribute('data-reveal')) {
+      el.setAttribute('data-reveal', '');
+      const delay = (index % 4) * 100;
+      if (delay > 0) el.setAttribute('data-reveal-delay', delay.toString());
+    }
+  });
+
+  const revealEls = document.querySelectorAll('[data-reveal]');
+  if (!revealEls.length) return;
+
+  const revealObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.08,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+}
+
+/* ==========================================================================
+   13. 3D CARD TILT & SPECULAR GLARE MOTION ENGINE
+   ========================================================================== */
+function setupInteractiveTilt() {
+  if (window.innerWidth < 768) return;
+
+  const cardSelectors = [
+    '.bento-card',
+    '.csr-card',
+    '.challenge-row-card',
+    '.roadmap-step-card',
+    '.particular-item',
+    '.transparency-banner-card',
+    '.passbook-terminal-card',
+    '.hero-visual-card'
+  ];
+
+  const tiltCards = document.querySelectorAll(cardSelectors.join(', '));
+
+  tiltCards.forEach(card => {
+    card.classList.add('tilt-card');
+
+    // Add specular glare and shimmer layer if not present
+    if (!card.querySelector('.card-glare-overlay')) {
+      const glare = document.createElement('div');
+      glare.className = 'card-glare-overlay';
+      card.appendChild(glare);
+    }
+    if (!card.querySelector('.shimmer-sweep-layer')) {
+      const shimmer = document.createElement('div');
+      shimmer.className = 'shimmer-sweep-layer';
+      card.appendChild(shimmer);
+    }
+
+    let isHovered = false;
     let targetX = 0;
     let targetY = 0;
     let currentX = 0;
     let currentY = 0;
-    let isHovering = false;
-    let rect = null;
+    let animFrame = null;
 
-    function onMouseEnter() {
-      isHovering = true;
-      rect = card.getBoundingClientRect();
-      card.classList.remove('is-resetting');
+    function renderTilt() {
+      if (!isHovered) return;
+      currentX += (targetX - currentX) * 0.15;
+      currentY += (targetY - currentY) * 0.15;
+
+      card.style.transform = `perspective(1000px) rotateX(${currentX.toFixed(2)}deg) rotateY(${currentY.toFixed(2)}deg) scale3d(1.025, 1.025, 1.025)`;
+      animFrame = requestAnimationFrame(renderTilt);
     }
 
-    function onMouseMove(e) {
-      if (!isHovering) return;
-      if (!rect) rect = card.getBoundingClientRect();
+    card.addEventListener('mouseenter', () => {
+      isHovered = true;
+      card.classList.remove('tilt-reset');
+      card.classList.add('tilt-moving');
+      animFrame = requestAnimationFrame(renderTilt);
+    });
 
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-
-      const px = Math.max(0, Math.min(100, (x / rect.width) * 100));
-      const py = Math.max(0, Math.min(100, (y / rect.height) * 100));
-
-      card.style.setProperty('--mouse-x', `${px.toFixed(1)}%`);
-      card.style.setProperty('--mouse-y', `${py.toFixed(1)}%`);
-
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
 
-      // Max tilt angle: ±6.5 degrees for tasteful luxury physics
-      targetX = ((y - centerY) / centerY) * -6.5;
-      targetY = ((x - centerX) / centerX) * 6.5;
+      // Calculate tilt angles (max 6 deg)
+      targetX = ((y - centerY) / centerY) * -5.5;
+      targetY = ((x - centerX) / centerX) * 5.5;
 
-      if (!rafId) {
-        rafId = requestAnimationFrame(updateTilt);
-      }
-    }
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
 
-    function updateTilt() {
-      // Smooth Lerp physics
-      currentX += (targetX - currentX) * 0.16;
-      currentY += (targetY - currentY) * 0.16;
-
-      card.style.transform = `perspective(1100px) rotateX(${currentX.toFixed(2)}deg) rotateY(${currentY.toFixed(2)}deg) scale3d(1.015, 1.015, 1.015)`;
-
-      if (isHovering && (Math.abs(targetX - currentX) > 0.02 || Math.abs(targetY - currentY) > 0.02)) {
-        rafId = requestAnimationFrame(updateTilt);
-      } else {
-        rafId = null;
-      }
-    }
-
-    function onMouseLeave() {
-      isHovering = false;
-      rect = null;
-      if (rafId) {
-        cancelAnimationFrame(rafId);
-        rafId = null;
-      }
-      card.classList.add('is-resetting');
-      card.style.transform = 'perspective(1100px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-    }
-
-    card.addEventListener('mouseenter', onMouseEnter);
-    card.addEventListener('mousemove', onMouseMove);
-    card.addEventListener('mouseleave', onMouseLeave);
+    card.addEventListener('mouseleave', () => {
+      isHovered = false;
+      cancelAnimationFrame(animFrame);
+      card.classList.remove('tilt-moving');
+      card.classList.add('tilt-reset');
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    });
   });
 }
 
-/* ==========================================================================
-   12. EDITORIAL TEXT REVEAL ON SCROLL (Staggered Word Blur-to-Sharp)
-   Staggered typography reveal as sections enter viewport
-   ========================================================================== */
-function setupTextReveal() {
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  const targetSelectors = [
-    '.section-headline-vibrant',
-    '.manifesto-vibrant-title',
-    '.operate-section-heading',
-    '.operate-title-luxury',
-    '.section-headline-dark'
-  ].join(',');
+/**
+ * 5-PILLAR OPERATING ARCHITECTURE PIPELINE
+ * Provides interactive tab navigation, keyboard controls, and arrow stepper
+ */
+function setupOperatingModelPipeline() {
+  const navButtons = document.querySelectorAll('.pipeline-nav-btn');
+  const panels = document.querySelectorAll('.pillar-panel-view');
+  if (!navButtons.length || !panels.length) return;
 
-  const targets = document.querySelectorAll(targetSelectors);
+  function switchPillar(targetIndex) {
+    // targetIndex is 1-based (1 to 5)
+    navButtons.forEach(btn => {
+      const idx = parseInt(btn.getAttribute('data-pillar'), 10);
+      const isMatch = idx === targetIndex;
+      btn.classList.toggle('active', isMatch);
+      btn.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+    });
 
-  targets.forEach(heading => {
-    // Skip if already processed or is kinetic scrub target
-    if (heading.dataset.revealedSetup || heading.classList.contains('kinetic-lead-paragraph')) return;
-    heading.dataset.revealedSetup = 'true';
+    panels.forEach(panel => {
+      const panelId = panel.id;
+      const isMatch = panelId === `pillar-panel-${targetIndex}`;
+      panel.classList.toggle('active', isMatch);
+    });
+  }
 
-    const childNodes = Array.from(heading.childNodes);
-    heading.innerHTML = '';
-    const wordSpans = [];
+  // Click on pipeline nav buttons
+  navButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = parseInt(btn.getAttribute('data-pillar'), 10);
+      switchPillar(target);
+    });
 
-    childNodes.forEach(node => {
-      if (node.nodeType === Node.TEXT_NODE) {
-        const text = node.textContent;
-        const tokens = text.split(/(\s+)/);
-
-        tokens.forEach(token => {
-          if (/^\s+$/.test(token)) {
-            heading.appendChild(document.createTextNode(token));
-          } else if (token.length > 0) {
-            const wrap = document.createElement('span');
-            wrap.className = 'word-reveal-wrap';
-
-            const span = document.createElement('span');
-            span.className = 'reveal-word';
-            span.textContent = token;
-            if (prefersReduced) span.classList.add('revealed');
-
-            wrap.appendChild(span);
-            heading.appendChild(wrap);
-            wordSpans.push(span);
-          }
-        });
-      } else if (node.nodeType === Node.ELEMENT_NODE) {
-        if (node.tagName.toLowerCase() === 'br') {
-          heading.appendChild(node);
-        } else {
-          const text = node.textContent;
-          const tokens = text.split(/(\s+)/);
-          const clonedElement = node.cloneNode(false);
-
-          tokens.forEach(token => {
-            if (/^\s+$/.test(token)) {
-              clonedElement.appendChild(document.createTextNode(token));
-            } else if (token.length > 0) {
-              const wrap = document.createElement('span');
-              wrap.className = 'word-reveal-wrap';
-
-              const span = document.createElement('span');
-              span.className = 'reveal-word';
-              span.textContent = token;
-              if (prefersReduced) span.classList.add('revealed');
-
-              wrap.appendChild(span);
-              clonedElement.appendChild(wrap);
-              wordSpans.push(span);
-            }
-          });
-          heading.appendChild(clonedElement);
-        }
+    // Keyboard support
+    btn.addEventListener('keydown', (e) => {
+      const current = parseInt(btn.getAttribute('data-pillar'), 10);
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        const next = current === 5 ? 1 : current + 1;
+        switchPillar(next);
+        const nextBtn = document.querySelector(`.pipeline-nav-btn[data-pillar="${next}"]`);
+        if (nextBtn) nextBtn.focus();
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        const prev = current === 1 ? 5 : current - 1;
+        switchPillar(prev);
+        const prevBtn = document.querySelector(`.pipeline-nav-btn[data-pillar="${prev}"]`);
+        if (prevBtn) prevBtn.focus();
       }
     });
+  });
 
-    if (prefersReduced) return;
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          wordSpans.forEach((span, i) => {
-            setTimeout(() => {
-              span.classList.add('revealed');
-            }, i * 36);
-          });
-          observer.unobserve(heading);
-        }
-      });
-    }, {
-      threshold: 0.15,
-      rootMargin: '0px 0px -40px 0px'
+  // Next and Prev stepper arrows inside each panel
+  document.querySelectorAll('.pillar-arrow-btn').forEach(arrowBtn => {
+    arrowBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = parseInt(arrowBtn.getAttribute('data-target'), 10);
+      if (target >= 1 && target <= 5) {
+        switchPillar(target);
+      }
     });
-
-    observer.observe(heading);
   });
 }
