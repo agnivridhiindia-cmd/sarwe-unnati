@@ -309,15 +309,15 @@ button, input, select, textarea {
 
 .brand-emblem-icon,
 .brand-emblem-seal {
-  width: 42px;
-  height: 42px;
-  background: #000000;
+  width: 52px;
+  height: 52px;
+  background: #FFFFFF;
   border: 2px solid #10B981;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15), 0 0 12px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15), 0 0 16px rgba(16, 185, 129, 0.35);
   flex-shrink: 0;
   overflow: hidden;
   transition: transform 0.25s var(--ease-spring), border-color 0.25s ease, box-shadow 0.25s ease;
@@ -333,7 +333,7 @@ button, input, select, textarea {
 .brand-logo-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 50%;
   display: block;
 }
@@ -348,7 +348,7 @@ button, input, select, textarea {
 .brand-main-title {
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 1.05rem;
+  font-size: 1.18rem;
   color: #0F172A;
   letter-spacing: -0.01em;
   line-height: 1.15;
@@ -654,6 +654,112 @@ button, input, select, textarea {
   background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.22) 0%, rgba(16, 185, 129, 0.12) 45%, transparent 70%);
   pointer-events: none;
   z-index: 1;
+}
+
+/* Hero Brand & Prominent Logo Showcase */
+.hero-brand-showcase {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.65rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-logo-emblem-box {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 3px solid #10B981;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 28px rgba(16, 185, 129, 0.45);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.hero-logo-emblem-box:hover {
+  transform: scale(1.06) rotate(3deg);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 36px rgba(16, 185, 129, 0.6);
+}
+
+.hero-logo-emblem-box .hero-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.hero-brand-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hero-brand-title-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hero-brand-org-name {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 1.8vw, 1.55rem);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  line-height: 1.1;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-brand-sub-seal {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #F59E0B;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.page-hero-logo-seal {
+  margin: 0 auto 1.35rem;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2.5px solid #10B981;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45), 0 0 24px rgba(16, 185, 129, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.page-hero-logo-seal:hover {
+  transform: scale(1.06);
+}
+
+.page-hero-logo-seal img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .hero-brand-showcase {
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .hero-logo-emblem-box {
+    width: 72px;
+    height: 72px;
+  }
 }
 
 .section-hero::before {
