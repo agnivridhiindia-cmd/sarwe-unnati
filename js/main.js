@@ -105,8 +105,8 @@ function setupHeroSlideshow() {
   if (!slides || slides.length < 2) return;
 
   const slideData = [
-    { tag: 'FLAGSHIP RELIEF', title: 'Nutritious Meal Preparation & Hot Street Distribution' },
-    { tag: 'FSSAI HYGIENE', title: 'Certified Safe Kitchens & Food Safety Regulations' },
+    { tag: 'FLAGSHIP RELIEF', title: 'Nutritious Meal Sourcing & Hot Street Distribution' },
+    { tag: 'FSSAI HYGIENE', title: 'Certified Partner Sourcing & Food Safety Regulations' },
     { tag: 'NUTRITION FIRST', title: 'Balanced Thali: Staple Grains, Lentils, Vegetables & Fruit' },
     { tag: 'COMMUNITY REACH', title: 'Daily Wage Workers, Street Dwellers & Homeless Families' },
     { tag: 'VOLUNTEER CADRE', title: '50-100 Dedicated Frontline Volunteers on the Ground' }
@@ -722,13 +722,11 @@ function setupInteractiveTilt() {
 
   const cardSelectors = [
     '.bento-card',
-    '.csr-card',
     '.challenge-row-card',
     '.roadmap-step-card',
     '.particular-item',
     '.transparency-banner-card',
-    '.passbook-terminal-card',
-    '.hero-visual-card'
+    '.passbook-terminal-card'
   ];
 
   const tiltCards = document.querySelectorAll(cardSelectors.join(', '));
